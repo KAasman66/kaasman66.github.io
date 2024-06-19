@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="controls">
+        <button id="stop">⏹️ Stop</button>
+    </div>
     <div class="container">
         <div class="instrument" data-sound="sounds/bass1.mp3">
             <img src="images/bass.png" class="icon" alt="Bass 1">
@@ -39,7 +42,7 @@
     <div id="meter" class="meter">
         <span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span>
     </div>
-    <div id="timestamp">Version 0.5 - Created on: <span id="creation-date"></span></div>
+    <div id="timestamp">Version 0.6 - Created on: <span id="creation-date"></span></div>
     <div id="summary">
         <h2>Summary of Changes</h2>
         <ul>
@@ -48,6 +51,7 @@
             <li>Waiting Animation: If a sound is clicked while another is playing, the new sound waits until the next loop to start, indicated by a smooth up-and-down animation.</li>
             <li>Syncing Sounds: All sounds start together and remain synchronized.</li>
             <li>8-Dot Meter Animation: An animation of 8 dots indicates the measure of the file.</li>
+            <li>Global Stop Button: Stop all playing sounds with a stop button.</li>
         </ul>
     </div>
     <script src="scripts.js"></script>
