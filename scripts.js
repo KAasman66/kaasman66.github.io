@@ -32,6 +32,7 @@ document.querySelectorAll('.instrument').forEach(inst => {
                 isPlaying = true;
                 loops[instrument].start(0);
                 animateMeter();
+                icon.classList.add('pulsate');
             } else {
                 icon.classList.add('waiting');
                 const waitForNextLoop = nextStartTime - context.currentTime;
@@ -41,7 +42,6 @@ document.querySelectorAll('.instrument').forEach(inst => {
                     icon.classList.add('pulsate');
                 }, waitForNextLoop * 1000);
             }
-            icon.classList.add('pulsate');
         }
     });
 });
