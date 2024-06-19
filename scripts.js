@@ -1,14 +1,17 @@
 const context = new (window.AudioContext || window.webkitAudioContext)();
 let loops = {};
 let isPlaying = false;
-let meterInterval;
+const bpm = 117;
+const beatDuration = 60 / bpm;
+const measureDuration = beatDuration * 4; // assuming 4 beats per measure
+let startTime;
 
 document.querySelector('#play').addEventListener('click', () => {
     if (!isPlaying) {
-        Object.values(loops).forEach(loop => loop.start(0, context.currentTime % loop.buffer.duration));
+        startTime = context.currentTime;
+        Object.values(loops).forEach(loop => loop.start(0, startTime % loop.buffer.duration));
         isPlaying = true;
         toggleControls();
-        showMeter();
     }
 });
 
@@ -17,39 +20,32 @@ document.querySelector('#stop').addEventListener('click', () => {
         Object.values(loops).forEach(loop => loop.stop(0));
         isPlaying = false;
         toggleControls();
-        hideMeter();
         stopPulsate();
     }
 });
 
 document.querySelectorAll('.instrument').forEach(inst => {
-    inst.addEventListener('click', () => {
-        const choices = inst.querySelector('.choices');
-        choices.style.display = choices.style.display === 'block' ? 'none' : 'block';
-    });
-});
-
-document.querySelectorAll('.choices button').forEach(button => {
-    button.addEventListener('click', async () => {
-        const instrument = button.closest('.instrument').dataset.instrument;
-        const soundUrl = button.dataset.sound;
+    inst.addEventListener('click', async () => {
+        const soundUrl = inst.dataset.sound;
+        const instrument = soundUrl.split('/')[1].split('.')[0];
         
         if (loops[instrument]) {
             loops[instrument].stop();
             delete loops[instrument];
+            inst.querySelector('.icon').classList.remove('pulsate');
+        } else {
+            const buffer = await fetchSound(soundUrl);
+            loops[instrument] = context.createBufferSource();
+            loops[instrument].buffer = buffer;
+            loops[instrument].loop = true;
+            loops[instrument].connect(context.destination);
+
+            if (isPlaying) {
+                loops[instrument].start(0, startTime % buffer.duration);
+            }
+
+            inst.querySelector('.icon').classList.add('pulsate');
         }
-
-        const buffer = await fetchSound(soundUrl);
-        loops[instrument] = context.createBufferSource();
-        loops[instrument].buffer = buffer;
-        loops[instrument].loop = true;
-        loops[instrument].connect(context.destination);
-
-        if (isPlaying) {
-            loops[instrument].start(0, context.currentTime % buffer.duration);
-        }
-
-        pulsateIcon(instrument);
     });
 });
 
@@ -62,26 +58,6 @@ async function fetchSound(url) {
 function toggleControls() {
     document.querySelector('#play').disabled = isPlaying;
     document.querySelector('#stop').disabled = !isPlaying;
-}
-
-function showMeter() {
-    const meter = document.getElementById('meter');
-    meter.style.visibility = 'visible';
-    meterInterval = setInterval(() => {
-        meter.innerHTML = Array(5).fill('🔊').map(() => (Math.random() > 0.5 ? '🔊' : '🔈')).join('');
-    }, 200);
-}
-
-function hideMeter() {
-    const meter = document.getElementById('meter');
-    meter.style.visibility = 'hidden';
-    clearInterval(meterInterval);
-}
-
-function pulsateIcon(instrument) {
-    stopPulsate();
-    const icon = document.querySelector(`.instrument[data-instrument="${instrument}"] .icon`);
-    icon.classList.add('pulsate');
 }
 
 function stopPulsate() {
