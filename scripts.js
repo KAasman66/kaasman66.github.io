@@ -1,12 +1,14 @@
 const context = new (window.AudioContext || window.webkitAudioContext)();
 let loops = {};
 let isPlaying = false;
+let meterInterval;
 
 document.querySelector('#play').addEventListener('click', () => {
     if (!isPlaying) {
         Object.values(loops).forEach(loop => loop.start(0, context.currentTime % loop.buffer.duration));
         isPlaying = true;
         toggleControls();
+        showMeter();
     }
 });
 
@@ -15,6 +17,7 @@ document.querySelector('#stop').addEventListener('click', () => {
         Object.values(loops).forEach(loop => loop.stop(0));
         isPlaying = false;
         toggleControls();
+        hideMeter();
     }
 });
 
@@ -57,3 +60,19 @@ function toggleControls() {
     document.querySelector('#play').disabled = isPlaying;
     document.querySelector('#stop').disabled = !isPlaying;
 }
+
+function showMeter() {
+    const meter = document.getElementById('meter');
+    meter.style.visibility = 'visible';
+    meterInterval = setInterval(() => {
+        meter.innerHTML = Array(5).fill('🔊').map(() => (Math.random() > 0.5 ? '🔊' : '🔈')).join('');
+    }, 200);
+}
+
+function hideMeter() {
+    const meter = document.getElementById('meter');
+    meter.style.visibility = 'hidden';
+    clearInterval(meterInterval);
+}
+
+document.getElementById('creation-date').innerText = new Date().toLocaleString();

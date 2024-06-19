@@ -8,35 +8,39 @@
 </head>
 <body>
     <div class="controls">
-        <button id="play">▶️</button>
-        <button id="stop">⏹️</button>
+        <button id="play">▶️ Play</button>
+        <button id="stop">⏹️ Stop</button>
+    </div>
+    <div id="meter" class="meter">
+        <span>🔊</span><span>🔊</span><span>🔊</span><span>🔊</span><span>🔊</span>
     </div>
     <div class="container">
         <div class="instrument" data-instrument="bass">
-            🎸
+            <div class="icon">🎸</div>
             <div class="choices">
-                <button data-sound="sounds/bass1.mp3">1</button>
-                <button data-sound="sounds/bass2.mp3">2</button>
-                <button data-sound="sounds/bass3.mp3">3</button>
+                <button data-sound="sounds/bass1.mp3">Bass Loop 1</button>
+                <button data-sound="sounds/bass2.mp3">Bass Loop 2</button>
+                <button data-sound="sounds/bass3.mp3">Bass Loop 3</button>
             </div>
         </div>
         <div class="instrument" data-instrument="drums">
-            🥁
+            <div class="icon">🥁</div>
             <div class="choices">
-                <button data-sound="sounds/drums1.mp3">1</button>
-                <button data-sound="sounds/drums2.mp3">2</button>
-                <button data-sound="sounds/drums3.mp3">3</button>
+                <button data-sound="sounds/drums1.mp3">Drums Loop 1</button>
+                <button data-sound="sounds/drums2.mp3">Drums Loop 2</button>
+                <button data-sound="sounds/drums3.mp3">Drums Loop 3</button>
             </div>
         </div>
         <div class="instrument" data-instrument="guitar">
-            🎸
+            <div class="icon">🎸</div>
             <div class="choices">
-                <button data-sound="sounds/guitar1.mp3">1</button>
-                <button data-sound="sounds/guitar2.mp3">2</button>
-                <button data-sound="sounds/guitar3.mp3">3</button>
+                <button data-sound="sounds/guitar1.mp3">Guitar Loop 1</button>
+                <button data-sound="sounds/guitar2.mp3">Guitar Loop 2</button>
+                <button data-sound="sounds/guitar3.mp3">Guitar Loop 3</button>
             </div>
         </div>
     </div>
+    <div id="timestamp">Version 0.3 - Created on: <span id="creation-date"></span></div>
     <script src="scripts.js"></script>
 </body>
 </html>

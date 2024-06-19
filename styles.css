@@ -3,24 +3,31 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
 }
 
 .controls {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 button {
-    font-size: 24px;
+    font-size: 36px;
     cursor: pointer;
-    margin: 0 10px;
-    padding: 10px;
+    margin: 0 20px;
+    padding: 20px 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #4CAF50;
     color: white;
+}
+
+button#stop {
+    background-color: #f44336;
 }
 
 button:disabled {
@@ -30,22 +37,45 @@ button:disabled {
 
 .container {
     display: flex;
-    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
 }
 
 .instrument {
     text-align: center;
-    font-size: 50px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 48px;
+    margin: 0 20px;
+}
+
+.icon {
+    font-size: 120px;
 }
 
 .choices {
     display: none;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .choices button {
-    font-size: 20px;
-    margin: 5px;
-    padding: 10px;
+    font-size: 24px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.meter {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    margin: 20px 0;
+    visibility: hidden;
+}
+
+#timestamp {
+    font-size: 18px;
+    margin-top: 20px;
 }
