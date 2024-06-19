@@ -9,32 +9,6 @@ body {
     margin: 0;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-button {
-    font-size: 36px;
-    cursor: pointer;
-    margin: 0 20px;
-    padding: 20px 40px;
-    border: none;
-    border-radius: 10px;
-    background-color: #4CAF50;
-    color: white;
-}
-
-button#stop {
-    background-color: #f44336;
-}
-
-button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -69,7 +43,33 @@ button:disabled {
     100% { transform: scale(1); }
 }
 
+.icon.waiting {
+    animation: waiting 1s infinite;
+}
+
+@keyframes waiting {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.meter {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.dot {
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
 #timestamp {
     font-size: 18px;
     margin-top: 20px;
+}
+
+#summary {
+    margin-top: 20px;
+    text-align: center;
 }
