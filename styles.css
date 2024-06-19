@@ -1,10 +1,31 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+    margin: 0;
+}
+
+.controls {
+    margin: 20px;
+}
+
+button {
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
 
 .container {
@@ -14,21 +35,17 @@ body {
 
 .instrument {
     text-align: center;
-}
-
-.instrument img {
-    width: 150px;
+    font-size: 50px;
     cursor: pointer;
 }
 
 .choices {
     display: none;
+    margin-top: 10px;
 }
 
 .choices button {
-    display: block;
-    margin: 5px 0;
+    font-size: 20px;
+    margin: 5px;
     padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
 }

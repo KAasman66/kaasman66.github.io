@@ -1,9 +1,26 @@
 const context = new (window.AudioContext || window.webkitAudioContext)();
 let loops = {};
+let isPlaying = false;
 
-document.querySelectorAll('.instrument img').forEach(img => {
-    img.addEventListener('click', () => {
-        const choices = img.nextElementSibling;
+document.querySelector('#play').addEventListener('click', () => {
+    if (!isPlaying) {
+        Object.values(loops).forEach(loop => loop.start(0, context.currentTime % loop.buffer.duration));
+        isPlaying = true;
+        toggleControls();
+    }
+});
+
+document.querySelector('#stop').addEventListener('click', () => {
+    if (isPlaying) {
+        Object.values(loops).forEach(loop => loop.stop(0));
+        isPlaying = false;
+        toggleControls();
+    }
+});
+
+document.querySelectorAll('.instrument').forEach(inst => {
+    inst.addEventListener('click', () => {
+        const choices = inst.querySelector('.choices');
         choices.style.display = choices.style.display === 'block' ? 'none' : 'block';
     });
 });
@@ -19,8 +36,14 @@ document.querySelectorAll('.choices button').forEach(button => {
         }
 
         const buffer = await fetchSound(soundUrl);
-        const loop = playLoop(buffer);
-        loops[instrument] = loop;
+        loops[instrument] = context.createBufferSource();
+        loops[instrument].buffer = buffer;
+        loops[instrument].loop = true;
+        loops[instrument].connect(context.destination);
+
+        if (isPlaying) {
+            loops[instrument].start(0, context.currentTime % buffer.duration);
+        }
     });
 });
 
@@ -30,11 +53,7 @@ async function fetchSound(url) {
     return await context.decodeAudioData(arrayBuffer);
 }
 
-function playLoop(buffer) {
-    const source = context.createBufferSource();
-    source.buffer = buffer;
-    source.loop = true;
-    source.connect(context.destination);
-    source.start(0, context.currentTime % buffer.duration);
-    return source;
+function toggleControls() {
+    document.querySelector('#play').disabled = isPlaying;
+    document.querySelector('#stop').disabled = !isPlaying;
 }
