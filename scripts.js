@@ -18,6 +18,7 @@ document.querySelector('#stop').addEventListener('click', () => {
         isPlaying = false;
         toggleControls();
         hideMeter();
+        stopPulsate();
     }
 });
 
@@ -47,6 +48,8 @@ document.querySelectorAll('.choices button').forEach(button => {
         if (isPlaying) {
             loops[instrument].start(0, context.currentTime % buffer.duration);
         }
+
+        pulsateIcon(instrument);
     });
 });
 
@@ -73,6 +76,16 @@ function hideMeter() {
     const meter = document.getElementById('meter');
     meter.style.visibility = 'hidden';
     clearInterval(meterInterval);
+}
+
+function pulsateIcon(instrument) {
+    stopPulsate();
+    const icon = document.querySelector(`.instrument[data-instrument="${instrument}"] .icon`);
+    icon.classList.add('pulsate');
+}
+
+function stopPulsate() {
+    document.querySelectorAll('.icon').forEach(icon => icon.classList.remove('pulsate'));
 }
 
 document.getElementById('creation-date').innerText = new Date().toLocaleString();

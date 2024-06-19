@@ -53,7 +53,19 @@ button:disabled {
 }
 
 .icon {
-    font-size: 120px;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.2s;
+}
+
+.icon.pulsate {
+    animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .choices {
