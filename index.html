@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="controls">
-        <button id="play">▶️ Play</button>
-        <button id="stop">⏹️ Stop</button>
-    </div>
     <div class="container">
         <div class="instrument" data-sound="sounds/bass1.mp3">
             <img src="images/bass.png" class="icon" alt="Bass 1">
@@ -40,7 +36,20 @@
             <img src="images/guitar.png" class="icon" alt="Guitar 3">
         </div>
     </div>
+    <div id="meter" class="meter">
+        <span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span><span class="dot">●</span>
+    </div>
     <div id="timestamp">Version 0.3 - Created on: <span id="creation-date"></span></div>
+    <div id="summary">
+        <h2>Summary of Changes</h2>
+        <ul>
+            <li>Play Sound on Click: Sounds start playing when the corresponding icon is clicked.</li>
+            <li>Pulsating Icon: The icon pulsates at 117 BPM while the sound is playing.</li>
+            <li>Waiting Animation: If a sound is clicked while another is playing, the new sound waits until the next loop to start, indicated by a smooth up-and-down animation.</li>
+            <li>Syncing Sounds: All sounds start together and remain synchronized.</li>
+            <li>8-Dot Meter Animation: An animation of 8 dots indicates the measure of the file.</li>
+        </ul>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
