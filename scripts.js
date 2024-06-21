@@ -9,6 +9,7 @@ const loopDuration = measureDuration * numMeasures;
 let startTime;
 let nextStartTime;
 let animationInterval;
+let scheduledTime;
 
 document.querySelectorAll('.instrument').forEach(inst => {
     inst.addEventListener('click', async () => {
@@ -18,19 +19,22 @@ document.querySelectorAll('.instrument').forEach(inst => {
         
         if (loops[instrument]) {
             icon.classList.remove('pulsate', 'waiting');
-            delete loops[instrument];
+            loops[instrument].scheduled = false;
         } else {
-            const buffer = await fetchSound(soundUrl);
-            loops[instrument] = {
-                buffer: buffer,
-                source: null
-            };
-
-            icon.classList.add('waiting');
-            
-            if (!isPlaying) {
-                startPlaying();
+            if (!loops[instrument]) {
+                const buffer = await fetchSound(soundUrl);
+                loops[instrument] = {
+                    buffer: buffer,
+                    source: null,
+                    scheduled: false
+                };
             }
+            icon.classList.add('waiting');
+            loops[instrument].scheduled = true;
+        }
+
+        if (!isPlaying) {
+            startPlaying();
         }
     });
 });
@@ -43,28 +47,32 @@ async function fetchSound(url) {
 
 function startPlaying() {
     startTime = context.currentTime;
+    scheduledTime = startTime;
     nextStartTime = startTime + loopDuration;
     isPlaying = true;
-    playAllLoops();
+    scheduleLoop();
     animateMeter();
 }
 
-function playAllLoops() {
+function scheduleLoop() {
     for (let instrument in loops) {
-        if (loops[instrument].source) {
-            loops[instrument].source.stop();
+        if (loops[instrument].scheduled) {
+            if (loops[instrument].source) {
+                loops[instrument].source.stop();
+            }
+            loops[instrument].source = context.createBufferSource();
+            loops[instrument].source.buffer = loops[instrument].buffer;
+            loops[instrument].source.loop = true;
+            loops[instrument].source.connect(context.destination);
+            loops[instrument].source.start(scheduledTime);
+            
+            const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
+            icon.classList.remove('waiting');
+            icon.classList.add('pulsate');
         }
-        loops[instrument].source = context.createBufferSource();
-        loops[instrument].source.buffer = loops[instrument].buffer;
-        loops[instrument].source.loop = true;
-        loops[instrument].source.connect(context.destination);
-        loops[instrument].source.start(nextStartTime);
-        
-        const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
-        icon.classList.remove('waiting');
-        icon.classList.add('pulsate');
     }
-    nextStartTime += loopDuration;
+    scheduledTime += loopDuration;
+    setTimeout(scheduleLoop, (scheduledTime - context.currentTime - 0.1) * 1000);
 }
 
 function animateMeter() {
@@ -75,10 +83,6 @@ function animateMeter() {
         dots.forEach(dot => dot.style.opacity = '0.5');
         dots[index].style.opacity = '1';
         index = (index + 1) % dots.length;
-        
-        if (index === 0) {
-            playAllLoops();
-        }
     }, loopDuration / dots.length * 1000);
 }
 
@@ -89,6 +93,7 @@ document.getElementById('stop').addEventListener('click', () => {
         if (loops[instrument].source) {
             loops[instrument].source.stop();
         }
+        loops[instrument].scheduled = false;
         const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
         icon.classList.remove('pulsate', 'waiting');
     }
