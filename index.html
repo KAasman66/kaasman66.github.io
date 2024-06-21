@@ -3,76 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Sync App v6</title>
+    <title>Cannon Fodder Simplified</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="beat-counter">1</div>
-    <div class="measure-indicator">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    <div class="controls">
-        <button id="stop">⏹️ Stop</button>
-    </div>
-    <div class="container">
-        <div class="instrument" data-sound="sounds/bass1.mp3">
-            <div class="countdown"></div>
-            <img src="images/bass.png" class="icon" alt="Bass 1">
-            <span class="label">Bass 1</span>
-        </div>
-        <div class="instrument" data-sound="sounds/bass2.mp3">
-            <div class="countdown"></div>
-            <img src="images/bass.png" class="icon" alt="Bass 2">
-            <span class="label">Bass 2</span>
-        </div>
-        <div class="instrument" data-sound="sounds/bass3.mp3">
-            <div class="countdown"></div>
-            <img src="images/bass.png" class="icon" alt="Bass 3">
-            <span class="label">Bass 3</span>
-        </div>
-        <div class="instrument" data-sound="sounds/drums1.mp3">
-            <div class="countdown"></div>
-            <img src="images/drumset.png" class="icon" alt="Drums 1">
-            <span class="label">Drums 1</span>
-        </div>
-        <div class="instrument" data-sound="sounds/drums2.mp3">
-            <div class="countdown"></div>
-            <img src="images/drumset.png" class="icon" alt="Drums 2">
-            <span class="label">Drums 2</span>
-        </div>
-        <div class="instrument" data-sound="sounds/drums3.mp3">
-            <div class="countdown"></div>
-            <img src="images/drumset.png" class="icon" alt="Drums 3">
-            <span class="label">Drums 3</span>
-        </div>
-        <div class="instrument" data-sound="sounds/guitar1.mp3">
-            <div class="countdown"></div>
-            <img src="images/guitar.png" class="icon" alt="Guitar 1">
-            <span class="label">Guitar 1</span>
-        </div>
-        <div class="instrument" data-sound="sounds/guitar2.mp3">
-            <div class="countdown"></div>
-            <img src="images/guitar.png" class="icon" alt="Guitar 2">
-            <span class="label">Guitar 2</span>
-        </div>
-        <div class="instrument" data-sound="sounds/guitar3.mp3">
-            <div class="countdown"></div>
-            <img src="images/guitar.png" class="icon" alt="Guitar 3">
-            <span class="label">Guitar 3</span>
-        </div>
-    </div>
-    <div id="console-container">
-        <h3>Console</h3>
-        <div id="console"></div>
-    </div>
-    <div id="version">Version: <span id="version-number"></span></div>
-    <script src="scripts.js"></script>
+    <div id="grid"></div>
+    <div id="emoticon">😊</div>
+    <div id="time"></div>
+    <script src="pathfinding.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
