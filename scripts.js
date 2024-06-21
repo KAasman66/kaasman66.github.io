@@ -1,104 +1,109 @@
-const context = new (window.AudioContext || window.webkitAudioContext)();
-let loops = {};
-let isPlaying = false;
-const bpm = 117;
-const beatDuration = 60 / bpm;
-const measureDuration = beatDuration * 4; // assuming 4 beats per measure
-const numMeasures = 8;
-const loopDuration = measureDuration * numMeasures;
-let startTime;
-let nextLoopStartTime;
-let animationInterval;
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const instruments = document.querySelectorAll('.instrument');
+const stopButton = document.getElementById('stopButton');
+const loopIndicator = document.getElementById('loopIndicator');
 
-document.querySelectorAll('.instrument').forEach(inst => {
-    inst.addEventListener('click', async () => {
-        const soundUrl = inst.dataset.sound;
-        const instrument = soundUrl.split('/')[1].split('.')[0];
-        const icon = inst.querySelector('.icon');
-        
-        if (loops[instrument]) {
-            icon.classList.remove('pulsate', 'waiting');
-            delete loops[instrument];
-        } else {
-            const buffer = await fetchSound(soundUrl);
-            loops[instrument] = {
-                buffer: buffer,
-                source: null
-            };
-            icon.classList.add('waiting');
+const BPM = 117;
+const BEAT_DURATION = 60 / BPM;
+const MEASURE_DURATION = BEAT_DURATION * 4;
+const LOOP_DURATION = MEASURE_DURATION * 8;
+
+let isPlaying = false;
+let loopStartTime = 0;
+let nextLoopStartTime = 0;
+let activeInstruments = new Map();
+let waitingInstruments = new Set();
+
+async function loadSound(url) {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    return await audioContext.decodeAudioData(arrayBuffer);
+}
+
+function scheduleLoop() {
+    const currentTime = audioContext.currentTime;
+
+    if (currentTime >= nextLoopStartTime) {
+        loopStartTime = nextLoopStartTime;
+        nextLoopStartTime = loopStartTime + LOOP_DURATION;
+
+        activeInstruments.forEach((instrument, element) => {
+            if (instrument.source) instrument.source.stop();
+            startInstrument(element, instrument.buffer);
+        });
+
+        waitingInstruments.forEach(element => {
+            const buffer = activeInstruments.get(element).buffer;
+            startInstrument(element, buffer);
+            waitingInstruments.delete(element);
+            element.classList.remove('waiting');
+            element.classList.add('active');
+        });
+
+        updateLoopIndicator();
+    }
+
+    if (isPlaying) {
+        requestAnimationFrame(scheduleLoop);
+    }
+}
+
+function startInstrument(element, buffer) {
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioContext.destination);
+    source.start(loopStartTime);
+    activeInstruments.set(element, { buffer, source });
+}
+
+function updateLoopIndicator() {
+    const dots = loopIndicator.children;
+    const loopProgress = (audioContext.currentTime - loopStartTime) / LOOP_DURATION;
+    const activeDotIndex = Math.floor(loopProgress * dots.length) % dots.length;
+
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.toggle('active', i === activeDotIndex);
+    }
+
+    if (isPlaying) {
+        requestAnimationFrame(updateLoopIndicator);
+    }
+}
+
+instruments.forEach(instrument => {
+    instrument.addEventListener('click', async () => {
+        if (!isPlaying) {
+            isPlaying = true;
+            loopStartTime = audioContext.currentTime;
+            nextLoopStartTime = loopStartTime + LOOP_DURATION;
+            scheduleLoop();
+            updateLoopIndicator();
         }
 
-        if (!isPlaying) {
-            startPlaying();
+        if (activeInstruments.has(instrument)) {
+            activeInstruments.get(instrument).source.stop();
+            activeInstruments.delete(instrument);
+            instrument.classList.remove('active', 'waiting');
+        } else {
+            const soundUrl = instrument.dataset.sound;
+            const buffer = await loadSound(soundUrl);
+
+            if (audioContext.currentTime < nextLoopStartTime) {
+                waitingInstruments.add(instrument);
+                instrument.classList.add('waiting');
+            } else {
+                startInstrument(instrument, buffer);
+                instrument.classList.add('active');
+            }
         }
     });
 });
 
-async function fetchSound(url) {
-    const response = await fetch(url);
-    const arrayBuffer = await response.arrayBuffer();
-    return await context.decodeAudioData(arrayBuffer);
-}
-
-function startPlaying() {
-    startTime = context.currentTime;
-    nextLoopStartTime = startTime + loopDuration;
-    isPlaying = true;
-    scheduleNextLoop();
-    animateMeter();
-}
-
-function scheduleNextLoop() {
-    if (!isPlaying) return;
-
-    const currentTime = context.currentTime;
-    if (currentTime < nextLoopStartTime) {
-        setTimeout(scheduleNextLoop, 20); // Check again in 20ms
-        return;
-    }
-
-    for (let instrument in loops) {
-        if (loops[instrument].source) {
-            loops[instrument].source.stop();
-        }
-        loops[instrument].source = context.createBufferSource();
-        loops[instrument].source.buffer = loops[instrument].buffer;
-        loops[instrument].source.loop = true;
-        loops[instrument].source.connect(context.destination);
-        loops[instrument].source.start(nextLoopStartTime);
-        
-        const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
-        icon.classList.remove('waiting');
-        icon.classList.add('pulsate');
-    }
-
-    nextLoopStartTime += loopDuration;
-    setTimeout(scheduleNextLoop, 20); // Schedule next loop
-}
-
-function animateMeter() {
-    const dots = document.querySelectorAll('#meter .dot');
-    let index = 0;
-    clearInterval(animationInterval);
-    animationInterval = setInterval(() => {
-        dots.forEach(dot => dot.style.opacity = '0.5');
-        dots[index].style.opacity = '1';
-        index = (index + 1) % dots.length;
-    }, loopDuration / dots.length * 1000);
-}
-
-document.getElementById('stop').addEventListener('click', () => {
+stopButton.addEventListener('click', () => {
     isPlaying = false;
-    clearInterval(animationInterval);
-    for (let instrument in loops) {
-        if (loops[instrument].source) {
-            loops[instrument].source.stop();
-        }
-        const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
-        icon.classList.remove('pulsate', 'waiting');
-    }
-    loops = {};
-    document.querySelectorAll('#meter .dot').forEach(dot => dot.style.opacity = '0.5');
+    activeInstruments.forEach(instrument => instrument.source.stop());
+    activeInstruments.clear();
+    waitingInstruments.clear();
+    instruments.forEach(instrument => instrument.classList.remove('active', 'waiting'));
+    loopIndicator.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
 });
-
-document.getElementById('creation-date').innerText = new Date().toLocaleString();

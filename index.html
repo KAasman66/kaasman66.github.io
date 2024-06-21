@@ -7,49 +7,50 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="controls">
-        <button id="stop">⏹️ Stop</button>
-    </div>
     <div class="container">
-        <div class="instrument" data-sound="sounds/bass1.mp3">
-            <img src="images/bass.png" class="icon" alt="Bass 1">
+        <div id="controls">
+            <button id="stopButton">Stop All</button>
         </div>
-        <div class="instrument" data-sound="sounds/bass2.mp3">
-            <img src="images/bass.png" class="icon" alt="Bass 2">
+        <div id="instruments">
+            <div class="instrument" data-sound="sounds/bass1.mp3">
+                <img src="images/bass.png" alt="Bass 1">
+            </div>
+            <div class="instrument" data-sound="sounds/bass2.mp3">
+                <img src="images/bass.png" alt="Bass 2">
+            </div>
+            <div class="instrument" data-sound="sounds/bass3.mp3">
+                <img src="images/bass.png" alt="Bass 3">
+            </div>
+            <div class="instrument" data-sound="sounds/drums1.mp3">
+                <img src="images/drumset.png" alt="Drums 1">
+            </div>
+            <div class="instrument" data-sound="sounds/drums2.mp3">
+                <img src="images/drumset.png" alt="Drums 2">
+            </div>
+            <div class="instrument" data-sound="sounds/drums3.mp3">
+                <img src="images/drumset.png" alt="Drums 3">
+            </div>
+            <div class="instrument" data-sound="sounds/guitar1.mp3">
+                <img src="images/guitar.png" alt="Guitar 1">
+            </div>
+            <div class="instrument" data-sound="sounds/guitar2.mp3">
+                <img src="images/guitar.png" alt="Guitar 2">
+            </div>
+            <div class="instrument" data-sound="sounds/guitar3.mp3">
+                <img src="images/guitar.png" alt="Guitar 3">
+            </div>
         </div>
-        <div class="instrument" data-sound="sounds/bass3.mp3">
-            <img src="images/bass.png" class="icon" alt="Bass 3">
-        </div>
-        <div class="instrument" data-sound="sounds/drums1.mp3">
-            <img src="images/drumset.png" class="icon" alt="Drums 1">
-        </div>
-        <div class="instrument" data-sound="sounds/drums2.mp3">
-            <img src="images/drumset.png" class="icon" alt="Drums 2">
-        </div>
-        <div class="instrument" data-sound="sounds/drums3.mp3">
-            <img src="images/drumset.png" class="icon" alt="Drums 3">
-        </div>
-        <div class="instrument" data-sound="sounds/guitar1.mp3">
-            <img src="images/guitar.png" class="icon" alt="Guitar 1">
-        </div>
-        <div class="instrument" data-sound="sounds/guitar2.mp3">
-            <img src="images/guitar.png" class="icon" alt="Guitar 2">
-        </div>
-        <div class="instrument" data-sound="sounds/guitar3.mp3">
-            <img src="images/guitar.png" class="icon" alt="Guitar 3">
+        <div id="loopIndicator">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
     </div>
-    <div id="meter" class="meter">
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-        <span class="dot">●</span>
-    </div>
-    <div id="timestamp">Version 0.7 - Created on: <span id="creation-date"></span></div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
