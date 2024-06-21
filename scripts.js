@@ -28,9 +28,11 @@ async function startMasterLoop() {
     nextStartTime = startTime + loopDuration;
     console.log('Master loop started at', startTime);
     console.log('Next start time:', nextStartTime);
+
     masterLoop.onended = () => {
         nextStartTime += loopDuration;
-        console.log('Next start time updated to:', nextStartTime);
+        console.log('Master loop ended. Next start time updated to:', nextStartTime);
+        startMasterLoop();  // Restart the master loop
     };
 }
 
