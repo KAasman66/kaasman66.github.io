@@ -1,3 +1,4 @@
+
 const context = new (window.AudioContext || window.webkitAudioContext)();
 let loops = {};
 let isPlaying = false;
@@ -8,6 +9,24 @@ const numMeasures = 8;
 const loopDuration = measureDuration * numMeasures;
 let startTime;
 let nextStartTime;
+let masterLoop;
+
+async function fetchSound(url) {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    return await context.decodeAudioData(arrayBuffer);
+}
+
+async function startMasterLoop() {
+    const silenceBuffer = context.createBuffer(1, context.sampleRate * loopDuration, context.sampleRate);
+    masterLoop = context.createBufferSource();
+    masterLoop.buffer = silenceBuffer;
+    masterLoop.loop = true;
+    masterLoop.connect(context.destination);
+    masterLoop.start(0);
+    startTime = context.currentTime;
+    nextStartTime = startTime + loopDuration;
+}
 
 document.querySelectorAll('.instrument').forEach(inst => {
     inst.addEventListener('click', async () => {
@@ -27,8 +46,7 @@ document.querySelectorAll('.instrument').forEach(inst => {
             loops[instrument].connect(context.destination);
 
             if (!isPlaying) {
-                startTime = context.currentTime;
-                nextStartTime = startTime + loopDuration;
+                await startMasterLoop();
                 isPlaying = true;
                 loops[instrument].start(0);
                 icon.classList.add('pulsate');
@@ -45,14 +63,9 @@ document.querySelectorAll('.instrument').forEach(inst => {
     });
 });
 
-async function fetchSound(url) {
-    const response = await fetch(url);
-    const arrayBuffer = await response.arrayBuffer();
-    return await context.decodeAudioData(arrayBuffer);
-}
-
 document.getElementById('stop').addEventListener('click', () => {
     Object.values(loops).forEach(loop => loop.stop());
+    if (masterLoop) masterLoop.stop();
     loops = {};
     isPlaying = false;
     document.querySelectorAll('.icon').forEach(icon => {
@@ -60,7 +73,6 @@ document.getElementById('stop').addEventListener('click', () => {
     });
 });
 
-// Set version number based on creation date
-const creationDate = new Date();
-const versionNumber = `${creationDate.getFullYear()}.${creationDate.getMonth() + 1}.${creationDate.getDate()}`;
+// Set version number to 0.01
+const versionNumber = '0.01';
 document.getElementById('version-number').textContent = versionNumber;
