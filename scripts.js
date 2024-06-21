@@ -17,7 +17,7 @@ async function fetchSound(url) {
     return await context.decodeAudioData(arrayBuffer);
 }
 
-async function startMasterLoop() {
+function startMasterLoop() {
     const silenceBuffer = context.createBuffer(1, context.sampleRate * loopDuration, context.sampleRate);
     masterLoop = context.createBufferSource();
     masterLoop.buffer = silenceBuffer;
@@ -54,7 +54,7 @@ document.querySelectorAll('.instrument').forEach(inst => {
             loops[instrument].connect(context.destination);
 
             if (!isPlaying) {
-                await startMasterLoop();
+                startMasterLoop();
                 isPlaying = true;
                 loops[instrument].start(0);
                 icon.classList.add('pulsate');
@@ -84,8 +84,8 @@ document.getElementById('stop').addEventListener('click', () => {
     });
 });
 
-// Set version number to 0.01 and display creation time
-const versionNumber = '0.01';
+// Set version number to 0.02 and display creation time
+const versionNumber = '0.02';
 const creationDate = new Date();
 const versionText = \`\${versionNumber} - Created on \${creationDate.toLocaleString()}\`;
 document.getElementById('version-number').textContent = versionText;
