@@ -32,19 +32,20 @@ function scheduleTrack(track) {
     source.loop = true;
     source.connect(audioContext.destination);
     
-    const startTime = nextLoopStartTime;
+    const startTime = Math.max(nextLoopStartTime, audioContext.currentTime);
     source.start(startTime);
     
     track.source = source;
     track.startTime = startTime;
     
-    console.log(`${track.name} scheduled to start at ${startTime}`);
+    logToConsole(`Track ${track.name} scheduled to start at ${startTime.toFixed(2)}`);
 }
 
 function stopTrack(track) {
     if (track.source) {
         track.source.stop();
         track.source = null;
+        logToConsole(`Track ${track.name} stopped`);
     }
 }
 
@@ -95,6 +96,8 @@ async function initializeApp() {
 
     document.getElementById('start').addEventListener('click', startApp);
     document.getElementById('stop').addEventListener('click', stopApp);
+
+    logToConsole("App initialized");
 }
 
 function startApp() {
@@ -109,6 +112,7 @@ function startApp() {
     document.getElementById('stop').disabled = false;
     
     updateNextLoopStartTime();
+    logToConsole("App started");
 }
 
 function stopApp() {
@@ -120,6 +124,7 @@ function stopApp() {
     document.getElementById('stop').disabled = true;
     
     Object.keys(tracks).forEach(updateUI);
+    logToConsole("App stopped");
 }
 
 function updateNextLoopStartTime() {
@@ -127,10 +132,18 @@ function updateNextLoopStartTime() {
     setTimeout(updateNextLoopStartTime, (nextLoopStartTime - audioContext.currentTime) * 1000);
 }
 
+function logToConsole(message) {
+    const console = document.getElementById('console');
+    const logEntry = document.createElement('div');
+    logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+    console.appendChild(logEntry);
+    console.scrollTop = console.scrollHeight;
+}
+
 initializeApp();
 
-// Set version number and display creation time
-const versionNumber = '0.04';
+// Set version number based on creation time
 const creationDate = new Date();
-const versionText = `${versionNumber} - Created on ${creationDate.toLocaleString()}`;
+const versionNumber = `${creationDate.getFullYear()}${(creationDate.getMonth() + 1).toString().padStart(2, '0')}${creationDate.getDate().toString().padStart(2, '0')}.${creationDate.getHours().toString().padStart(2, '0')}${creationDate.getMinutes().toString().padStart(2, '0')}`;
+const versionText = `${versionNumber}`;
 document.getElementById('version-number').textContent = versionText;

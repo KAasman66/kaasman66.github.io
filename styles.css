@@ -53,6 +53,7 @@ body {
     gap: 20px;
     width: 100%;
     max-width: 800px;
+    margin-bottom: 20px;
 }
 
 .instrument {
@@ -104,6 +105,22 @@ body {
     0% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
+}
+
+#console-container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+#console {
+    height: 200px;
+    overflow-y: auto;
+    background-color: #000;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #version {
