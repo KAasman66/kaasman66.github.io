@@ -1,91 +1,136 @@
-
-const context = new (window.AudioContext || window.webkitAudioContext)();
-let loops = {};
-let isPlaying = false;
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const bpm = 117;
 const beatDuration = 60 / bpm;
-const measureDuration = beatDuration * 4; // assuming 4 beats per measure
-const numMeasures = 8;
-const loopDuration = measureDuration * numMeasures;
-let startTime;
-let nextStartTime;
-let masterLoop;
+const measuresPerLoop = 8;
+const beatsPerMeasure = 4;
+const loopDuration = beatDuration * beatsPerMeasure * measuresPerLoop;
 
-async function fetchSound(url) {
+let tracks = {};
+let isRunning = false;
+let nextLoopStartTime = 0;
+
+function createSilentAnchor() {
+    const buffer = audioContext.createBuffer(1, audioContext.sampleRate * loopDuration, audioContext.sampleRate);
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    source.loop = true;
+    source.connect(audioContext.destination);
+    return source;
+}
+
+let anchorTrack = createSilentAnchor();
+
+async function loadAudio(url) {
     const response = await fetch(url);
     const arrayBuffer = await response.arrayBuffer();
-    return await context.decodeAudioData(arrayBuffer);
+    return await audioContext.decodeAudioData(arrayBuffer);
 }
 
-function startMasterLoop() {
-    const silenceBuffer = context.createBuffer(1, context.sampleRate * loopDuration, context.sampleRate);
-    masterLoop = context.createBufferSource();
-    masterLoop.buffer = silenceBuffer;
-    masterLoop.loop = true;
-    masterLoop.connect(context.destination);
-    masterLoop.start(0);
-    startTime = context.currentTime;
-    nextStartTime = startTime + loopDuration;
-    console.log('Master loop started at', startTime);
-    console.log('Next start time:', nextStartTime);
-
-    masterLoop.onended = () => {
-        nextStartTime += loopDuration;
-        console.log('Master loop ended. Next start time updated to:', nextStartTime);
-        startMasterLoop();  // Restart the master loop
-    };
+function scheduleTrack(track) {
+    const source = audioContext.createBufferSource();
+    source.buffer = track.buffer;
+    source.loop = true;
+    source.connect(audioContext.destination);
+    
+    const startTime = nextLoopStartTime;
+    source.start(startTime);
+    
+    track.source = source;
+    track.startTime = startTime;
+    
+    console.log(`${track.name} scheduled to start at ${startTime}`);
 }
 
-document.querySelectorAll('.instrument').forEach(inst => {
-    inst.addEventListener('click', async () => {
+function stopTrack(track) {
+    if (track.source) {
+        track.source.stop();
+        track.source = null;
+    }
+}
+
+function toggleTrack(trackName) {
+    if (!isRunning) startApp();
+    
+    const track = tracks[trackName];
+    if (track.source) {
+        stopTrack(track);
+        track.isPlaying = false;
+    } else {
+        scheduleTrack(track);
+        track.isPlaying = true;
+    }
+    updateUI(trackName);
+}
+
+function updateUI(trackName) {
+    const element = document.querySelector(`.instrument[data-sound$="${trackName}.mp3"]`);
+    const icon = element.querySelector('.icon');
+    
+    if (tracks[trackName].isPlaying) {
+        icon.classList.add('pulsate');
+        icon.classList.remove('hovering');
+    } else {
+        icon.classList.remove('pulsate');
+        icon.classList.add('hovering');
+    }
+}
+
+async function initializeApp() {
+    const instruments = document.querySelectorAll('.instrument');
+    for (const inst of instruments) {
         const soundUrl = inst.dataset.sound;
-        const instrument = soundUrl.split('/')[1].split('.')[0];
-        const icon = inst.querySelector('.icon');
+        const trackName = soundUrl.split('/')[1].split('.')[0];
         
-        if (loops[instrument]) {
-            loops[instrument].stop();
-            delete loops[instrument];
-            icon.classList.remove('pulsate', 'waiting');
-        } else {
-            const buffer = await fetchSound(soundUrl);
-            loops[instrument] = context.createBufferSource();
-            loops[instrument].buffer = buffer;
-            loops[instrument].loop = true;
-            loops[instrument].connect(context.destination);
+        tracks[trackName] = {
+            name: trackName,
+            buffer: await loadAudio(soundUrl),
+            isPlaying: false,
+            source: null,
+            startTime: 0
+        };
 
-            if (!isPlaying) {
-                startMasterLoop();
-                isPlaying = true;
-                loops[instrument].start(0);
-                icon.classList.add('pulsate');
-            } else {
-                icon.classList.add('waiting');
-                const waitForNextLoop = nextStartTime - context.currentTime;
-                console.log('Instrument clicked:', instrument);
-                console.log('Wait time for next loop:', waitForNextLoop);
-                setTimeout(() => {
-                    icon.classList.remove('waiting');
-                    loops[instrument].start(nextStartTime);
-                    icon.classList.add('pulsate');
-                    console.log('Instrument started at', nextStartTime);
-                }, waitForNextLoop * 1000);
-            }
-        }
-    });
-});
+        inst.addEventListener('click', () => toggleTrack(trackName));
+        updateUI(trackName);
+    }
 
-document.getElementById('stop').addEventListener('click', () => {
-    Object.values(loops).forEach(loop => loop.stop());
-    if (masterLoop) masterLoop.stop();
-    loops = {};
-    isPlaying = false;
-    document.querySelectorAll('.icon').forEach(icon => {
-        icon.classList.remove('pulsate', 'waiting');
-    });
-});
+    document.getElementById('start').addEventListener('click', startApp);
+    document.getElementById('stop').addEventListener('click', stopApp);
+}
 
-// Set version number to 0.02 and display creation time
-const versionNumber = '0.02';
+function startApp() {
+    if (isRunning) return;
+    
+    audioContext.resume();
+    nextLoopStartTime = audioContext.currentTime;
+    anchorTrack.start(nextLoopStartTime);
+    isRunning = true;
+    
+    document.getElementById('start').disabled = true;
+    document.getElementById('stop').disabled = false;
+    
+    updateNextLoopStartTime();
+}
+
+function stopApp() {
+    anchorTrack.stop();
+    Object.values(tracks).forEach(stopTrack);
+    isRunning = false;
+    
+    document.getElementById('start').disabled = false;
+    document.getElementById('stop').disabled = true;
+    
+    Object.keys(tracks).forEach(updateUI);
+}
+
+function updateNextLoopStartTime() {
+    nextLoopStartTime += loopDuration;
+    setTimeout(updateNextLoopStartTime, (nextLoopStartTime - audioContext.currentTime) * 1000);
+}
+
+initializeApp();
+
+// Set version number and display creation time
+const versionNumber = '0.04';
 const creationDate = new Date();
-const versionText = \`\${versionNumber} - Created on \${creationDate.toLocaleString()}\`;
+const versionText = `${versionNumber} - Created on ${creationDate.toLocaleString()}`;
 document.getElementById('version-number').textContent = versionText;
