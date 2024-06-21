@@ -26,6 +26,12 @@ async function startMasterLoop() {
     masterLoop.start(0);
     startTime = context.currentTime;
     nextStartTime = startTime + loopDuration;
+    console.log('Master loop started at', startTime);
+    console.log('Next start time:', nextStartTime);
+    masterLoop.onended = () => {
+        nextStartTime += loopDuration;
+        console.log('Next start time updated to:', nextStartTime);
+    };
 }
 
 document.querySelectorAll('.instrument').forEach(inst => {
@@ -53,10 +59,13 @@ document.querySelectorAll('.instrument').forEach(inst => {
             } else {
                 icon.classList.add('waiting');
                 const waitForNextLoop = nextStartTime - context.currentTime;
+                console.log('Instrument clicked:', instrument);
+                console.log('Wait time for next loop:', waitForNextLoop);
                 setTimeout(() => {
                     icon.classList.remove('waiting');
                     loops[instrument].start(nextStartTime);
                     icon.classList.add('pulsate');
+                    console.log('Instrument started at', nextStartTime);
                 }, waitForNextLoop * 1000);
             }
         }
@@ -73,6 +82,8 @@ document.getElementById('stop').addEventListener('click', () => {
     });
 });
 
-// Set version number to 0.01
+// Set version number to 0.01 and display creation time
 const versionNumber = '0.01';
-document.getElementById('version-number').textContent = versionNumber;
+const creationDate = new Date();
+const versionText = \`\${versionNumber} - Created on \${creationDate.toLocaleString()}\`;
+document.getElementById('version-number').textContent = versionText;
