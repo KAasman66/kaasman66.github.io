@@ -1,1 +1,44 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="styles.css"></head><body><script src="scripts.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="instrument" data-sound="sounds/drums.mp3">
+            <img src="icons/drums.png" alt="Drums" class="icon">
+            <span>Drums</span>
+        </div>
+        <div class="instrument" data-sound="sounds/bass.mp3">
+            <img src="icons/bass.png" alt="Bass" class="icon">
+            <span>Bass</span>
+        </div>
+        <div class="instrument" data-sound="sounds/guitar.mp3">
+            <img src="icons/guitar.png" alt="Guitar" class="icon">
+            <span>Guitar</span>
+        </div>
+        <div class="instrument" data-sound="sounds/piano.mp3">
+            <img src="icons/piano.png" alt="Piano" class="icon">
+            <span>Piano</span>
+        </div>
+    </div>
+    <div class="meter">
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+        <span class="dot">•</span>
+    </div>
+    <div id="summary">
+        <p>Active loops: <span id="active-loops">0</span></p>
+        <p>Created on: <span id="creation-date"></span></p>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
