@@ -7,51 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div id="controls">
-            <button id="stopButton">Stop All</button>
-        </div>
-        <div id="instruments">
-            <div class="instrument" data-sound="sounds/bass1.mp3">
-                <img src="images/bass.png" alt="Bass 1">
-            </div>
-            <div class="instrument" data-sound="sounds/bass2.mp3">
-                <img src="images/bass.png" alt="Bass 2">
-            </div>
-            <div class="instrument" data-sound="sounds/bass3.mp3">
-                <img src="images/bass.png" alt="Bass 3">
-            </div>
-            <div class="instrument" data-sound="sounds/drums1.mp3">
-                <img src="images/drumset.png" alt="Drums 1">
-            </div>
-            <div class="instrument" data-sound="sounds/drums2.mp3">
-                <img src="images/drumset.png" alt="Drums 2">
-            </div>
-            <div class="instrument" data-sound="sounds/drums3.mp3">
-                <img src="images/drumset.png" alt="Drums 3">
-            </div>
-            <div class="instrument" data-sound="sounds/guitar1.mp3">
-                <img src="images/guitar.png" alt="Guitar 1">
-            </div>
-            <div class="instrument" data-sound="sounds/guitar2.mp3">
-                <img src="images/guitar.png" alt="Guitar 2">
-            </div>
-            <div class="instrument" data-sound="sounds/guitar3.mp3">
-                <img src="images/guitar.png" alt="Guitar 3">
-            </div>
-        </div>
-        <div id="loopIndicator">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        <div id="versionInfo"></div>
+    <div class="controls">
+        <button id="stop">⏹️ Stop</button>
     </div>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="instrument" data-sound="sounds/bass1.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 1">
+        </div>
+        <div class="instrument" data-sound="sounds/bass2.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 2">
+        </div>
+        <div class="instrument" data-sound="sounds/bass3.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 3">
+        </div>
+        <div class="instrument" data-sound="sounds/drums1.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 1">
+        </div>
+        <div class="instrument" data-sound="sounds/drums2.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 2">
+        </div>
+        <div class="instrument" data-sound="sounds/drums3.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 3">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar1.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 1">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar2.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 2">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar3.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 3">
+        </div>
+    </div>
+    <div id="version">Version: <span id="version-number"></span></div>
+    <script src="scripts.js"></script>
 </body>
 </html>
