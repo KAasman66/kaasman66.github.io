@@ -1,3 +1,4 @@
+
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const bpm = 117;
 const beatDuration = 60 / bpm;
@@ -33,11 +34,12 @@ function scheduleTrack(track) {
     source.loop = true;
     source.connect(audioContext.destination);
     
-    const startTime = Math.max(nextLoopStartTime, audioContext.currentTime);
+    const startTime = nextLoopStartTime;
     source.start(startTime);
     
     track.source = source;
     track.startTime = startTime;
+    track.status = 'playing';
     
     logToConsole(`Track ${track.name} scheduled to start at ${startTime.toFixed(2)}`);
 }
@@ -46,6 +48,7 @@ function stopTrack(track) {
     if (track.source) {
         track.source.stop();
         track.source = null;
+        track.status = 'stopped';
         logToConsole(`Track ${track.name} stopped`);
     }
 }
@@ -54,12 +57,11 @@ function toggleTrack(trackName) {
     if (!isRunning) startApp();
     
     const track = tracks[trackName];
-    if (track.source) {
+    if (track.status === 'playing' || track.status === 'waiting') {
         stopTrack(track);
-        track.isPlaying = false;
     } else {
-        scheduleTrack(track);
-        track.isPlaying = true;
+        track.status = 'waiting';
+        updateCountdown(track);
     }
     updateUI(trackName);
 }
@@ -67,13 +69,33 @@ function toggleTrack(trackName) {
 function updateUI(trackName) {
     const element = document.querySelector(`.instrument[data-sound$="${trackName}.mp3"]`);
     const icon = element.querySelector('.icon');
+    const countdown = element.querySelector('.countdown');
     
-    if (tracks[trackName].isPlaying) {
-        icon.classList.add('pulsate');
-        icon.classList.remove('hovering');
+    icon.classList.remove('pulsate', 'hovering');
+    countdown.textContent = '';
+
+    switch (tracks[trackName].status) {
+        case 'playing':
+            icon.classList.add('pulsate');
+            break;
+        case 'waiting':
+            icon.classList.add('hovering');
+            break;
+    }
+}
+
+function updateCountdown(track) {
+    const timeUntilStart = nextLoopStartTime - audioContext.currentTime;
+    const element = document.querySelector(`.instrument[data-sound$="${track.name}.mp3"]`);
+    const countdown = element.querySelector('.countdown');
+    
+    if (timeUntilStart > 0) {
+        countdown.textContent = timeUntilStart.toFixed(1);
+        requestAnimationFrame(() => updateCountdown(track));
     } else {
-        icon.classList.remove('pulsate');
-        icon.classList.add('hovering');
+        countdown.textContent = '';
+        scheduleTrack(track);
+        updateUI(track.name);
     }
 }
 
@@ -86,7 +108,7 @@ async function initializeApp() {
         tracks[trackName] = {
             name: trackName,
             buffer: await loadAudio(soundUrl),
-            isPlaying: false,
+            status: 'stopped',
             source: null,
             startTime: 0
         };
@@ -125,7 +147,6 @@ function stopApp() {
     Object.keys(tracks).forEach(updateUI);
     logToConsole("App stopped");
 
-    // Reset beat counter and measure indicator
     currentBeat = 0;
     updateBeatCounter();
     updateMeasureIndicator();
@@ -143,11 +164,13 @@ function updateBeatCounter() {
     const beatCounter = document.querySelector('.beat-counter');
     beatCounter.textContent = currentBeat;
     beatCounter.style.opacity = 1;
+    beatCounter.style.transform = 'translate(-50%, -50%) scale(1.2)';
 
     updateMeasureIndicator();
 
     setTimeout(() => {
         beatCounter.style.opacity = 0;
+        beatCounter.style.transform = 'translate(-50%, -50%) scale(1)';
     }, beatDuration * 1000 / 2);
 
     setTimeout(updateBeatCounter, beatDuration * 1000);
@@ -177,5 +200,4 @@ initializeApp();
 // Set version number based on creation time
 const creationDate = new Date();
 const versionNumber = `${creationDate.getFullYear()}${(creationDate.getMonth() + 1).toString().padStart(2, '0')}${creationDate.getDate().toString().padStart(2, '0')}.${creationDate.getHours().toString().padStart(2, '0')}${creationDate.getMinutes().toString().padStart(2, '0')}`;
-const versionText = `${versionNumber}`;
-document.getElementById('version-number').textContent = versionText;
+document.getElementById('version').textContent = `Version: ${versionNumber}`;

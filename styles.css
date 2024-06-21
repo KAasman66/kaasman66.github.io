@@ -12,11 +12,17 @@ body {
 }
 
 .beat-counter {
-    font-size: 120px;
+    font-size: 200px;
     font-weight: bold;
-    margin-bottom: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+    color: rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .measure-indicator {
@@ -26,17 +32,17 @@ body {
 }
 
 .dot {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 0 5px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .dot.active {
     background-color: #4CAF50;
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .controls {
@@ -82,11 +88,20 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
 }
 
 .instrument:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.countdown {
+    position: absolute;
+    top: -20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4CAF50;
 }
 
 .icon {
