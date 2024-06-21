@@ -1,3 +1,4 @@
+
 const context = new (window.AudioContext || window.webkitAudioContext)();
 let loops = {};
 let isPlaying = false;
@@ -11,6 +12,7 @@ let nextStartTime;
 
 document.querySelectorAll('.instrument').forEach(inst => {
     inst.addEventListener('click', async () => {
+        console.log("Instrument clicked:", inst); // Debugging statement
         const soundUrl = inst.dataset.sound;
         const instrument = soundUrl.split('/')[1].split('.')[0];
         const icon = inst.querySelector('.icon');
@@ -46,12 +48,14 @@ document.querySelectorAll('.instrument').forEach(inst => {
 });
 
 async function fetchSound(url) {
+    console.log("Fetching sound:", url); // Debugging statement
     const response = await fetch(url);
     const arrayBuffer = await response.arrayBuffer();
     return await context.decodeAudioData(arrayBuffer);
 }
 
 document.getElementById('stop').addEventListener('click', () => {
+    console.log("Stop button clicked"); // Debugging statement
     Object.values(loops).forEach(loop => loop.stop());
     loops = {};
     isPlaying = false;
