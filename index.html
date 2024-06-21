@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Machine</title>
+    <title>Music Sync App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="controls">
+        <button id="stop">⏹️ Stop</button>
+    </div>
     <div class="container">
-        <div class="instrument" data-sound="sounds/drums.mp3">
-            <img src="icons/drums.png" alt="Drums" class="icon">
-            <span>Drums</span>
+        <div class="instrument" data-sound="sounds/bass1.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 1">
         </div>
-        <div class="instrument" data-sound="sounds/bass.mp3">
-            <img src="icons/bass.png" alt="Bass" class="icon">
-            <span>Bass</span>
+        <div class="instrument" data-sound="sounds/bass2.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 2">
         </div>
-        <div class="instrument" data-sound="sounds/guitar.mp3">
-            <img src="icons/guitar.png" alt="Guitar" class="icon">
-            <span>Guitar</span>
+        <div class="instrument" data-sound="sounds/bass3.mp3">
+            <img src="images/bass.png" class="icon" alt="Bass 3">
         </div>
-        <div class="instrument" data-sound="sounds/piano.mp3">
-            <img src="icons/piano.png" alt="Piano" class="icon">
-            <span>Piano</span>
+        <div class="instrument" data-sound="sounds/drums1.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 1">
+        </div>
+        <div class="instrument" data-sound="sounds/drums2.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 2">
+        </div>
+        <div class="instrument" data-sound="sounds/drums3.mp3">
+            <img src="images/drumset.png" class="icon" alt="Drums 3">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar1.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 1">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar2.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 2">
+        </div>
+        <div class="instrument" data-sound="sounds/guitar3.mp3">
+            <img src="images/guitar.png" class="icon" alt="Guitar 3">
         </div>
     </div>
-    <div class="meter">
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
-        <span class="dot">•</span>
+    <div id="meter" class="meter">
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
+        <span class="dot">●</span>
     </div>
-    <div id="summary">
-        <p>Active loops: <span id="active-loops">0</span></p>
-        <p>Created on: <span id="creation-date"></span></p>
-    </div>
+    <div id="timestamp">Version 0.7 - Created on: <span id="creation-date"></span></div>
     <script src="scripts.js"></script>
 </body>
 </html>

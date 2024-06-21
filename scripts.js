@@ -8,6 +8,7 @@ const numMeasures = 8;
 const loopDuration = measureDuration * numMeasures;
 let startTime;
 let nextStartTime;
+let animationInterval;
 
 document.querySelectorAll('.instrument').forEach(inst => {
     inst.addEventListener('click', async () => {
@@ -16,44 +17,23 @@ document.querySelectorAll('.instrument').forEach(inst => {
         const icon = inst.querySelector('.icon');
         
         if (loops[instrument]) {
-            stopLoop(instrument);
-            icon.classList.remove('pulsate');
+            icon.classList.remove('pulsate', 'waiting');
+            delete loops[instrument];
         } else {
-            await startLoop(instrument, soundUrl, icon);
+            const buffer = await fetchSound(soundUrl);
+            loops[instrument] = {
+                buffer: buffer,
+                source: null
+            };
+
+            icon.classList.add('waiting');
+            
+            if (!isPlaying) {
+                startPlaying();
+            }
         }
-        updateActiveLoops();
     });
 });
-
-async function startLoop(instrument, soundUrl, icon) {
-    const buffer = await fetchSound(soundUrl);
-    loops[instrument] = context.createBufferSource();
-    loops[instrument].buffer = buffer;
-    loops[instrument].loop = true;
-    loops[instrument].connect(context.destination);
-
-    if (!isPlaying) {
-        startTime = context.currentTime;
-        nextStartTime = startTime + loopDuration;
-        isPlaying = true;
-        loops[instrument].start(0);
-        animateMeter();
-        icon.classList.add('pulsate');
-    } else {
-        icon.classList.add('waiting');
-        const waitForNextLoop = nextStartTime - context.currentTime;
-        setTimeout(() => {
-            icon.classList.remove('waiting');
-            loops[instrument].start(nextStartTime);
-            icon.classList.add('pulsate');
-        }, waitForNextLoop * 1000);
-    }
-}
-
-function stopLoop(instrument) {
-    loops[instrument].stop();
-    delete loops[instrument];
-}
 
 async function fetchSound(url) {
     const response = await fetch(url);
@@ -61,19 +41,59 @@ async function fetchSound(url) {
     return await context.decodeAudioData(arrayBuffer);
 }
 
+function startPlaying() {
+    startTime = context.currentTime;
+    nextStartTime = startTime + loopDuration;
+    isPlaying = true;
+    playAllLoops();
+    animateMeter();
+}
+
+function playAllLoops() {
+    for (let instrument in loops) {
+        if (loops[instrument].source) {
+            loops[instrument].source.stop();
+        }
+        loops[instrument].source = context.createBufferSource();
+        loops[instrument].source.buffer = loops[instrument].buffer;
+        loops[instrument].source.loop = true;
+        loops[instrument].source.connect(context.destination);
+        loops[instrument].source.start(nextStartTime);
+        
+        const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
+        icon.classList.remove('waiting');
+        icon.classList.add('pulsate');
+    }
+    nextStartTime += loopDuration;
+}
+
 function animateMeter() {
-    const dots = document.querySelectorAll('.dot');
+    const dots = document.querySelectorAll('#meter .dot');
     let index = 0;
-    setInterval(() => {
+    clearInterval(animationInterval);
+    animationInterval = setInterval(() => {
         dots.forEach(dot => dot.style.opacity = '0.5');
         dots[index].style.opacity = '1';
         index = (index + 1) % dots.length;
+        
+        if (index === 0) {
+            playAllLoops();
+        }
     }, loopDuration / dots.length * 1000);
 }
 
-function updateActiveLoops() {
-    const activeLoopsCount = Object.keys(loops).length;
-    document.getElementById('active-loops').textContent = activeLoopsCount;
-}
+document.getElementById('stop').addEventListener('click', () => {
+    isPlaying = false;
+    clearInterval(animationInterval);
+    for (let instrument in loops) {
+        if (loops[instrument].source) {
+            loops[instrument].source.stop();
+        }
+        const icon = document.querySelector(`.instrument[data-sound*="${instrument}"] .icon`);
+        icon.classList.remove('pulsate', 'waiting');
+    }
+    loops = {};
+    document.querySelectorAll('#meter .dot').forEach(dot => dot.style.opacity = '0.5');
+});
 
 document.getElementById('creation-date').innerText = new Date().toLocaleString();
