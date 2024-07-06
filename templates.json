@@ -1,11 +1,4 @@
 {
-  "gedachtenregistratie": [
-    {"type": "title", "text": "Gedachtenregistratie"},
-    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie"},
-    {"type": "textarea", "label": "Gedachten", "placeholder": "Noteer je gedachten"},
-    {"type": "textarea", "label": "Gevoel", "placeholder": "Beschrijf je gevoel"},
-    {"type": "textarea", "label": "Gedrag", "placeholder": "Wat deed je?"}
-  ],
   "activiteitenplanning": [
     {"type": "title", "text": "Activiteitenplanning"},
     {"type": "date", "label": "Datum"},
