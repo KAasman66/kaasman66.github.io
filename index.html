@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <base href="https://">
+    <base href="https://cgt-formulier-generator.nl">
     <title>CGT Formulier Generator Pro1.0</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,7 +208,7 @@
         };
 
         function loadExternalTemplates() {
-            fetch('templates.json')
+            fetch('./templates.json')  // Gebruik een relatieve URL
                 .then(response => response.json())
                 .then(data => {
                     templates = {...templates, ...data};
