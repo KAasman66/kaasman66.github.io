@@ -6,169 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f4f8;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-        }
-        select, input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-        }
-        button:active {
-            transform: translateY(0);
-        }
-        .form-element {
-            margin-bottom: 20px;
-            position: relative;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-        .form-element:hover {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .checkbox-group, .radio-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .checkbox-item, .radio-item {
-            display: flex;
-            align-items: center;
-        }
-        .checkbox-item input, .radio-item input {
-            margin-right: 8px;
-            width: auto;
-        }
-        #formContainer {
-            width: 210mm;
-            min-height: 297mm;
-            margin: 30px auto;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding: 20mm;
-            box-sizing: border-box;
-        }
-        .draggable {
-            cursor: move;
-        }
-        .editable {
-            position: relative;
-        }
-        .edit-icon {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            cursor: pointer;
-            opacity: 0.6;
-            transition: opacity 0.3s;
-            font-size: 1.2em;
-        }
-        .edit-icon:hover {
-            opacity: 1;
-        }
-        .edit-options {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 10px;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .edit-options button {
-            display: block;
-            width: 100%;
-            margin-bottom: 5px;
-            font-size: 0.9em;
-            padding: 8px 12px;
-        }
-        .subtext {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-            display: block;
-            font-style: italic;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        .controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .template-select {
-            flex-grow: 1;
-        }
-        @media print {
-            body * {
-                visibility: hidden;
-            }
-            #formContainer, #formContainer * {
-                visibility: visible;
-            }
-            #formContainer {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 210mm;
-                min-height: 297mm;
-                box-shadow: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -178,9 +16,11 @@
             <button onclick="addTextField()">Tekstveld</button>
             <button onclick="addCheckboxGroup()">Afvinkvakjes</button>
             <button onclick="addRadioGroup()">Keuzerondjes</button>
-            <button onclick="addDropdown()">Dropdown</button>
             <button onclick="addDateField()">Datumveld</button>
             <button onclick="addRatingScale()">Beoordelingsschaal</button>
+            <button onclick="addHeader()">Koptekst</button>
+            <button onclick="addParagraph()">Paragraaf</button>
+            <button onclick="addNumberField()">Numeriek veld</button>
             <button onclick="printForm()">Formulier printen</button>
             <div class="template-select">
                 <select id="templateSelect">
@@ -199,7 +39,7 @@
     <script>
         let templates = {
             gedachtenregistratie: [
-                {type: 'title', text: 'Gedachtenregistratie'},
+                {type: 'header', text: 'Gedachtenregistratie'},
                 {type: 'textarea', label: 'Situatie', placeholder: 'Beschrijf de situatie'},
                 {type: 'textarea', label: 'Gedachten', placeholder: 'Noteer je gedachten'},
                 {type: 'textarea', label: 'Gevoel', placeholder: 'Beschrijf je gevoel'},
@@ -207,34 +47,47 @@
             ]
         };
 
-        function loadExternalTemplates() {
-            fetch('./templates.json')  // Gebruik een relatieve URL
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Loaded templates:', data);
-                    templates = {...templates, ...data};
-                    updateTemplateSelect();
-                })
-                .catch(error => console.error('Error loading templates:', error));
-        }
-
-        function updateTemplateSelect() {
-            const select = document.getElementById('templateSelect');
-            select.innerHTML = '<option value="">Selecteer een template</option>';
-            for (const [key, value] of Object.entries(templates)) {
-                select.innerHTML += `<option value="${key}">${value[0].text}</option>`;
-            }
-        }
-
         function createFormElement(element) {
             let html = `<div class="form-element draggable">`;
             switch (element.type) {
-                // Dezelfde switch case structuur als voorheen
+                case 'header':
+                    html += `<h2 class="editable">${element.text}</h2>`;
+                    break;
+                case 'paragraph':
+                    html += `<p class="editable">${element.text}</p>`;
+                    break;
+                case 'textarea':
+                    html += `<label class="editable">${element.label}</label><textarea placeholder="${element.placeholder}"></textarea>`;
+                    break;
+                case 'checkbox':
+                    html += `<label class="editable">${element.label}</label><div class="checkbox-group">`;
+                    element.options.forEach(option => {
+                        html += `<div class="checkbox-item"><input type="checkbox"><span class="editable">${option}</span></div>`;
+                    });
+                    html += `</div>`;
+                    break;
+                case 'radio':
+                    html += `<label class="editable">${element.label}</label><div class="radio-group">`;
+                    element.options.forEach(option => {
+                        html += `<div class="radio-item"><input type="radio" name="${element.label}"><span class="editable">${option}</span></div>`;
+                    });
+                    html += `</div>`;
+                    break;
+                case 'date':
+                    html += `<label class="editable">${element.label}</label><input type="date">`;
+                    break;
+                case 'rating':
+                    html += `<label class="editable">${element.label}</label><div class="rating-group">`;
+                    for (let i = 1; i <= element.max; i++) {
+                        html += `<input type="radio" name="${element.label}" value="${i}">${i}`;
+                    }
+                    html += `</div>`;
+                    break;
+                case 'number':
+                    html += `<label class="editable">${element.label}</label><input type="number" min="${element.min}" max="${element.max}">`;
+                    break;
+                default:
+                    break;
             }
             html += `<span class="edit-icon">✏️</span></div>`;
             return html;
@@ -283,22 +136,6 @@
             }
         }
 
-        function addDropdown() {
-            const fieldName = prompt("Geef een naam voor het dropdown veld:");
-            if (fieldName) {
-                const options = [];
-                while (true) {
-                    const option = prompt(`Geef optie ${options.length + 1} (of laat leeg om te stoppen):`);
-                    if (!option) break;
-                    options.push(option);
-                }
-                const element = {type: 'dropdown', label: fieldName, options: options};
-                document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
-                initSortable();
-                initEditable();
-            }
-        }
-
         function addDateField() {
             const fieldName = prompt("Geef een naam voor het datumveld:");
             if (fieldName) {
@@ -314,6 +151,38 @@
             if (fieldName) {
                 const max = prompt("Geef het maximum aantal punten voor de schaal:");
                 const element = {type: 'rating', label: fieldName, max: parseInt(max) || 5};
+                document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+                initSortable();
+                initEditable();
+            }
+        }
+
+        function addHeader() {
+            const text = prompt("Geef de tekst voor de koptekst:");
+            if (text) {
+                const element = {type: 'header', text: text};
+                document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+                initSortable();
+                initEditable();
+            }
+        }
+
+        function addParagraph() {
+            const text = prompt("Geef de tekst voor de paragraaf:");
+            if (text) {
+                const element = {type: 'paragraph', text: text};
+                document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+                initSortable();
+                initEditable();
+            }
+        }
+
+        function addNumberField() {
+            const fieldName = prompt("Geef een naam voor het numerieke veld:");
+            if (fieldName) {
+                const min = prompt("Geef het minimum aantal (optioneel):");
+                const max = prompt("Geef het maximum aantal (optioneel):");
+                const element = {type: 'number', label: fieldName, min: min || '', max: max || ''};
                 document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
                 initSortable();
                 initEditable();
@@ -376,7 +245,6 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadExternalTemplates();
             updateTemplateSelect();
             initSortable();
             initEditable();
@@ -394,6 +262,14 @@
                 initEditable();
             }
         });
+
+        function updateTemplateSelect() {
+            const select = document.getElementById('templateSelect');
+            select.innerHTML = '<option value="">Selecteer een template</option>';
+            for (const [key, value] of Object.entries(templates)) {
+                select.innerHTML += `<option value="${key}">${value[0].text}</option>`;
+            }
+        }
     </script>
 </body>
 </html>

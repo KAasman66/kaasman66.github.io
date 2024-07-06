@@ -1,4 +1,5 @@
 {
+ 
   "activiteitenplanning": [
     {"type": "title", "text": "Activiteitenplanning"},
     {"type": "date", "label": "Datum"},
