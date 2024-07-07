@@ -1,48 +1,68 @@
 {
   "waarden-verkenning": [
     {"type": "header", "text": "Waarden Verkenning"},
-    {"type": "textarea", "label": "Relaties", "placeholder": "Wat zijn je waarden met betrekking tot relaties?"},
-    {"type": "textarea", "label": "Werk/Opleiding", "placeholder": "Wat zijn je waarden met betrekking tot werk of opleiding?"},
-    {"type": "textarea", "label": "Persoonlijke groei", "placeholder": "Wat zijn je waarden met betrekking tot persoonlijke groei?"},
-    {"type": "textarea", "label": "Vrije tijd", "placeholder": "Wat zijn je waarden met betrekking tot vrije tijd?"},
-    {"type": "textarea", "label": "Gezondheid", "placeholder": "Wat zijn je waarden met betrekking tot gezondheid?"},
-    {"type": "textarea", "label": "Gemeenschap", "placeholder": "Wat zijn je waarden met betrekking tot gemeenschap of maatschappij?"}
+    {"type": "textarea", "label": "Relaties", "placeholder": "Wat zijn je waarden met betrekking tot relaties? (bijv. eerlijkheid, loyaliteit, communicatie)"},
+    {"type": "textarea", "label": "Werk/Opleiding", "placeholder": "Wat zijn je waarden met betrekking tot werk of opleiding? (bijv. groei, creativiteit, financiële stabiliteit)"},
+    {"type": "textarea", "label": "Persoonlijke groei", "placeholder": "Wat zijn je waarden met betrekking tot persoonlijke groei? (bijv. zelfkennis, uitdaging, leren)"},
+    {"type": "textarea", "label": "Vrije tijd", "placeholder": "Wat zijn je waarden met betrekking tot vrije tijd? (bijv. avontuur, ontspanning, creativiteit)"},
+    {"type": "textarea", "label": "Gezondheid", "placeholder": "Wat zijn je waarden met betrekking tot gezondheid? (bijv. vitaliteit, balans, zelfzorg)"},
+    {"type": "textarea", "label": "Gemeenschap", "placeholder": "Wat zijn je waarden met betrekking tot gemeenschap of maatschappij? (bijv. rechtvaardigheid, duurzaamheid, betrokkenheid)"},
+    {"type": "textarea", "label": "Spiritualiteit", "placeholder": "Wat zijn je waarden met betrekking tot spiritualiteit of levensbeschouwing? (bijv. verbondenheid, zingeving, contemplatie)"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe kun je deze waarden meer in je dagelijks leven integreren?"}
   ],
   "smart-doelen": [
     {"type": "header", "text": "SMART Doelen Worksheet"},
-    {"type": "textarea", "label": "Specifiek", "placeholder": "Wat wil je precies bereiken?"},
-    {"type": "textarea", "label": "Meetbaar", "placeholder": "Hoe ga je meten of je je doel hebt bereikt?"},
-    {"type": "textarea", "label": "Acceptabel", "placeholder": "Is dit doel acceptabel en aantrekkelijk voor je?"},
-    {"type": "textarea", "label": "Realistisch", "placeholder": "Is dit doel haalbaar gezien je huidige situatie?"},
-    {"type": "textarea", "label": "Tijdgebonden", "placeholder": "Wanneer wil je dit doel bereikt hebben?"},
-    {"type": "textarea", "label": "Actiestappen", "placeholder": "Welke stappen ga je nemen om dit doel te bereiken?"}
+    {"type": "textarea", "label": "Specifiek", "placeholder": "Wat wil je precies bereiken? Wees zo concreet mogelijk."},
+    {"type": "textarea", "label": "Meetbaar", "placeholder": "Hoe ga je meten of je je doel hebt bereikt? Welke criteria gebruik je?"},
+    {"type": "textarea", "label": "Acceptabel", "placeholder": "Is dit doel acceptabel en aantrekkelijk voor je? Waarom wel of niet?"},
+    {"type": "textarea", "label": "Realistisch", "placeholder": "Is dit doel haalbaar gezien je huidige situatie? Welke middelen heb je nodig?"},
+    {"type": "textarea", "label": "Tijdgebonden", "placeholder": "Wanneer wil je dit doel bereikt hebben? Stel een specifieke deadline."},
+    {"type": "textarea", "label": "Actiestappen", "placeholder": "Welke concrete stappen ga je nemen om dit doel te bereiken? Maak een gedetailleerd actieplan."},
+    {"type": "textarea", "label": "Obstakels", "placeholder": "Welke mogelijke obstakels zie je? Hoe ga je hiermee om?"},
+    {"type": "textarea", "label": "Ondersteuning", "placeholder": "Wie of wat kan je ondersteunen bij het bereiken van dit doel?"},
+    {"type": "textarea", "label": "Motivatie", "placeholder": "Waarom is dit doel belangrijk voor je? Hoe past het bij je waarden?"}
   ],
   "terugvalpreventieplan": [
     {"type": "header", "text": "Terugvalpreventieplan"},
-    {"type": "textarea", "label": "Waarschuwingssignalen", "placeholder": "Welke signalen wijzen op een mogelijke terugval?"},
-    {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn je belangrijkste triggers?"},
-    {"type": "textarea", "label": "Coping strategieën", "placeholder": "Welke coping strategieën kun je gebruiken?"},
-    {"type": "textarea", "label": "Ondersteunend netwerk", "placeholder": "Wie kun je om hulp vragen?"},
-    {"type": "textarea", "label": "Professionele hulp", "placeholder": "Welke professionele hulp kun je inschakelen indien nodig?"},
-    {"type": "textarea", "label": "Dagelijkse routine", "placeholder": "Welke dagelijkse gewoontes helpen je stabiel te blijven?"}
+    {"type": "textarea", "label": "Waarschuwingssignalen", "placeholder": "Welke signalen (gedachten, gevoelens, gedrag) wijzen op een mogelijke terugval?"},
+    {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn je belangrijkste triggers (situaties, mensen, plaatsen)?"},
+    {"type": "textarea", "label": "Coping strategieën", "placeholder": "Welke gezonde coping strategieën kun je gebruiken? Wees specifiek."},
+    {"type": "textarea", "label": "Ondersteunend netwerk", "placeholder": "Wie kun je om hulp vragen? Maak een lijst met namen en contactgegevens."},
+    {"type": "textarea", "label": "Professionele hulp", "placeholder": "Welke professionele hulp kun je inschakelen indien nodig? Noteer contactgegevens."},
+    {"type": "textarea", "label": "Dagelijkse routine", "placeholder": "Welke dagelijkse gewoontes helpen je stabiel te blijven?"},
+    {"type": "textarea", "label": "Noodplan", "placeholder": "Wat is je plan voor acute crisissituaties?"},
+    {"type": "textarea", "label": "Positieve herinneringen", "placeholder": "Noteer positieve ervaringen en successen uit je herstel om je te motiveren."},
+    {"type": "textarea", "label": "Zelfzorgplan", "placeholder": "Beschrijf je dagelijkse en wekelijkse zelfzorgactiviteiten."}
   ],
   "grensstellings-oefening": [
     {"type": "header", "text": "Grensstellings Oefening"},
-    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een situatie waarin je grenzen werden overschreden"},
-    {"type": "textarea", "label": "Gevoelens", "placeholder": "Hoe voelde je je in deze situatie?"},
-    {"type": "textarea", "label": "Behoeften", "placeholder": "Wat had je nodig in deze situatie?"},
-    {"type": "textarea", "label": "Grenzen", "placeholder": "Welke grenzen wil je stellen?"},
-    {"type": "textarea", "label": "Communicatie", "placeholder": "Hoe ga je deze grenzen communiceren?"},
-    {"type": "textarea", "label": "Acties", "placeholder": "Welke acties ga je ondernemen om je grenzen te handhaven?"}
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een specifieke situatie waarin je grenzen werden overschreden"},
+    {"type": "textarea", "label": "Gevoelens", "placeholder": "Hoe voelde je je in deze situatie? Wees zo specifiek mogelijk."},
+    {"type": "textarea", "label": "Lichamelijke sensaties", "placeholder": "Welke lichamelijke sensaties ervaarde je?"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten kwamen bij je op?"},
+    {"type": "textarea", "label": "Behoeften", "placeholder": "Wat had je nodig in deze situatie? Welke behoeften werden niet vervuld?"},
+    {"type": "textarea", "label": "Grenzen", "placeholder": "Welke specifieke grenzen wil je stellen om je behoeften te beschermen?"},
+    {"type": "textarea", "label": "Communicatie", "placeholder": "Hoe ga je deze grenzen duidelijk en respectvol communiceren?"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Welke concrete acties ga je ondernemen om je grenzen te handhaven?"},
+    {"type": "textarea", "label": "Zelfzorg", "placeholder": "Hoe ga je voor jezelf zorgen na het stellen van grenzen?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Wat heb je geleerd van deze oefening? Hoe kun je dit in de toekomst toepassen?"}
   ],
   "emotieregulatie-vaardigheden": [
     {"type": "header", "text": "Emotieregulatie Vaardigheden Tracker"},
     {"type": "date", "label": "Datum"},
-    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de emotioneel uitdagende situatie"},
-    {"type": "textarea", "label": "Emotie", "placeholder": "Welke emotie ervaarde je?"},
+    {"type": "time", "label": "Tijdstip"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de emotioneel uitdagende situatie in detail"},
+    {"type": "textarea", "label": "Emotie", "placeholder": "Welke emotie(s) ervaarde je? Wees zo specifiek mogelijk."},
     {"type": "rating", "label": "Intensiteit voor", "max": 10},
-    {"type": "checkbox", "label": "Gebruikte vaardigheden", "options": ["Mindfulness", "Afleiding", "Tegenovergestelde actie", "Radicale acceptatie", "Probleemoplossing", "ABC PLEASE"]},
-    {"type": "textarea", "label": "Effect", "placeholder": "Hoe hielpen deze vaardigheden?"},
-    {"type": "rating", "label": "Intensiteit na", "max": 10}
+    {"type": "checkbox", "label": "Gebruikte vaardigheden", "options": [
+      "Mindfulness", "Afleiding", "Tegenovergestelde actie", "Radicale acceptatie", 
+      "Probleemoplossing", "Emotie-erkenning", "Ademhalingsoefeningen", "Progressieve spierontspanning", 
+      "Positieve zelfspraak", "Sociale steun zoeken", "Creatieve expressie"
+    ]},
+    {"type": "textarea", "label": "Toepassing vaardigheden", "placeholder": "Beschrijf hoe je elke vaardigheid hebt toegepast"},
+    {"type": "textarea", "label": "Effect", "placeholder": "Hoe hielpen deze vaardigheden? Wat was het resultaat?"},
+    {"type": "rating", "label": "Intensiteit na", "max": 10},
+    {"type": "textarea", "label": "Lessen", "placeholder": "Wat heb je geleerd dat je in de toekomst kunt toepassen?"},
+    {"type": "textarea", "label": "Volgende stappen", "placeholder": "Welke vaardigheden wil je verder ontwikkelen of vaker toepassen?"}
   ]
 }

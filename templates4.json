@@ -4,7 +4,54 @@
     {"type": "date", "label": "Datum"},
     {"type": "time", "label": "Tijdstip"},
     {"type": "number", "label": "Duur (minuten)", "min": 1},
-    {"type": "textarea", "label": "Fysieke gewaarwordingen", "placeholder": "Beschrijf de fysieke sensaties die je opmerkte"},
-    {"type": "textarea", "label": "Emotionele ervaring", "placeholder": "Beschrijf de emoties die opkwamen tijdens de oefening"},
-    {"type": "textarea", "label": "Gedachten", "placeholder": "Noteer eventuele gedachten die je opvielen"},
-    {"type": "textarea", "label": "Algemene ervaring", "placeholder": "Hoe was je algemene ervaring met
+    {"type": "textarea", "label": "Fysieke gewaarwordingen", "placeholder": "Beschrijf de fysieke sensaties die je opmerkte (bijv. spanning, ontspanning, temperatuur, tinteling)"},
+    {"type": "textarea", "label": "Emotionele ervaring", "placeholder": "Beschrijf de emoties die opkwamen tijdens de oefening (bijv. kalmte, frustratie, blijdschap)"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Noteer eventuele gedachten die je opvielen tijdens de oefening"},
+    {"type": "textarea", "label": "Aandacht en focus", "placeholder": "Beschrijf hoe je aandacht en focus waren tijdens de oefening"},
+    {"type": "rating", "label": "Ontspanningsniveau voor de oefening", "max": 10},
+    {"type": "rating", "label": "Ontspanningsniveau na de oefening", "max": 10},
+    {"type": "textarea", "label": "Moeilijkheden", "placeholder": "Beschrijf eventuele moeilijkheden die je ervaarde tijdens de oefening"},
+    {"type": "textarea", "label": "Inzichten", "placeholder": "Noteer eventuele inzichten of ontdekkingen die je deed tijdens de oefening"},
+    {"type": "textarea", "label": "Algemene ervaring", "placeholder": "Beschrijf je algemene ervaring met de lichaamsscan meditatie"},
+    {"type": "textarea", "label": "Toepassing in het dagelijks leven", "placeholder": "Hoe kun je de inzichten uit deze oefening toepassen in je dagelijks leven?"}
+  ],
+  "ademhalingsoefening": [
+    {"type": "header", "text": "Ademhalingsoefening Log"},
+    {"type": "date", "label": "Datum"},
+    {"type": "time", "label": "Tijdstip"},
+    {"type": "number", "label": "Duur (minuten)", "min": 1},
+    {"type": "dropdown", "label": "Type ademhalingsoefening", "options": ["Buikademhaling", "4-7-8 Ademhaling", "Alternatieve neusgat ademhaling", "Box breathing", "Verlengde uitademing", "Andere"]},
+    {"type": "textarea", "label": "Beschrijving oefening", "placeholder": "Als je 'Andere' hebt gekozen, beschrijf dan de gebruikte ademhalingstechniek"},
+    {"type": "rating", "label": "Stressniveau voor de oefening", "max": 10},
+    {"type": "rating", "label": "Stressniveau na de oefening", "max": 10},
+    {"type": "textarea", "label": "Fysieke effecten", "placeholder": "Beschrijf de fysieke effecten die je opmerkte (bijv. ontspanning, verandering in hartslag)"},
+    {"type": "textarea", "label": "Mentale effecten", "placeholder": "Beschrijf de mentale effecten die je ervaarde (bijv. kalmte, helderheid)"},
+    {"type": "textarea", "label": "Moeilijkheden", "placeholder": "Beschrijf eventuele moeilijkheden die je tegenkwam tijdens de oefening"},
+    {"type": "textarea", "label": "Algemene ervaring", "placeholder": "Beschrijf je algemene ervaring met de ademhalingsoefening"},
+    {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe zou je deze techniek kunnen toepassen in stressvolle situaties?"}
+  ],
+  "mindfulness-dagboek": [
+    {"type": "header", "text": "Mindfulness Dagboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Mindful moment", "placeholder": "Beschrijf een moment waarop je vandaag bewust aanwezig was"},
+    {"type": "textarea", "label": "Zintuiglijke waarnemingen", "placeholder": "Noteer vijf dingen die je vandaag hebt gezien, gehoord, gevoeld, geroken of geproefd"},
+    {"type": "textarea", "label": "Gedachtenpatronen", "placeholder": "Welke gedachtenpatronen heb je vandaag opgemerkt?"},
+    {"type": "textarea", "label": "Emoties", "placeholder": "Welke emoties heb je vandaag ervaren en hoe ging je ermee om?"},
+    {"type": "textarea", "label": "Dankbaarheid", "placeholder": "Noem drie dingen waarvoor je vandaag dankbaar bent"},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je vandaag geleerd over jezelf of je omgeving?"},
+    {"type": "textarea", "label": "Intentie voor morgen", "placeholder": "Wat is je mindfulness-intentie voor morgen?"}
+  ],
+  "meditatie-voortgang": [
+    {"type": "header", "text": "Meditatie Voortgangslogboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "number", "label": "Aantal meditaties deze week"},
+    {"type": "number", "label": "Totale meditatie-tijd deze week (minuten)"},
+    {"type": "rating", "label": "Algemeen ontspanningsniveau deze week", "max": 10},
+    {"type": "rating", "label": "Algemeen stressniveau deze week", "max": 10},
+    {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen in je meditatiepraktijk deze week?"},
+    {"type": "textarea", "label": "Successen", "placeholder": "Welke successen heb je ervaren in je meditatiepraktijk deze week?"},
+    {"type": "textarea", "label": "Effecten in het dagelijks leven", "placeholder": "Welke effecten merk je van je meditatiepraktijk in je dagelijks leven?"},
+    {"type": "textarea", "label": "Doelen voor volgende week", "placeholder": "Wat zijn je meditatie-doelen voor de komende week?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Algemene reflectie op je meditatiepraktijk en vooruitgang"}
+  ]
+}

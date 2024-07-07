@@ -1,8 +1,50 @@
 {
-    "dagboekVANDE2": [
-        {"type": "header", "text": "Dagboek"},
-        {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Beschrijf je dag", "placeholder": "Schrijf hier over je dag"},
-        {"type": "rating", "label": "Hoe voelde je je?", "max": 10}
-    ]
+  // ... (previous templates remain unchanged)
+
+  "dagboekVANDE2": [
+    {"type": "title", "text": "Uitgebreid Dagboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Beschrijf je dag", "placeholder": "Schrijf hier over je dag"},
+    {"type": "rating", "label": "Algemene stemming", "max": 10},
+    {"type": "textarea", "label": "Positieve ervaringen", "placeholder": "Beschrijf positieve ervaringen van vandaag"},
+    {"type": "textarea", "label": "Uitdagingen", "placeholder": "Beschrijf uitdagingen die je vandaag tegenkwam"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Noteer belangrijke gedachten van vandaag"},
+    {"type": "textarea", "label": "Gevoelens", "placeholder": "Beschrijf je belangrijkste gevoelens van vandaag"},
+    {"type": "checkbox", "label": "Activiteiten", "options": [
+      "Werk/studie", "Sociaal contact", "Hobby's", "Lichaamsbeweging", "Ontspanning", "Huishoudelijke taken"
+    ]},
+    {"type": "textarea", "label": "Zelfzorg", "placeholder": "Welke zelfzorgactiviteiten heb je vandaag gedaan?"},
+    {"type": "textarea", "label": "Dankbaarheid", "placeholder": "Waar ben je vandaag dankbaar voor?"},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je vandaag geleerd?"},
+    {"type": "textarea", "label": "Doelen voor morgen", "placeholder": "Wat wil je morgen bereiken?"}
+  ],
+
+  "weekoverzicht": [
+    {"type": "title", "text": "Weekoverzicht"},
+    {"type": "date", "label": "Week van"},
+    {"type": "textarea", "label": "Hoogtepunten", "placeholder": "Wat waren de hoogtepunten van deze week?"},
+    {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je deze week tegen?"},
+    {"type": "rating", "label": "Algemene stemming deze week", "max": 10},
+    {"type": "textarea", "label": "Belangrijkste prestaties", "placeholder": "Wat heb je deze week bereikt?"},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je deze week geleerd?"},
+    {"type": "textarea", "label": "Zelfzorg", "placeholder": "Hoe heb je deze week voor jezelf gezorgd?"},
+    {"type": "textarea", "label": "Sociale interacties", "placeholder": "Hoe waren je sociale interacties deze week?"},
+    {"type": "textarea", "label": "Doelen voor volgende week", "placeholder": "Wat wil je volgende week bereiken?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Algemene reflectie op de afgelopen week"}
+  ],
+
+  "stresslogboek": [
+    {"type": "title", "text": "Stresslogboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "time", "label": "Tijdstip"},
+    {"type": "textarea", "label": "Stressvolle situatie", "placeholder": "Beschrijf de stressvolle situatie"},
+    {"type": "rating", "label": "Stressniveau", "max": 10},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten had je tijdens deze situatie?"},
+    {"type": "textarea", "label": "Gevoelens", "placeholder": "Welke gevoelens ervaarde je?"},
+    {"type": "textarea", "label": "Lichamelijke reacties", "placeholder": "Welke lichamelijke reacties merkte je op?"},
+    {"type": "textarea", "label": "Coping strategieën", "placeholder": "Hoe ben je met de situatie omgegaan?"},
+    {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van je aanpak?"},
+    {"type": "textarea", "label": "Alternatieve aanpak", "placeholder": "Hoe zou je de situatie anders kunnen aanpakken in de toekomst?"},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je geleerd van deze ervaring?"}
+  ]
 }
