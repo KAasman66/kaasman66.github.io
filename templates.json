@@ -1,6 +1,6 @@
 {
   "zelfzorg-checklist": [
-    {"type": "title", "text": "Zelfzorg Checklist"},
+    {"type": "header", "text": "Zelfzorg Checklist"},
     {"type": "date", "label": "Datum"},
     {"type": "checkbox", "label": "Fysieke zelfzorg", "options": [
       "Voldoende slaap (7-9 uur)",
@@ -36,7 +36,7 @@
   ],
 
   "angst-hierarchie": [
-    {"type": "title", "text": "Angst Hiërarchie"},
+    {"type": "header", "text": "Angst Hiërarchie"},
     {"type": "textarea", "label": "Angst of fobie", "placeholder": "Beschrijf de specifieke angst of fobie"},
     {"type": "textarea", "label": "Trigger", "placeholder": "Wat triggert deze angst?"},
     {"type": "textarea", "label": "Minst angstige situatie (0-10)", "placeholder": "Beschrijf een situatie die minimale angst oproept"},
@@ -53,7 +53,7 @@
   ],
 
   "slaaphygiene-tracker": [
-    {"type": "title", "text": "Slaaphygiëne Tracker"},
+    {"type": "header", "text": "Slaaphygiëne Tracker"},
     {"type": "date", "label": "Datum"},
     {"type": "time", "label": "Bedtijd"},
     {"type": "time", "label": "Inslaaptijd (geschat)"},
@@ -80,7 +80,7 @@
   ],
 
   "zintuigelijke-bewustwording": [
-    {"type": "title", "text": "Zintuigelijke Bewustwording Oefening"},
+    {"type": "header", "text": "Zintuigelijke Bewustwording Oefening"},
     {"type": "textarea", "label": "Omgeving", "placeholder": "Beschrijf kort je huidige omgeving"},
     {"type": "textarea", "label": "5 dingen die je ziet", "placeholder": "Beschrijf 5 dingen die je op dit moment kunt zien"},
     {"type": "textarea", "label": "4 dingen die je kunt aanraken", "placeholder": "Beschrijf 4 dingen die je kunt aanraken of voelen"},
@@ -95,7 +95,7 @@
   ],
 
   "interpersoonlijke-effectiviteit": [
-    {"type": "title", "text": "Interpersoonlijke Effectiviteit Dagboek"},
+    {"type": "header", "text": "Interpersoonlijke Effectiviteit Dagboek"},
     {"type": "date", "label": "Datum"},
     {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de interpersoonlijke situatie"},
     {"type": "textarea", "label": "Betrokken personen", "placeholder": "Wie waren er betrokken bij deze situatie?"},
@@ -132,7 +132,7 @@
   ],
 
   "activiteitenplanning": [
-    {"type": "title", "text": "Activiteitenplanning"},
+    {"type": "header", "text": "Activiteitenplanning"},
     {"type": "date", "label": "Datum"},
     {"type": "textarea", "label": "Geplande Activiteiten", "placeholder": "Lijst van geplande activiteiten"},
     {"type": "textarea", "label": "Uitgevoerde Activiteiten", "placeholder": "Lijst van uitgevoerde activiteiten"},
@@ -142,7 +142,7 @@
   ],
 
   "stemmingsmeter": [
-    {"type": "title", "text": "Stemmingsmeter"},
+    {"type": "header", "text": "Stemmingsmeter"},
     {"type": "date", "label": "Datum"},
     {"type": "rating", "label": "Stemming", "max": 10},
     {"type": "textarea", "label": "Beschrijving Stemming", "placeholder": "Beschrijf je stemming in een paar woorden"},
@@ -158,7 +158,7 @@
   ],
 
   "sft-schema": [
-    {"type": "title", "text": "Schemagerichte Therapie (SFT) Schema"},
+    {"type": "header", "text": "Schemagerichte Therapie (SFT) Schema"},
     {"type": "textarea", "label": "Schema Naam", "placeholder": "Naam van het schema"},
     {"type": "textarea", "label": "Beschrijving", "placeholder": "Beschrijving van het schema"},
     {"type": "textarea", "label": "Ontstaan", "placeholder": "Hoe is dit schema ontstaan?"},
@@ -171,7 +171,7 @@
   ],
 
   "act-waardenoefening": [
-    {"type": "title", "text": "ACT Waardenoefening"},
+    {"type": "header", "text": "ACT Waardenoefening"},
     {"type": "textarea", "label": "Waarden", "placeholder": "Beschrijf je belangrijkste waarden"},
     {"type": "textarea", "label": "Acties", "placeholder": "Acties in lijn met je waarden"},
     {"type": "textarea", "label": "Obstakels", "placeholder": "Welke obstakels ervaar je bij het naleven van je waarden?"},
@@ -179,4 +179,5 @@
     {"type": "textarea", "label": "Bereidheid", "placeholder": "Wat ben je bereid te voelen om je waarden na te leven?"},
     {"type": "textarea", "label": "Toegewijde Actie", "placeholder": "Welke concrete stappen ga je zetten?"},
     {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op je acties en vooruitgang"}
-  ],
+  ]
+}
