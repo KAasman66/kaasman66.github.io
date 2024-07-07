@@ -1,0 +1,8 @@
+{
+    "dagboekVANDE2": [
+        {"type": "header", "text": "Dagboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Beschrijf je dag", "placeholder": "Schrijf hier over je dag"},
+        {"type": "rating", "label": "Hoe voelde je je?", "max": 10}
+    ]
+}

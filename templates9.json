@@ -1,0 +1,68 @@
+{
+ 
+  "activiteitenplanning": [
+    {"type": "title", "text": "Activiteitenplanning"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Geplande activiteiten", "placeholder": "Lijst van geplande activiteiten"},
+    {"type": "textarea", "label": "Uitgevoerde activiteiten", "placeholder": "Lijst van uitgevoerde activiteiten"}
+  ],
+  "stemmingsmeter": [
+    {"type": "title", "text": "Stemmingsmeter"},
+    {"type": "date", "label": "Datum"},
+    {"type": "rating", "label": "Stemming", "max": 10}
+  ],
+  "sft-schema": [
+    {"type": "title", "text": "SFT Schema"},
+    {"type": "textarea", "label": "Schema Naam", "placeholder": "Naam van het schema"},
+    {"type": "textarea", "label": "Beschrijving", "placeholder": "Beschrijving van het schema"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Acties om het schema te doorbreken"}
+  ],
+  "act-waardenoefening": [
+    {"type": "title", "text": "ACT Waardenoefening"},
+    {"type": "textarea", "label": "Waarden", "placeholder": "Beschrijf je waarden"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Acties in lijn met je waarden"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op je acties"}
+  ],
+  "crisisplan": [
+    {"type": "title", "text": "Crisisplan"},
+    {"type": "textarea", "label": "Waarschuwingssignalen", "placeholder": "Signalen dat het niet goed gaat"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Acties die je kunt nemen"},
+    {"type": "textarea", "label": "Contactpersonen", "placeholder": "Personen die je kunt contacteren"}
+  ],
+  "gedragsactivatie": [
+    {"type": "title", "text": "Gedragsactivatie"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Activiteiten", "placeholder": "Lijst van geplande activiteiten"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Reflectie op de uitgevoerde activiteiten"}
+  ],
+  "exposure-oefening": [
+    {"type": "title", "text": "Exposure Oefening"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie"},
+    {"type": "textarea", "label": "Gedachten en gevoelens", "placeholder": "Noteer je gedachten en gevoelens"},
+    {"type": "textarea", "label": "Resultaten", "placeholder": "Resultaten van de oefening"}
+  ],
+  "relatiediagram": [
+    {"type": "title", "text": "Relatiediagram"},
+    {"type": "textarea", "label": "Relaties", "placeholder": "Beschrijf je relaties"},
+    {"type": "textarea", "label": "Positieve aspecten", "placeholder": "Positieve aspecten van de relaties"},
+    {"type": "textarea", "label": "Negatieve aspecten", "placeholder": "Negatieve aspecten van de relaties"}
+  ],
+  "probleemoplossing": [
+    {"type": "title", "text": "Probleemoplossing"},
+    {"type": "textarea", "label": "Probleem", "placeholder": "Beschrijf het probleem"},
+    {"type": "textarea", "label": "Oplossingen", "placeholder": "Lijst van mogelijke oplossingen"},
+    {"type": "textarea", "label": "Actieplan", "placeholder": "Actieplan voor de gekozen oplossing"}
+  ],
+  "dagboek": [
+    {"type": "title", "text": "Dagboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Wat ging er goed?", "placeholder": "Beschrijf wat er goed ging vandaag"},
+    {"type": "textarea", "label": "Wat ging er minder goed?", "placeholder": "Beschrijf wat er minder goed ging vandaag"}
+  ],
+  "doelenstellen": [
+    {"type": "title", "text": "Doelenstellen"},
+    {"type": "textarea", "label": "Doel", "placeholder": "Beschrijf je doel"},
+    {"type": "textarea", "label": "Stappen", "placeholder": "Beschrijf de stappen om je doel te bereiken"},
+    {"type": "textarea", "label": "Tijdslijn", "placeholder": "Beschrijf de tijdslijn voor je doel"}
+  ]
+}

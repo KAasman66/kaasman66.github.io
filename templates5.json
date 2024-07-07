@@ -1,0 +1,48 @@
+{
+    "werken_met_lvb": [
+        {"type": "header", "text": "Werken met LVB"},
+        {"type": "textarea", "label": "Probleembeschrijving", "placeholder": "Beschrijf het probleem van de cliënt"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf de behandelingsdoelen"},
+        {"type": "textarea", "label": "Interventies", "placeholder": "Beschrijf de toegepaste interventies"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Beschrijf de resultaten van de interventies"}
+    ],
+    "jongerenbegeleiding": [
+        {"type": "header", "text": "Jongerenbegeleiding"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de huidige situatie van de jongere"},
+        {"type": "textarea", "label": "Gedrag", "placeholder": "Beschrijf het gedrag van de jongere"},
+        {"type": "textarea", "label": "Interventies", "placeholder": "Beschrijf de toegepaste interventies"},
+        {"type": "textarea", "label": "Evaluatie", "placeholder": "Beschrijf de evaluatie van de interventies"}
+    ],
+    "fact_formulier": [
+        {"type": "header", "text": "FACT Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie van de cliënt"},
+        {"type": "textarea", "label": "Plan van aanpak", "placeholder": "Beschrijf het plan van aanpak"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf de voortgang"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Beschrijf de genomen acties"},
+        {"type": "textarea", "label": "Evaluatie", "placeholder": "Beschrijf de evaluatie van de acties"}
+    ],
+    "crisis_interventie": [
+        {"type": "header", "text": "Crisis Interventie"},
+        {"type": "date", "label": "Datum en tijd"},
+        {"type": "textarea", "label": "Beschrijving van de crisis", "placeholder": "Beschrijf de crisis"},
+        {"type": "textarea", "label": "Interventies", "placeholder": "Beschrijf de toegepaste interventies"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Beschrijf de resultaten van de interventies"},
+        {"type": "textarea", "label": "Vervolgacties", "placeholder": "Beschrijf de vervolgacties"}
+    ],
+    "behandelplan": [
+        {"type": "header", "text": "Behandelplan"},
+        {"type": "textarea", "label": "Probleembeschrijving", "placeholder": "Beschrijf het probleem van de cliënt"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf de behandelingsdoelen"},
+        {"type": "textarea", "label": "Behandelingen", "placeholder": "Beschrijf de behandelingen"},
+        {"type": "textarea", "label": "Evaluatie", "placeholder": "Beschrijf de evaluatie van de behandelingen"},
+        {"type": "textarea", "label": "Aanpassingen", "placeholder": "Beschrijf eventuele aanpassingen in het behandelplan"}
+    ],
+    "dagboek_van_emoties": [
+        {"type": "header", "text": "Dagboek van Emoties"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Emoties ervaren", "placeholder": "Beschrijf de emoties die je hebt ervaren"},
+        {"type": "textarea", "label": "Oorzaken of triggers", "placeholder": "Beschrijf de oorzaken of triggers van deze emoties"},
+        {"type": "textarea", "label": "Reacties en copingstrategieën", "placeholder": "Beschrijf je reacties en de copingstrategieën die je hebt gebruikt"}
+    ]
+}

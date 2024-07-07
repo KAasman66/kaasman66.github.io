@@ -1,0 +1,46 @@
+{
+  "zelfzorg-checklist": [
+    {"type": "header", "text": "Zelfzorg Checklist"},
+    {"type": "date", "label": "Datum"},
+    {"type": "checkbox", "label": "Fysieke zelfzorg", "options": ["Voldoende slaap", "Gezond eten", "Beweging", "Persoonlijke hygiëne"]},
+    {"type": "checkbox", "label": "Emotionele zelfzorg", "options": ["Tijd voor ontspanning", "Sociale contacten", "Creatieve activiteit", "Mindfulness beoefening"]},
+    {"type": "checkbox", "label": "Mentale zelfzorg", "options": ["Lezen", "Nieuwe vaardigheid leren", "Puzzel of spel spelen", "Reflectie of journaling"]},
+    {"type": "textarea", "label": "Andere zelfzorgactiviteiten", "placeholder": "Welke andere zelfzorgactiviteiten heb je gedaan?"}
+  ],
+  "angst-hierarchie": [
+    {"type": "header", "text": "Angst Hiërarchie"},
+    {"type": "textarea", "label": "Angst of fobie", "placeholder": "Beschrijf de angst of fobie"},
+    {"type": "textarea", "label": "Minst angstige situatie", "placeholder": "Beschrijf de minst angstige situatie (0-10)"},
+    {"type": "textarea", "label": "Matig angstige situatie", "placeholder": "Beschrijf een matig angstige situatie (30-40)"},
+    {"type": "textarea", "label": "Zeer angstige situatie", "placeholder": "Beschrijf een zeer angstige situatie (60-70)"},
+    {"type": "textarea", "label": "Meest angstige situatie", "placeholder": "Beschrijf de meest angstige situatie (90-100)"}
+  ],
+  "slaaphygiene-tracker": [
+    {"type": "header", "text": "Slaaphygiëne Tracker"},
+    {"type": "date", "label": "Datum"},
+    {"type": "time", "label": "Bedtijd"},
+    {"type": "time", "label": "Opsta tijd"},
+    {"type": "number", "label": "Uren geslapen", "min": 0, "max": 24},
+    {"type": "checkbox", "label": "Slaaphygiëne routine", "options": ["Geen cafeïne na 14:00", "Geen schermtijd 1 uur voor bed", "Ontspanningsoefening voor het slapen", "Consistente slaap-waak cyclus"]},
+    {"type": "textarea", "label": "Slaapkwaliteit", "placeholder": "Hoe was je slaapkwaliteit? Wat beïnvloedde je slaap?"}
+  ],
+  "zintuigelijke-bewustwording": [
+    {"type": "header", "text": "Zintuigelijke Bewustwording Oefening"},
+    {"type": "textarea", "label": "5 dingen die je ziet", "placeholder": "Beschrijf 5 dingen die je op dit moment kunt zien"},
+    {"type": "textarea", "label": "4 dingen die je kunt aanraken", "placeholder": "Beschrijf 4 dingen die je kunt aanraken of voelen"},
+    {"type": "textarea", "label": "3 dingen die je hoort", "placeholder": "Beschrijf 3 geluiden die je kunt horen"},
+    {"type": "textarea", "label": "2 dingen die je ruikt", "placeholder": "Beschrijf 2 geuren die je kunt ruiken"},
+    {"type": "textarea", "label": "1 ding dat je proeft", "placeholder": "Beschrijf 1 smaak die je kunt proeven"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe voel je je na deze oefening?"}
+  ],
+  "interpersoonlijke-effectiviteit": [
+    {"type": "header", "text": "Interpersoonlijke Effectiviteit Dagboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de interpersoonlijke situatie"},
+    {"type": "textarea", "label": "Doel", "placeholder": "Wat was je doel in deze situatie?"},
+    {"type": "textarea", "label": "DEAR MAN vaardigheden", "placeholder": "Welke DEAR MAN vaardigheden heb je gebruikt?"},
+    {"type": "textarea", "label": "GIVE vaardigheden", "placeholder": "Welke GIVE vaardigheden heb je toegepast?"},
+    {"type": "textarea", "label": "FAST vaardigheden", "placeholder": "Hoe heb je de FAST principes toegepast?"},
+    {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de interactie?"}
+  ]
+}

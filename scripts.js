@@ -1,203 +1,266 @@
+let templates = {};
 
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-const bpm = 117;
-const beatDuration = 60 / bpm;
-const measuresPerLoop = 8;
-const beatsPerMeasure = 4;
-const loopDuration = beatDuration * beatsPerMeasure * measuresPerLoop;
+function loadExternalTemplates() {
+    const templateFiles = [
+        'templates.json',
+        'templates1.json',
+        'templates2.json',
+        'templates3.json',
+        'templates4.json',
+        'templates5.json',
+        'templates6.json',
+        'templates7.json',
+        'templates8.json',
+        'templates9.json',
+        'templates10.json',
+        'templates11.json',
+        'templates12.json',
+        'templates13.json',
+        'templates14.json',
+        'templates15.json',
+        'templates16.json',
+        'templates17.json',
+        'templates18.json',
+        'templates19.json',
+        'templates20.json',
+        'templates21.json',
+        'templates22.json',
+        'templates23.json',
+        'templates24.json'
+    ];
 
-let tracks = {};
-let isRunning = false;
-let nextLoopStartTime = 0;
-let currentBeat = 0;
-
-function createSilentAnchor() {
-    const buffer = audioContext.createBuffer(1, audioContext.sampleRate * loopDuration, audioContext.sampleRate);
-    const source = audioContext.createBufferSource();
-    source.buffer = buffer;
-    source.loop = true;
-    source.connect(audioContext.destination);
-    return source;
+    Promise.all(templateFiles.map(file => fetch(file).then(response => response.ok ? response.json() : {}).catch(() => {})))
+        .then(dataArray => {
+            dataArray.forEach(data => {
+                if (data) {
+                    templates = { ...templates, ...data };
+                }
+            });
+            updateTemplateSelect();
+        })
+        .catch(error => console.error('Error loading templates:', error));
 }
 
-let anchorTrack = createSilentAnchor();
-
-async function loadAudio(url) {
-    const response = await fetch(url);
-    const arrayBuffer = await response.arrayBuffer();
-    return await audioContext.decodeAudioData(arrayBuffer);
-}
-
-function scheduleTrack(track) {
-    const source = audioContext.createBufferSource();
-    source.buffer = track.buffer;
-    source.loop = true;
-    source.connect(audioContext.destination);
-    
-    const startTime = nextLoopStartTime;
-    source.start(startTime);
-    
-    track.source = source;
-    track.startTime = startTime;
-    track.status = 'playing';
-    
-    logToConsole(`Track ${track.name} scheduled to start at ${startTime.toFixed(2)}`);
-}
-
-function stopTrack(track) {
-    if (track.source) {
-        track.source.stop();
-        track.source = null;
-        track.status = 'stopped';
-        logToConsole(`Track ${track.name} stopped`);
-    }
-}
-
-function toggleTrack(trackName) {
-    if (!isRunning) startApp();
-    
-    const track = tracks[trackName];
-    if (track.status === 'playing' || track.status === 'waiting') {
-        stopTrack(track);
-    } else {
-        track.status = 'waiting';
-        updateCountdown(track);
-    }
-    updateUI(trackName);
-}
-
-function updateUI(trackName) {
-    const element = document.querySelector(`.instrument[data-sound$="${trackName}.mp3"]`);
-    const icon = element.querySelector('.icon');
-    const countdown = element.querySelector('.countdown');
-    
-    icon.classList.remove('pulsate', 'hovering');
-    countdown.textContent = '';
-
-    switch (tracks[trackName].status) {
-        case 'playing':
-            icon.classList.add('pulsate');
+function createFormElement(element) {
+    let html = `<div class="form-element draggable">`;
+    switch (element.type) {
+        case 'header':
+            html += `<h2 class="editable">${element.text}</h2>`;
             break;
-        case 'waiting':
-            icon.classList.add('hovering');
+        case 'paragraph':
+            html += `<p class="editable">${element.text}</p>`;
+            break;
+        case 'textarea':
+            html += `<label class="editable">${element.label}</label><textarea placeholder="${element.placeholder}"></textarea>`;
+            break;
+        case 'checkbox':
+            html += `<label class="editable">${element.label}</label><div class="checkbox-group">`;
+            element.options.forEach(option => {
+                html += `<div class="checkbox-item"><input type="checkbox"><span class="editable">${option}</span></div>`;
+            });
+            html += `</div>`;
+            break;
+        case 'radio':
+            html += `<label class="editable">${element.label}</label><div class="radio-group">`;
+            element.options.forEach(option => {
+                html += `<div class="radio-item"><input type="radio" name="${element.label}"><span class="editable">${option}</span></div>`;
+            });
+            html += `</div>`;
+            break;
+        case 'date':
+            html += `<label class="editable">${element.label}</label><input type="date">`;
+            break;
+        case 'rating':
+            html += `<label class="editable">${element.label}</label><div class="rating-group">`;
+            for (let i = 1; i <= element.max; i++) {
+                html += `<input type="radio" name="${element.label}" value="${i}">${i}`;
+            }
+            html += `</div>`;
+            break;
+        case 'number':
+            html += `<label class="editable">${element.label}</label><input type="number" min="${element.min}" max="${element.max}">`;
+            break;
+        default:
             break;
     }
+    html += `<span class="edit-icon">✏️</span></div>`;
+    return html;
 }
 
-function updateCountdown(track) {
-    const timeUntilStart = nextLoopStartTime - audioContext.currentTime;
-    const element = document.querySelector(`.instrument[data-sound$="${track.name}.mp3"]`);
-    const countdown = element.querySelector('.countdown');
-    
-    if (timeUntilStart > 0) {
-        countdown.textContent = timeUntilStart.toFixed(1);
-        requestAnimationFrame(() => updateCountdown(track));
-    } else {
-        countdown.textContent = '';
-        scheduleTrack(track);
-        updateUI(track.name);
+function addTextField() {
+    const fieldName = prompt("Geef een naam voor het tekstveld:");
+    if (fieldName) {
+        const placeholder = prompt("Geef een placeholder tekst (optioneel):");
+        const element = { type: 'textarea', label: fieldName, placeholder: placeholder || '' };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
     }
 }
 
-async function initializeApp() {
-    const instruments = document.querySelectorAll('.instrument');
-    for (const inst of instruments) {
-        const soundUrl = inst.dataset.sound;
-        const trackName = soundUrl.split('/')[1].split('.')[0];
-        
-        tracks[trackName] = {
-            name: trackName,
-            buffer: await loadAudio(soundUrl),
-            status: 'stopped',
-            source: null,
-            startTime: 0
-        };
-
-        inst.addEventListener('click', () => toggleTrack(trackName));
-        updateUI(trackName);
-    }
-
-    document.getElementById('stop').addEventListener('click', stopApp);
-
-    logToConsole(`Program created at: ${new Date().toLocaleString()}`);
-}
-
-function startApp() {
-    if (isRunning) return;
-    
-    audioContext.resume();
-    nextLoopStartTime = audioContext.currentTime;
-    anchorTrack.start(nextLoopStartTime);
-    isRunning = true;
-    
-    document.getElementById('stop').disabled = false;
-    
-    updateNextLoopStartTime();
-    updateBeatCounter();
-    logToConsole("App started");
-}
-
-function stopApp() {
-    anchorTrack.stop();
-    Object.values(tracks).forEach(stopTrack);
-    isRunning = false;
-    
-    document.getElementById('stop').disabled = true;
-    
-    Object.keys(tracks).forEach(updateUI);
-    logToConsole("App stopped");
-
-    currentBeat = 0;
-    updateBeatCounter();
-    updateMeasureIndicator();
-}
-
-function updateNextLoopStartTime() {
-    nextLoopStartTime += loopDuration;
-    setTimeout(updateNextLoopStartTime, (nextLoopStartTime - audioContext.currentTime) * 1000);
-}
-
-function updateBeatCounter() {
-    if (!isRunning) return;
-
-    currentBeat = (currentBeat % 8) + 1;
-    const beatCounter = document.querySelector('.beat-counter');
-    beatCounter.textContent = currentBeat;
-    beatCounter.style.opacity = 1;
-    beatCounter.style.transform = 'translate(-50%, -50%) scale(1.2)';
-
-    updateMeasureIndicator();
-
-    setTimeout(() => {
-        beatCounter.style.opacity = 0;
-        beatCounter.style.transform = 'translate(-50%, -50%) scale(1)';
-    }, beatDuration * 1000 / 2);
-
-    setTimeout(updateBeatCounter, beatDuration * 1000);
-}
-
-function updateMeasureIndicator() {
-    const dots = document.querySelectorAll('.measure-indicator .dot');
-    dots.forEach((dot, index) => {
-        if (index === currentBeat - 1) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
+function addCheckboxGroup() {
+    const groupName = prompt("Geef een naam voor de groep afvinkvakjes:");
+    if (groupName) {
+        const options = [];
+        while (true) {
+            const option = prompt(`Geef optie ${options.length + 1} (of laat leeg om te stoppen):`);
+            if (!option) break;
+            options.push(option);
         }
+        const element = { type: 'checkbox', label: groupName, options: options };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addRadioGroup() {
+    const groupName = prompt("Geef een naam voor de groep keuzerondjes:");
+    if (groupName) {
+        const options = [];
+        while (true) {
+            const option = prompt(`Geef optie ${options.length + 1} (of laat leeg om te stoppen):`);
+            if (!option) break;
+            options.push(option);
+        }
+        const element = { type: 'radio', label: groupName, options: options };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addDateField() {
+    const fieldName = prompt("Geef een naam voor het datumveld:");
+    if (fieldName) {
+        const element = { type: 'date', label: fieldName };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addRatingScale() {
+    const fieldName = prompt("Geef een naam voor de beoordelingsschaal:");
+    if (fieldName) {
+        const max = prompt("Geef het maximum aantal punten voor de schaal:");
+        const element = { type: 'rating', label: fieldName, max: parseInt(max) || 5 };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addHeader() {
+    const text = prompt("Geef de tekst voor de koptekst:");
+    if (text) {
+        const element = { type: 'header', text: text };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addParagraph() {
+    const text = prompt("Geef de tekst voor de paragraaf:");
+    if (text) {
+        const element = { type: 'paragraph', text: text };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function addNumberField() {
+    const fieldName = prompt("Geef een naam voor het numerieke veld:");
+    if (fieldName) {
+        const min = prompt("Geef het minimum aantal (optioneel):");
+        const max = prompt("Geef het maximum aantal (optioneel):");
+        const element = { type: 'number', label: fieldName, min: min || '', max: max || '' };
+        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
+        initSortable();
+        initEditable();
+    }
+}
+
+function printForm() {
+    window.print();
+}
+
+function initSortable() {
+    new Sortable(document.getElementById('formContent'), {
+        animation: 150,
+        ghostClass: 'blue-background-class'
     });
 }
 
-function logToConsole(message) {
-    const console = document.getElementById('console');
-    const logEntry = document.createElement('div');
-    logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
-    console.appendChild(logEntry);
-    console.scrollTop = console.scrollHeight;
+function initEditable() {
+    document.querySelectorAll('.edit-icon').forEach(el => {
+        el.addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.querySelectorAll('.edit-options').forEach(opt => opt.remove());
+            
+            const formElement = this.closest('.form-element');
+            const options = document.createElement('div');
+            options.className = 'edit-options';
+            options.innerHTML = `
+                <button onclick="editElementText(this)">Tekst aanpassen</button>
+                <button onclick="removeElement(this)">Verwijderen</button>
+            `;
+            formElement.appendChild(options);
+            options.style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.editable').forEach(el => {
+        el.addEventListener('dblclick', function() {
+            const newText = prompt("Pas de tekst aan:", this.textContent);
+            if (newText !== null) {
+                this.textContent = newText;
+            }
+        });
+    });
 }
 
-initializeApp();
+function editElementText(button) {
+    const formElement = button.closest('.form-element');
+    const editableElements = formElement.querySelectorAll('.editable');
+    editableElements.forEach(el => {
+        const newText = prompt("Pas de tekst aan:", el.textContent);
+        if (newText !== null) {
+            el.textContent = newText;
+        }
+    });
+    button.parentElement.remove();
+}
 
-// Set version number based on creation time
-const creationDate = new Date();
-const versionNumber = `${creationDate.getFullYear()}${(creationDate.getMonth() + 1).toString().padStart(2, '0')}${creationDate.getDate().toString().padStart(2, '0')}.${creationDate.getHours().toString().padStart(2, '0')}${creationDate.getMinutes().toString().padStart(2, '0')}`;
-document.getElementById('version').textContent = `Version: ${versionNumber}`;
+function removeElement(button) {
+    button.closest('.form-element').remove();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadExternalTemplates();
+    initSortable();
+    initEditable();
+});
+
+document.getElementById('templateSelect').addEventListener('change', function() {
+    const templateName = this.value;
+    const formContent = document.getElementById('formContent');
+    formContent.innerHTML = '';
+    if (templateName && templates[templateName]) {
+        templates[templateName].forEach(element => {
+            formContent.insertAdjacentHTML('beforeend', createFormElement(element));
+        });
+        initSortable();
+        initEditable();
+    }
+});
+
+function updateTemplateSelect() {
+    const select = document.getElementById('templateSelect');
+    select.innerHTML = '<option value="">Selecteer een template</option>';
+    for (const [key, value] of Object.entries(templates)) {
+        select.innerHTML += `<option value="${key}">${value[0].text}</option>`;
+    }
+}

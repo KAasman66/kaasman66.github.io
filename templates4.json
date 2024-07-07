@@ -1,0 +1,10 @@
+{
+  "lichaamsscan-meditatie": [
+    {"type": "header", "text": "Lichaamsscan Meditatie Log"},
+    {"type": "date", "label": "Datum"},
+    {"type": "time", "label": "Tijdstip"},
+    {"type": "number", "label": "Duur (minuten)", "min": 1},
+    {"type": "textarea", "label": "Fysieke gewaarwordingen", "placeholder": "Beschrijf de fysieke sensaties die je opmerkte"},
+    {"type": "textarea", "label": "Emotionele ervaring", "placeholder": "Beschrijf de emoties die opkwamen tijdens de oefening"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Noteer eventuele gedachten die je opvielen"},
+    {"type": "textarea", "label": "Algemene ervaring", "placeholder": "Hoe was je algemene ervaring met
