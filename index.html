@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -5,8 +6,7 @@
     <title>GGZ Formulier Generator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -16,28 +16,27 @@
             <button onclick="addTextField()">Tekstveld</button>
             <button onclick="addCheckboxGroup()">Afvinkvakjes</button>
             <button onclick="addRadioGroup()">Keuzerondjes</button>
-            <button onclick="addDateField()">Datumveld</button>
-            <button onclick="addRatingScale()">Beoordelingsschaal</button>
             <button onclick="addHeader()">Koptekst</button>
             <button onclick="addParagraph()">Paragraaf</button>
-            <button onclick="addNumberField()">Numeriek veld</button>
             <button onclick="printForm()">Formulier printen</button>
-            <div class="template-select">
-                <select id="templateSelect">
-                    <option value="">Selecteer een template</option>
-                </select>
-            </div>
+        </div>
+
+        <div class="controls">
+            <label for="templateDropdown">Selecteer een template:</label>
+            <select id="templateDropdown" name="templateDropdown">
+                <option value="">Kies een template</option>
+            </select>
         </div>
         
         <div id="formContainer">
             <div id="formContent"></div>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-    <script src="templates.js"></script>
-    <script src="form-elements.js"></script>
-    <script src="editable.js"></script>
-    <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+        <script src="form-elements.js"></script>
+        <script src="editable.js"></script>
+        <script src="script.js"></script>
+        <script src="main.js"></script>
+    </div>
 </body>
 </html>

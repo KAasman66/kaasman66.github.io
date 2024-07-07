@@ -1,0 +1,183 @@
+{
+  "zelfzorg-checklist": [
+    {"type": "header", "text": "Zelfzorg Checklist"},
+    {"type": "date", "label": "Datum"},
+    {"type": "checkbox", "label": "Fysieke zelfzorg", "options": [
+      "Voldoende slaap (7-9 uur)",
+      "Gezonde maaltijden",
+      "30+ minuten beweging",
+      "Water drinken (2L)",
+      "Persoonlijke hygiëne",
+      "Rustmomenten nemen",
+      "Buitenlucht en natuur"
+    ]},
+    {"type": "checkbox", "label": "Emotionele zelfzorg", "options": [
+      "Tijd voor ontspanning",
+      "Sociale interactie",
+      "Creatieve activiteit",
+      "Mindfulness of meditatie",
+      "Grenzen stellen",
+      "Emoties uiten",
+      "Zelfcompassie beoefenen"
+    ]},
+    {"type": "checkbox", "label": "Mentale zelfzorg", "options": [
+      "Lezen of leren",
+      "Hobby beoefenen",
+      "Schermtijd beperken",
+      "Journaling of reflectie",
+      "Positieve zelfspraak",
+      "Uitdagende taak voltooien",
+      "Nieuwsconsumptie beperken"
+    ]},
+    {"type": "textarea", "label": "Andere zelfzorgactiviteiten", "placeholder": "Welke andere zelfzorgactiviteiten heb je gedaan?"},
+    {"type": "rating", "label": "Algemeen welzijn vandaag", "max": 10},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe voel je je na het uitvoeren van deze zelfzorgactiviteiten?"},
+    {"type": "textarea", "label": "Verbeterpunten", "placeholder": "Welke aspecten van zelfzorg wil je verbeteren?"}
+  ],
+
+  "angst-hierarchie": [
+    {"type": "header", "text": "Angst Hiërarchie"},
+    {"type": "textarea", "label": "Angst of fobie", "placeholder": "Beschrijf de specifieke angst of fobie"},
+    {"type": "textarea", "label": "Trigger", "placeholder": "Wat triggert deze angst?"},
+    {"type": "textarea", "label": "Minst angstige situatie (0-10)", "placeholder": "Beschrijf een situatie die minimale angst oproept"},
+    {"type": "textarea", "label": "Licht angstige situatie (20-30)", "placeholder": "Beschrijf een situatie die lichte angst oproept"},
+    {"type": "textarea", "label": "Matig angstige situatie (40-50)", "placeholder": "Beschrijf een situatie die matige angst oproept"},
+    {"type": "textarea", "label": "Erg angstige situatie (60-70)", "placeholder": "Beschrijf een situatie die sterke angst oproept"},
+    {"type": "textarea", "label": "Zeer angstige situatie (80-90)", "placeholder": "Beschrijf een situatie die zeer sterke angst oproept"},
+    {"type": "textarea", "label": "Meest angstige situatie (100)", "placeholder": "Beschrijf de situatie die de meeste angst oproept"},
+    {"type": "textarea", "label": "Fysieke reacties", "placeholder": "Beschrijf de fysieke reacties die je ervaart bij deze angst"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten heb je bij deze angstige situaties?"},
+    {"type": "textarea", "label": "Vermijdingsgedrag", "placeholder": "Hoe vermijd je meestal deze situaties?"},
+    {"type": "textarea", "label": "Coping strategieën", "placeholder": "Beschrijf coping strategieën voor elk niveau van de hiërarchie"},
+    {"type": "textarea", "label": "Doelen", "placeholder": "Wat zijn je doelen met betrekking tot het overwinnen van deze angst?"}
+  ],
+
+  "slaaphygiene-tracker": [
+    {"type": "header", "text": "Slaaphygiëne Tracker"},
+    {"type": "date", "label": "Datum"},
+    {"type": "time", "label": "Bedtijd"},
+    {"type": "time", "label": "Inslaaptijd (geschat)"},
+    {"type": "time", "label": "Opsta tijd"},
+    {"type": "number", "label": "Uren geslapen", "min": 0, "max": 24},
+    {"type": "number", "label": "Aantal keer wakker geworden", "min": 0},
+    {"type": "checkbox", "label": "Slaaphygiëne routine", "options": [
+      "Consistente slaap-waak cyclus",
+      "Ontspannende bedtijd routine",
+      "Comfortabele slaapomgeving",
+      "Geen cafeïne na 14:00",
+      "Geen grote maaltijden voor het slapen",
+      "Geen alcohol voor het slapen",
+      "Geen schermtijd 1 uur voor bed",
+      "30+ minuten daglicht overdag",
+      "Beweging overdag",
+      "Slaapkamer alleen voor slapen en intimiteit gebruikt"
+    ]},
+    {"type": "rating", "label": "Slaapkwaliteit", "max": 10},
+    {"type": "textarea", "label": "Dromen", "placeholder": "Beschrijf eventuele dromen of nachtmerries"},
+    {"type": "textarea", "label": "Factoren die slaap beïnvloedden", "placeholder": "Welke factoren hebben je slaap beïnvloed? (stress, geluid, temperatuur, etc.)"},
+    {"type": "textarea", "label": "Ochtendgevoel", "placeholder": "Hoe voel je je bij het opstaan?"},
+    {"type": "textarea", "label": "Verbeterpunten", "placeholder": "Hoe kun je je slaaphygiëne verbeteren?"}
+  ],
+
+  "zintuigelijke-bewustwording": [
+    {"type": "header", "text": "Zintuigelijke Bewustwording Oefening"},
+    {"type": "textarea", "label": "Omgeving", "placeholder": "Beschrijf kort je huidige omgeving"},
+    {"type": "textarea", "label": "5 dingen die je ziet", "placeholder": "Beschrijf 5 dingen die je op dit moment kunt zien"},
+    {"type": "textarea", "label": "4 dingen die je kunt aanraken", "placeholder": "Beschrijf 4 dingen die je kunt aanraken of voelen"},
+    {"type": "textarea", "label": "3 dingen die je hoort", "placeholder": "Beschrijf 3 geluiden die je kunt horen"},
+    {"type": "textarea", "label": "2 dingen die je ruikt", "placeholder": "Beschrijf 2 geuren die je kunt ruiken"},
+    {"type": "textarea", "label": "1 ding dat je proeft", "placeholder": "Beschrijf 1 smaak die je kunt proeven"},
+    {"type": "textarea", "label": "Lichamelijke sensaties", "placeholder": "Beschrijf eventuele lichamelijke sensaties die je opmerkt"},
+    {"type": "rating", "label": "Mate van aanwezigheid", "max": 10},
+    {"type": "textarea", "label": "Emotionele staat", "placeholder": "Beschrijf je emotionele staat na deze oefening"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten merk je op tijdens en na de oefening?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe heeft deze oefening je bewustzijn beïnvloed?"}
+  ],
+
+  "interpersoonlijke-effectiviteit": [
+    {"type": "header", "text": "Interpersoonlijke Effectiviteit Dagboek"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de interpersoonlijke situatie"},
+    {"type": "textarea", "label": "Betrokken personen", "placeholder": "Wie waren er betrokken bij deze situatie?"},
+    {"type": "textarea", "label": "Doel", "placeholder": "Wat was je doel in deze situatie?"},
+    {"type": "textarea", "label": "DEAR MAN vaardigheden", "placeholder": "Welke DEAR MAN vaardigheden heb je gebruikt?"},
+    {"type": "checkbox", "label": "DEAR MAN componenten", "options": [
+      "Describe (Beschrijven)",
+      "Express (Uitdrukken)",
+      "Assert (Assertief zijn)",
+      "Reinforce (Bekrachtigen)",
+      "Mindful (Aandachtig zijn)",
+      "Appear confident (Zelfverzekerd overkomen)",
+      "Negotiate (Onderhandelen)"
+    ]},
+    {"type": "textarea", "label": "GIVE vaardigheden", "placeholder": "Welke GIVE vaardigheden heb je toegepast?"},
+    {"type": "checkbox", "label": "GIVE componenten", "options": [
+      "Gentle (Vriendelijk zijn)",
+      "Interested (Geïnteresseerd zijn)",
+      "Validate (Valideren)",
+      "Easy manner (Ontspannen houding)"
+    ]},
+    {"type": "textarea", "label": "FAST vaardigheden", "placeholder": "Hoe heb je de FAST principes toegepast?"},
+    {"type": "checkbox", "label": "FAST componenten", "options": [
+      "Fair (Eerlijk zijn)",
+      "Apologies (geen overmatige excuses)",
+      "Stick to values (Vasthouden aan waarden)",
+      "Truthful (Eerlijk zijn)"
+    ]},
+    {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen in deze interactie?"},
+    {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de interactie?"},
+    {"type": "rating", "label": "Effectiviteit", "max": 10},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je geleerd van deze interactie?"},
+    {"type": "textarea", "label": "Toekomstige aanpak", "placeholder": "Hoe zou je een vergelijkbare situatie in de toekomst aanpakken?"}
+  ],
+
+  "activiteitenplanning": [
+    {"type": "header", "text": "Activiteitenplanning"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Geplande Activiteiten", "placeholder": "Lijst van geplande activiteiten"},
+    {"type": "textarea", "label": "Uitgevoerde Activiteiten", "placeholder": "Lijst van uitgevoerde activiteiten"},
+    {"type": "rating", "label": "Tevredenheid met Uitvoering", "max": 10},
+    {"type": "textarea", "label": "Obstakels", "placeholder": "Welke obstakels kwam je tegen?"},
+    {"type": "textarea", "label": "Aanpassingen", "placeholder": "Welke aanpassingen kun je maken voor morgen?"}
+  ],
+
+  "stemmingsmeter": [
+    {"type": "header", "text": "Stemmingsmeter"},
+    {"type": "date", "label": "Datum"},
+    {"type": "rating", "label": "Stemming", "max": 10},
+    {"type": "textarea", "label": "Beschrijving Stemming", "placeholder": "Beschrijf je stemming in een paar woorden"},
+    {"type": "textarea", "label": "Factoren", "placeholder": "Welke factoren beïnvloedden je stemming vandaag?"},
+    {"type": "checkbox", "label": "Symptomen", "options": [
+      "Vermoeidheid",
+      "Prikkelbaarheid",
+      "Concentratieproblemen",
+      "Slaapproblemen",
+      "Eetproblemen",
+      "Andere"
+    ]}
+  ],
+
+  "sft-schema": [
+    {"type": "header", "text": "Schemagerichte Therapie (SFT) Schema"},
+    {"type": "textarea", "label": "Schema Naam", "placeholder": "Naam van het schema"},
+    {"type": "textarea", "label": "Beschrijving", "placeholder": "Beschrijving van het schema"},
+    {"type": "textarea", "label": "Ontstaan", "placeholder": "Hoe is dit schema ontstaan?"},
+    {"type": "textarea", "label": "Trigger Situaties", "placeholder": "Situaties die het schema activeren"},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Typische gedachten bij dit schema"},
+    {"type": "textarea", "label": "Gevoelens", "placeholder": "Gevoelens geassocieerd met dit schema"},
+    {"type": "textarea", "label": "Gedrag", "placeholder": "Typisch gedrag als reactie op dit schema"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Acties om het schema te doorbreken"},
+    {"type": "textarea", "label": "Gezond Alternatief", "placeholder": "Wat zou een gezond alternatief zijn voor dit schema?"}
+  ],
+
+  "act-waardenoefening": [
+    {"type": "header", "text": "ACT Waardenoefening"},
+    {"type": "textarea", "label": "Waarden", "placeholder": "Beschrijf je belangrijkste waarden"},
+    {"type": "textarea", "label": "Acties", "placeholder": "Acties in lijn met je waarden"},
+    {"type": "textarea", "label": "Obstakels", "placeholder": "Welke obstakels ervaar je bij het naleven van je waarden?"},
+    {"type": "textarea", "label": "Fusie met Gedachten", "placeholder": "Welke gedachten houden je tegen?"},
+    {"type": "textarea", "label": "Bereidheid", "placeholder": "Wat ben je bereid te voelen om je waarden na te leven?"},
+    {"type": "textarea", "label": "Toegewijde Actie", "placeholder": "Welke concrete stappen ga je zetten?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op je acties en vooruitgang"}
+  ]
+}
