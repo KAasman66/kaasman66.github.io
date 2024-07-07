@@ -158,9 +158,3 @@ function editElementText(button) {
 function removeElement(button) {
     button.closest('.form-element').remove();
 }
-
-function printForm() {
-    document.querySelectorAll('.edit-icon, .edit-options').forEach(el => el.style.display = 'none');
-    window.print();
-    document.querySelectorAll('.edit-icon, .edit-options').forEach(el => el.style.display = '');
-}

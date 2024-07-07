@@ -93,17 +93,6 @@ button:active {
     border: 2px solid #e0e0e0;
     border-radius: var(--border-radius);
     transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-}
-
-.form-element label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.form-element textarea, .form-element input {
-    flex: 1;
 }
 
 .form-element:hover {
@@ -128,7 +117,9 @@ button:active {
 }
 
 #formContainer {
-    width: 100%;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 40px auto;
     background-color: white;
     box-shadow: var(--box-shadow);
     overflow: hidden;
