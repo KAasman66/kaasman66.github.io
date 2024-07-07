@@ -1,68 +1,247 @@
 {
-  "waarden-verkenning": [
-    {"type": "header", "text": "Waarden Verkenning"},
-    {"type": "textarea", "label": "Relaties", "placeholder": "Wat zijn je waarden met betrekking tot relaties? (bijv. eerlijkheid, loyaliteit, communicatie)"},
-    {"type": "textarea", "label": "Werk/Opleiding", "placeholder": "Wat zijn je waarden met betrekking tot werk of opleiding? (bijv. groei, creativiteit, financiële stabiliteit)"},
-    {"type": "textarea", "label": "Persoonlijke groei", "placeholder": "Wat zijn je waarden met betrekking tot persoonlijke groei? (bijv. zelfkennis, uitdaging, leren)"},
-    {"type": "textarea", "label": "Vrije tijd", "placeholder": "Wat zijn je waarden met betrekking tot vrije tijd? (bijv. avontuur, ontspanning, creativiteit)"},
-    {"type": "textarea", "label": "Gezondheid", "placeholder": "Wat zijn je waarden met betrekking tot gezondheid? (bijv. vitaliteit, balans, zelfzorg)"},
-    {"type": "textarea", "label": "Gemeenschap", "placeholder": "Wat zijn je waarden met betrekking tot gemeenschap of maatschappij? (bijv. rechtvaardigheid, duurzaamheid, betrokkenheid)"},
-    {"type": "textarea", "label": "Spiritualiteit", "placeholder": "Wat zijn je waarden met betrekking tot spiritualiteit of levensbeschouwing? (bijv. verbondenheid, zingeving, contemplatie)"},
-    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe kun je deze waarden meer in je dagelijks leven integreren?"}
-  ],
-  "smart-doelen": [
-    {"type": "header", "text": "SMART Doelen Worksheet"},
-    {"type": "textarea", "label": "Specifiek", "placeholder": "Wat wil je precies bereiken? Wees zo concreet mogelijk."},
-    {"type": "textarea", "label": "Meetbaar", "placeholder": "Hoe ga je meten of je je doel hebt bereikt? Welke criteria gebruik je?"},
-    {"type": "textarea", "label": "Acceptabel", "placeholder": "Is dit doel acceptabel en aantrekkelijk voor je? Waarom wel of niet?"},
-    {"type": "textarea", "label": "Realistisch", "placeholder": "Is dit doel haalbaar gezien je huidige situatie? Welke middelen heb je nodig?"},
-    {"type": "textarea", "label": "Tijdgebonden", "placeholder": "Wanneer wil je dit doel bereikt hebben? Stel een specifieke deadline."},
-    {"type": "textarea", "label": "Actiestappen", "placeholder": "Welke concrete stappen ga je nemen om dit doel te bereiken? Maak een gedetailleerd actieplan."},
-    {"type": "textarea", "label": "Obstakels", "placeholder": "Welke mogelijke obstakels zie je? Hoe ga je hiermee om?"},
-    {"type": "textarea", "label": "Ondersteuning", "placeholder": "Wie of wat kan je ondersteunen bij het bereiken van dit doel?"},
-    {"type": "textarea", "label": "Motivatie", "placeholder": "Waarom is dit doel belangrijk voor je? Hoe past het bij je waarden?"}
-  ],
-  "terugvalpreventieplan": [
-    {"type": "header", "text": "Terugvalpreventieplan"},
-    {"type": "textarea", "label": "Waarschuwingssignalen", "placeholder": "Welke signalen (gedachten, gevoelens, gedrag) wijzen op een mogelijke terugval?"},
-    {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn je belangrijkste triggers (situaties, mensen, plaatsen)?"},
-    {"type": "textarea", "label": "Coping strategieën", "placeholder": "Welke gezonde coping strategieën kun je gebruiken? Wees specifiek."},
-    {"type": "textarea", "label": "Ondersteunend netwerk", "placeholder": "Wie kun je om hulp vragen? Maak een lijst met namen en contactgegevens."},
-    {"type": "textarea", "label": "Professionele hulp", "placeholder": "Welke professionele hulp kun je inschakelen indien nodig? Noteer contactgegevens."},
-    {"type": "textarea", "label": "Dagelijkse routine", "placeholder": "Welke dagelijkse gewoontes helpen je stabiel te blijven?"},
-    {"type": "textarea", "label": "Noodplan", "placeholder": "Wat is je plan voor acute crisissituaties?"},
-    {"type": "textarea", "label": "Positieve herinneringen", "placeholder": "Noteer positieve ervaringen en successen uit je herstel om je te motiveren."},
-    {"type": "textarea", "label": "Zelfzorgplan", "placeholder": "Beschrijf je dagelijkse en wekelijkse zelfzorgactiviteiten."}
-  ],
-  "grensstellings-oefening": [
-    {"type": "header", "text": "Grensstellings Oefening"},
-    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een specifieke situatie waarin je grenzen werden overschreden"},
-    {"type": "textarea", "label": "Gevoelens", "placeholder": "Hoe voelde je je in deze situatie? Wees zo specifiek mogelijk."},
-    {"type": "textarea", "label": "Lichamelijke sensaties", "placeholder": "Welke lichamelijke sensaties ervaarde je?"},
-    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten kwamen bij je op?"},
-    {"type": "textarea", "label": "Behoeften", "placeholder": "Wat had je nodig in deze situatie? Welke behoeften werden niet vervuld?"},
-    {"type": "textarea", "label": "Grenzen", "placeholder": "Welke specifieke grenzen wil je stellen om je behoeften te beschermen?"},
-    {"type": "textarea", "label": "Communicatie", "placeholder": "Hoe ga je deze grenzen duidelijk en respectvol communiceren?"},
-    {"type": "textarea", "label": "Acties", "placeholder": "Welke concrete acties ga je ondernemen om je grenzen te handhaven?"},
-    {"type": "textarea", "label": "Zelfzorg", "placeholder": "Hoe ga je voor jezelf zorgen na het stellen van grenzen?"},
-    {"type": "textarea", "label": "Reflectie", "placeholder": "Wat heb je geleerd van deze oefening? Hoe kun je dit in de toekomst toepassen?"}
-  ],
-  "emotieregulatie-vaardigheden": [
-    {"type": "header", "text": "Emotieregulatie Vaardigheden Tracker"},
-    {"type": "date", "label": "Datum"},
-    {"type": "time", "label": "Tijdstip"},
-    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de emotioneel uitdagende situatie in detail"},
-    {"type": "textarea", "label": "Emotie", "placeholder": "Welke emotie(s) ervaarde je? Wees zo specifiek mogelijk."},
-    {"type": "rating", "label": "Intensiteit voor", "max": 10},
-    {"type": "checkbox", "label": "Gebruikte vaardigheden", "options": [
-      "Mindfulness", "Afleiding", "Tegenovergestelde actie", "Radicale acceptatie", 
-      "Probleemoplossing", "Emotie-erkenning", "Ademhalingsoefeningen", "Progressieve spierontspanning", 
-      "Positieve zelfspraak", "Sociale steun zoeken", "Creatieve expressie"
-    ]},
-    {"type": "textarea", "label": "Toepassing vaardigheden", "placeholder": "Beschrijf hoe je elke vaardigheid hebt toegepast"},
-    {"type": "textarea", "label": "Effect", "placeholder": "Hoe hielpen deze vaardigheden? Wat was het resultaat?"},
-    {"type": "rating", "label": "Intensiteit na", "max": 10},
-    {"type": "textarea", "label": "Lessen", "placeholder": "Wat heb je geleerd dat je in de toekomst kunt toepassen?"},
-    {"type": "textarea", "label": "Volgende stappen", "placeholder": "Welke vaardigheden wil je verder ontwikkelen of vaker toepassen?"}
-  ]
+    "gedragsexperiment": [
+        {
+            "type": "header",
+            "text": "Gedragsexperiment"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Verwachting",
+            "placeholder": "Beschrijf je verwachting"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedragsexperiment",
+            "placeholder": "Wat ga je doen? Hoe, waar, wanneer"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaat",
+            "placeholder": "Wat gebeurde er? Wat voelde je, wat dacht je"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je geleerd?",
+            "placeholder": "Conclusies, nieuwe inzichten"
+        },
+        {
+            "type": "textarea",
+            "label": "Toekomstige stappen",
+            "placeholder": "Hoe ga je deze nieuwe inzichten toepassen?"
+        }
+    ],
+    "gedachte_dagboek": [
+        {
+            "type": "header",
+            "text": "Gedachte Dagboek"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Automatische gedachte",
+            "placeholder": "Beschrijf je automatische gedachte"
+        },
+        {
+            "type": "textarea",
+            "label": "Gevoelens (emotie + intensiteit)",
+            "placeholder": "Beschrijf de gevoelens en hun intensiteit"
+        },
+        {
+            "type": "textarea",
+            "label": "Fysieke sensaties",
+            "placeholder": "Beschrijf de fysieke sensaties"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedrag",
+            "placeholder": "Beschrijf je reactie, acties"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs voor de gedachte",
+            "placeholder": "Beschrijf het bewijs voor je gedachte"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs tegen de gedachte",
+            "placeholder": "Beschrijf het bewijs tegen je gedachte"
+        },
+        {
+            "type": "textarea",
+            "label": "Alternatieve gedachte",
+            "placeholder": "Beschrijf een alternatieve gedachte"
+        },
+        {
+            "type": "textarea",
+            "label": "Gevoelens na alternatieve gedachte (emotie + intensiteit)",
+            "placeholder": "Beschrijf de gevoelens en hun intensiteit na de alternatieve gedachte"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je geleerd?",
+            "placeholder": "Inzichten, conclusies"
+        }
+    ],
+    "activiteitenplanning_gedragsactivering": [
+        {
+            "type": "header",
+            "text": "Activiteitenplanning en Gedragsactivering"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Activiteit",
+            "placeholder": "Beschrijf de activiteit"
+        },
+        {
+            "type": "textarea",
+            "label": "Tijdstip",
+            "placeholder": "Beschrijf het tijdstip"
+        },
+        {
+            "type": "rating",
+            "label": "Beoordeling vooraf (plezier, voldoening)",
+            "max": 10
+        },
+        {
+            "type": "textarea",
+            "label": "Obstakels en uitdagingen",
+            "placeholder": "Beschrijf de obstakels en uitdagingen"
+        },
+        {
+            "type": "rating",
+            "label": "Beoordeling achteraf (plezier, voldoening)",
+            "max": 10
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je geleerd?",
+            "placeholder": "Inzichten, aanpassingen voor de toekomst"
+        }
+    ],
+    "probleemoplossing": [
+        {
+            "type": "header",
+            "text": "Probleemoplossing"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Beschrijving van het probleem",
+            "placeholder": "Beschrijf het probleem"
+        },
+        {
+            "type": "textarea",
+            "label": "Analyse van het probleem",
+            "placeholder": "Beschrijf de oorzaken en gevolgen van het probleem"
+        },
+        {
+            "type": "textarea",
+            "label": "Mogelijke oplossingen",
+            "placeholder": "Brainstorm mogelijke oplossingen"
+        },
+        {
+            "type": "textarea",
+            "label": "Voors en tegens van elke oplossing",
+            "placeholder": "Beschrijf de voors en tegens van elke oplossing"
+        },
+        {
+            "type": "textarea",
+            "label": "Beste oplossing",
+            "placeholder": "Kies de beste oplossing"
+        },
+        {
+            "type": "textarea",
+            "label": "Actieplan",
+            "placeholder": "Beschrijf de stappen, middelen, tijdlijn"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaat",
+            "placeholder": "Beschrijf wat er gebeurde, evaluatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je geleerd?",
+            "placeholder": "Inzichten, aanpassingen voor de toekomst"
+        }
+    ],
+    "exposure": [
+        {
+            "type": "header",
+            "text": "Exposure Formulier"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de situatie"
+        },
+        {
+            "type": "rating",
+            "label": "Angstniveau vooraf",
+            "max": 10
+        },
+        {
+            "type": "textarea",
+            "label": "Verwachtingen",
+            "placeholder": "Wat denk je dat er gaat gebeuren"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedrag tijdens exposure",
+            "placeholder": "Beschrijf je gedrag tijdens de exposure"
+        },
+        {
+            "type": "rating",
+            "label": "Angstniveau tijdens exposure",
+            "max": 10
+        },
+        {
+            "type": "rating",
+            "label": "Angstniveau achteraf",
+            "max": 10
+        },
+        {
+            "type": "textarea",
+            "label": "Wat gebeurde er werkelijk?",
+            "placeholder": "Beschrijf wat er werkelijk gebeurde"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je geleerd?",
+            "placeholder": "Inzichten, nieuwe verwachtingen"
+        },
+        {
+            "type": "textarea",
+            "label": "Toekomstige stappen",
+            "placeholder": "Hoe ga je deze ervaring gebruiken?"
+        }
+    ]
 }
