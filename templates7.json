@@ -1,0 +1,128 @@
+{
+  "schema-therapie-moduskaart": [
+    {"type": "title", "text": "Schema Therapie Moduskaart"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie die een sterke emotionele reactie opriep"},
+    {"type": "select", "label": "Kindmodus", "options": ["Kwetsbare kind", "Boze kind", "Impulsieve kind", "Blije kind"]},
+    {"type": "select", "label": "Beschermmodus", "options": ["Afstandelijke beschermer", "Zelfverheerlijker", "Pest en aanval", "Overcompenseerder"]},
+    {"type": "select", "label": "Ouder-modus", "options": ["Straffende ouder", "Veeleisende ouder"]},
+    {"type": "select", "label": "Gezonde modus", "options": ["Gezonde volwassene", "Blije kind"]},
+    {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten had je in deze modus?"},
+    {"type": "textarea", "label": "Gevoelens", "placeholder": "Welke gevoelens ervaarde je in deze modus?"},
+    {"type": "textarea", "label": "Lichamelijke sensaties", "placeholder": "Welke lichamelijke sensaties merkte je op?"},
+    {"type": "textarea", "label": "Gedrag", "placeholder": "Hoe gedroeg je je in deze modus?"},
+    {"type": "textarea", "label": "Behoeften", "placeholder": "Welke onvervulde behoeften liggen mogelijk ten grondslag aan deze modus?"},
+    {"type": "textarea", "label": "Alternatieve reactie", "placeholder": "Hoe zou je gezonde volwassene kunnen reageren?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Wat heb je geleerd over je modi en hoe je ermee om kunt gaan?"}
+  ],
+
+  "mentaliseren-bevorderende-therapie-log": [
+    {"type": "title", "text": "Mentaliseren Bevorderende Therapie Log"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een recente interpersoonlijke situatie"},
+    {"type": "textarea", "label": "Eigen mentale toestand", "placeholder": "Wat dacht en voelde je in deze situatie?"},
+    {"type": "textarea", "label": "Mentale toestand ander", "placeholder": "Wat denk je dat de ander dacht en voelde?"},
+    {"type": "textarea", "label": "Alternatieve perspectieven", "placeholder": "Welke andere interpretaties zijn mogelijk?"},
+    {"type": "textarea", "label": "Impact eigen gedrag", "placeholder": "Hoe beïnvloedde jouw gedrag de ander?"},
+    {"type": "textarea", "label": "Impact gedrag ander", "placeholder": "Hoe beïnvloedde het gedrag van de ander jou?"},
+    {"type": "textarea", "label": "Miscommunicatie", "placeholder": "Waar ontstond mogelijk miscommunicatie?"},
+    {"type": "textarea", "label": "Emotieregulatie", "placeholder": "Hoe reguleerde je je emoties in deze situatie?"},
+    {"type": "textarea", "label": "Mentaliseren onder stress", "placeholder": "Hoe was je vermogen om te mentaliseren onder stress?"},
+    {"type": "textarea", "label": "Alternatieve aanpak", "placeholder": "Hoe zou je de situatie anders kunnen benaderen?"},
+    {"type": "rating", "label": "Mentaliserend vermogen", "max": 10},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je geleerd over jezelf en anderen?"}
+  ],
+
+  "acceptatie-en-commitmenttherapie-werkblad": [
+    {"type": "title", "text": "Acceptatie en Commitment Therapie Werkblad"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een situatie waarin je worstelde met acceptatie"},
+    {"type": "textarea", "label": "Ongewenste ervaringen", "placeholder": "Welke gedachten, gevoelens of sensaties probeerde je te vermijden?"},
+    {"type": "textarea", "label": "Vermijdingsstrategieën", "placeholder": "Hoe probeerde je deze ervaringen te vermijden of te controleren?"},
+    {"type": "textarea", "label": "Kosten van vermijding", "placeholder": "Wat zijn de nadelen van deze vermijding op lange termijn?"},
+    {"type": "textarea", "label": "Bereidheid", "placeholder": "Hoe kun je bereidheid tonen om deze ervaringen te hebben?"},
+    {"type": "textarea", "label": "Defusie-oefening", "placeholder": "Welke defusie-techniek kun je toepassen op moeilijke gedachten?"},
+    {"type": "textarea", "label": "Contact met het nu", "placeholder": "Hoe kun je meer aanwezig zijn in het huidige moment?"},
+    {"type": "textarea", "label": "Observerend zelf", "placeholder": "Hoe ervaar je je 'observerende zelf' in deze situatie?"},
+    {"type": "textarea", "label": "Waarden", "placeholder": "Welke persoonlijke waarden zijn relevant in deze situatie?"},
+    {"type": "textarea", "label": "Toegewijde actie", "placeholder": "Welke actie kun je ondernemen die in lijn is met je waarden?"},
+    {"type": "textarea", "label": "Psychologische flexibiliteit", "placeholder": "Hoe kun je psychologisch flexibeler zijn in deze situatie?"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Wat heb je geleerd over acceptatie en waardengedreven leven?"}
+  ],
+
+  "dialectische-gedragstherapie-vaardighedenlog": [
+    {"type": "title", "text": "Dialectische Gedragstherapie Vaardighedenlog"},
+    {"type": "date", "label": "Datum"},
+    {"type": "select", "label": "Vaardigheidsmodule", "options": ["Mindfulness", "Emotieregulatie", "Interpersoonlijke effectiviteit", "Stressbestendigheid"]},
+    {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie waarin je de vaardigheid hebt toegepast"},
+    {"type": "textarea", "label": "Toegepaste vaardigheid", "placeholder": "Welke specifieke DBT-vaardigheid heb je gebruikt?"},
+    {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je de vaardigheid precies toegepast?"},
+    {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen bij het toepassen?"},
+    {"type": "textarea", "label": "Effectiviteit", "placeholder": "Hoe effectief was de vaardigheid in deze situatie?"},
+    {"type": "rating", "label": "Moeilijkheidsgraad", "max": 10},
+    {"type": "rating", "label": "Mate van verlichting", "max": 10},
+    {"type": "textarea", "label": "Emotionele ervaring", "placeholder": "Hoe veranderde je emotionele ervaring?"},
+    {"type": "textarea", "label": "Gedragsverandering", "placeholder": "Welke gedragsverandering merkte je op?"},
+    {"type": "textarea", "label": "Alternatieve vaardigheden", "placeholder": "Welke andere vaardigheden had je kunnen gebruiken?"},
+    {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat heb je geleerd over het toepassen van deze vaardigheid?"},
+    {"type": "textarea", "label": "Toekomstige toepassing", "placeholder": "Hoe kun je deze vaardigheid in de toekomst verbeteren?"}
+  ],
+
+  "psychodynamische-therapie-reflectie": [
+    {"type": "title", "text": "Psychodynamische Therapie Reflectie"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Vrije associatie", "placeholder": "Noteer gedachten die opkwamen tijdens vrije associatie"},
+    {"type": "textarea", "label": "Droomanalyse", "placeholder": "Beschrijf en analyseer een recente droom"},
+    {"type": "textarea", "label": "Overdracht", "placeholder": "Welke gevoelens ervaar je ten opzichte van de therapeut?"},
+    {"type": "textarea", "label": "Tegenoverdracht", "placeholder": "Welke reacties merk je op bij de therapeut?"},
+    {"type": "textarea", "label": "Weerstand", "placeholder": "Waar merk je weerstand op in je therapieproces?"},
+    {"type": "textarea", "label": "Afweermechanismen", "placeholder": "Welke afweermechanismen herken je bij jezelf?"},
+    {"type": "textarea", "label": "Vroege herinneringen", "placeholder": "Beschrijf een significante vroege herinnering"},
+    {"type": "textarea", "label": "Relationele patronen", "placeholder": "Welke terugkerende patronen zie je in je relaties?"},
+    {"type": "textarea", "label": "Onbewuste conflicten", "placeholder": "Welke onbewuste conflicten worden mogelijk zichtbaar?"},
+    {"type": "textarea", "label": "Levensverhaal", "placeholder": "Hoe past deze sessie in je bredere levensverhaal?"},
+    {"type": "textarea", "label": "Inzichten", "placeholder": "Welke nieuwe inzichten heb je gekregen?"},
+    {"type": "textarea", "label": "Therapeutische relatie", "placeholder": "Hoe ervaar je de therapeutische relatie?"},
+    {"type": "textarea", "label": "Volgende stappen", "placeholder": "Welke thema's wil je verder onderzoeken?"}
+  ],
+
+  "systeemtherapie-gezinsdiagram": [
+    {"type": "title", "text": "Systeemtherapie Gezinsdiagram"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Gezinsleden", "placeholder": "Lijst van alle relevante gezinsleden"},
+    {"type": "textarea", "label": "Familierelaties", "placeholder": "Beschrijf de belangrijkste familierelaties"},
+    {"type": "textarea", "label": "Subsystemen", "placeholder": "Identificeer subsystemen binnen het gezin"},
+    {"type": "textarea", "label": "Grenzen", "placeholder": "Beschrijf de grenzen tussen subsystemen"},
+    {"type": "textarea", "label": "Hiërarchie", "placeholder": "Hoe ziet de gezinshiërarchie eruit?"},
+    {"type": "textarea", "label": "Communicatiepatronen", "placeholder": "Beschrijf de dominante communicatiepatronen"},
+    {"type": "textarea", "label": "Rollen", "placeholder": "Welke rollen nemen verschillende gezinsleden op zich?"},
+    {"type": "textarea", "label": "Allianties en coalities", "placeholder": "Identificeer allianties en coalities binnen het gezin"},
+    {"type": "textarea", "label": "Gezinsregels", "placeholder": "Welke expliciete en impliciete gezinsregels zijn er?"},
+    {"type": "textarea", "label": "Gezinsmythen", "placeholder": "Welke gezinsmythen of overtuigingen heersen er?"},
+    {"type": "textarea", "label": "Stressoren", "placeholder": "Welke interne en externe stressoren beïnvloeden het gezin?"},
+    {"type": "textarea", "label": "Sterke punten", "placeholder": "Wat zijn de sterke punten van dit gezinssysteem?"},
+    {"type": "textarea", "label": "Interventiedoelen", "placeholder": "Welke systemische interventiedoelen kunnen worden gesteld?"}
+  ],
+
+  "narratieve-therapie-werkblad": [
+    {"type": "title", "text": "Narratieve Therapie Werkblad"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Dominant verhaal", "placeholder": "Beschrijf het dominante probleem-verzadigde verhaal"},
+    {"type": "textarea", "label": "Externalisatie", "placeholder": "Hoe kun je het probleem externaliseren?"},
+    {"type": "textarea", "label": "Unieke uitkomsten", "placeholder": "Beschrijf momenten die niet passen bij het dominante verhaal"},
+    {"type": "textarea", "label": "Alternatief verhaal", "placeholder": "Ontwikkel een alternatief, voorkeursverhaal"},
+    {"type": "textarea", "label": "Betekenisgeving", "placeholder": "Welke nieuwe betekenis geef je aan je ervaringen?"},
+    {"type": "textarea", "label": "Intenties en waarden", "placeholder": "Welke intenties en waarden komen naar voren?"},
+    {"type": "textarea", "label": "Relationele invloeden", "placeholder": "Hoe beïnvloeden relaties je verhaal?"},
+    {"type": "textarea", "label": "Culturele context", "placeholder": "Hoe beïnvloedt de culturele context je verhaal?"},
+    {"type": "textarea", "label": "Toekomstvisie", "placeholder": "Hoe zie je je toekomst in het licht van dit nieuwe verhaal?"},
+    {"type": "textarea", "label": "Publiek", "placeholder": "Wie zou je willen betrekken als 'publiek' voor je nieuwe verhaal?"},
+    {"type": "textarea", "label": "Brieven en documenten", "placeholder": "Ideeën voor therapeutische brieven of documenten"},
+    {"type": "textarea", "label": "Rituelen", "placeholder": "Mogelijke rituelen om het nieuwe verhaal te versterken"},
+    {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe verandert dit nieuwe verhaal je zelfbeeld en relaties?"}
+  ],
+
+  "oplossingsgerichte-therapie-schaalvraag": [
+    {"type": "title", "text": "Oplossingsgerichte Therapie Schaalvraag"},
+    {"type": "date", "label": "Datum"},
+    {"type": "textarea", "label": "Doelstelling", "placeholder": "Beschrijf het doel waaraan je werkt

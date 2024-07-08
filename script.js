@@ -1,28 +1,4 @@
 
-function addHeader() {
-    const text = prompt("Geef de tekst voor de koptekst:");
-    if (text) {
-        const element = { type: 'header', text: text };
-        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
-        initSortable();
-        initEditable();
-    }
-}
-
-function addParagraph() {
-    const text = prompt("Geef de tekst voor de paragraaf:");
-    if (text) {
-        const element = { type: 'paragraph', text: text };
-        document.getElementById('formContent').insertAdjacentHTML('beforeend', createFormElement(element));
-        initSortable();
-        initEditable();
-    }
-}
-
-function printForm() {
-    window.print();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     initSortable();
     initEditable();
@@ -36,6 +12,8 @@ function loadTemplates() {
         'templates3.json',
         'templates4.json',
         'templates6.json',
+	'templates7.json',
+	'templates8.json',
         'templates9.json'
     ];
 
