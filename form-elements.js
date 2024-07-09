@@ -1,46 +1,40 @@
 function addTextField() {
-    const element = {
-        type: 'textarea',
+    addElementToForm({
+        type: 'text',
         label: 'Tekstveld',
         placeholder: 'Voer tekst in'
-    };
-    addElementToForm(element);
+    });
 }
 
-function addCheckboxGroup() {
-    const element = {
+function addCheckboxGroup(count) {
+    const options = Array.from({length: count}, (_, i) => `Optie ${i + 1}`);
+    addElementToForm({
         type: 'checkbox',
-        label: 'Afvinkvakjes',
-        options: ['Optie 1', 'Optie 2', 'Optie 3']
-    };
-    addElementToForm(element);
+        label: `${count} keuze opties`,
+        options: options
+    });
 }
 
-// Verwijder de keuzerondjes functie
-// function addRadioGroup() {
-//     const element = {
-//         type: 'radio',
-//         label: 'Keuzerondjes',
-//         options: ['Optie 1', 'Optie 2', 'Optie 3']
-//     };
-//     addElementToForm(element);
-// }
+function addCheckboxGroup3() { addCheckboxGroup(3); }
+function addCheckboxGroup4() { addCheckboxGroup(4); }
+function addCheckboxGroup5() { addCheckboxGroup(5); }
+function addCheckboxGroup7() { addCheckboxGroup(7); }
+function addCheckboxGroup10() { addCheckboxGroup(10); }
 
 function addHeader() {
-    const element = {
+    addElementToForm({
         type: 'header',
-        text: 'Titel'
-    };
-    addElementToForm(element);
+        text: 'Nieuwe Koptekst'
+    });
 }
 
 function addRatingScale() {
-    const element = {
+    addElementToForm({
         type: 'rating',
-        label: 'Schaal',
-        max: 100
-    };
-    addElementToForm(element);
+        label: 'Beoordeling',
+        min: 1,
+        max: 5
+    });
 }
 
 function addElementToForm(element) {
@@ -53,36 +47,58 @@ function addElementToForm(element) {
     }
     initSortable();
     initEditable();
+    initResizable();
 }
 
 function createFormElement(element) {
-    let html = `<div class="form-element draggable">`;
-    switch (element.type) {
-        case 'header':
-            html += `<h2 class="editable">${element.text}</h2>`;
-            break;
-        case 'textarea':
-            html += `<label class="editable">${element.label}</label><textarea placeholder="${element.placeholder}"></textarea>`;
+    let html = '';
+    switch(element.type) {
+        case 'text':
+            html = `
+                <div class="form-element draggable" draggable="true">
+                    <span class="edit-icon">✏️</span>
+                    <label class="editable">${element.label}</label>
+                    <input type="text" placeholder="${element.placeholder}">
+                </div>`;
             break;
         case 'checkbox':
-            html += `<label class="editable">${element.label}</label><div class="checkbox-group">`;
-            element.options.forEach(option => {
-                html += `<div class="checkbox-item"><input type="checkbox"><span class="editable">${option}</span></div>`;
-            });
-            html += `</div>`;
+            const options = element.options.map((option, index) => `
+                <div class="checkbox-item">
+                    <input type="checkbox" id="option${index}" name="option${index}">
+                    <span class="editable">${option}</span>
+                </div>`).join('');
+            html = `
+                <div class="form-element draggable" draggable="true">
+                    <span class="edit-icon">✏️</span>
+                    <label class="editable">${element.label}</label>
+                    <div class="checkbox-group">
+                        ${options}
+                    </div>
+                </div>`;
+            break;
+        case 'header':
+            html = `
+                <div class="form-element draggable" draggable="true">
+                    <span class="edit-icon">✏️</span>
+                    <h2 class="editable">${element.text}</h2>
+                </div>`;
             break;
         case 'rating':
-            html += `<label class="editable">${element.label}</label><input type="range" min="0" max="${element.max}" value="0">`;
-            break;
-        default:
+            const scaleOptions = Array.from({length: element.max - element.min + 1}, (_, i) => `
+                <input type="radio" id="rating${i + element.min}" name="rating" value="${i + element.min}">
+                <label for="rating${i + element.min}">${i + element.min}</label>
+            `).join('');
+            html = `
+                <div class="form-element draggable" draggable="true">
+                    <span class="edit-icon">✏️</span>
+                    <label class="editable">${element.label}</label>
+                    <div class="rating-scale">
+                        ${scaleOptions}
+                    </div>
+                </div>`;
             break;
     }
-    html += `<span class="edit-icon">✏️</span></div>`;
     return html;
-}
-
-function printForm() {
-    window.print();
 }
 
 function initSortable() {
@@ -92,45 +108,11 @@ function initSortable() {
     });
 }
 
-function initEditable() {
-    document.querySelectorAll('.edit-icon').forEach(el => {
-        el.addEventListener('click', function(e) {
-            e.stopPropagation();
-            document.querySelectorAll('.edit-options').forEach(opt => opt.remove());
-            
-            const formElement = this.closest('.form-element');
-            const options = document.createElement('div');
-            options.className = 'edit-options';
-            options.innerHTML = 
-                `<button onclick="editElementText(this)">Tekst aanpassen</button>
-                <button onclick="removeElement(this)">Verwijderen</button>`;
-            formElement.appendChild(options);
-            options.style.display = 'block';
-        });
-    });
-
-    document.querySelectorAll('.editable').forEach(el => {
-        el.addEventListener('dblclick', function() {
-            const newText = prompt("Pas de tekst aan:", this.textContent);
-            if (newText !== null) {
-                this.textContent = newText;
-            }
-        });
-    });
+function initResizable() {
+    // Implementation for making elements resizable
+    // This function needs to be defined or removed if not used
 }
 
-function editElementText(button) {
-    const formElement = button.closest('.form-element');
-    const editableElements = formElement.querySelectorAll('.editable');
-    editableElements.forEach(el => {
-        const newText = prompt("Pas de tekst aan:", el.textContent);
-        if (newText !== null) {
-            el.textContent = newText;
-        }
-    });
-    button.parentElement.remove();
-}
-
-function removeElement(button) {
-    button.closest('.form-element').remove();
+function printForm() {
+    window.print();
 }

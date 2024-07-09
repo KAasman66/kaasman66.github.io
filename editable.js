@@ -7,10 +7,9 @@ function initEditable() {
             const formElement = this.closest('.form-element');
             const options = document.createElement('div');
             options.className = 'edit-options';
-            options.innerHTML = `
-                <button onclick="editElementText(this)">Tekst aanpassen</button>
-                <button onclick="removeElement(this)">Verwijderen</button>
-            `;
+            options.innerHTML = 
+                `<button onclick="editElementText(this)">Tekst aanpassen</button>
+                <button onclick="removeElement(this)">Verwijderen</button>`;
             formElement.appendChild(options);
             options.style.display = 'block';
         });
@@ -22,6 +21,12 @@ function initEditable() {
             if (newText !== null) {
                 this.textContent = newText;
             }
+        });
+    });
+
+    document.querySelectorAll('.remove-icon').forEach(el => {
+        el.addEventListener('click', function() {
+            this.closest('.form-element').remove();
         });
     });
 }
