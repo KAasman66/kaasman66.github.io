@@ -1,7 +1,5 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     initSortable();
-    initEditable();
     loadTemplates();
 });
 
@@ -12,8 +10,8 @@ function loadTemplates() {
         'templates3.json',
         'templates4.json',
         'templates6.json',
-	'templates7.json',
-	'templates8.json',
+        'templates7.json',
+        'templates8.json',
         'templates9.json'
     ];
 
@@ -59,7 +57,7 @@ function displayTemplate(template) {
     formContent.innerHTML = ''; // Clear previous content
     if (template) {
         template.forEach(element => {
-            formContent.insertAdjacentHTML('beforeend', createFormElement(element));
+            formContent.insertAdjacentHTML('afterbegin', createFormElement(element));
         });
         initSortable();
         initEditable();
@@ -95,7 +93,7 @@ function createFormElement(element) {
             element.options.forEach(option => {
                 html += `<div class="checkbox-item"><input type="checkbox"><span class="editable">${option}</span></div>`;
             });
-            html += `</div>`;
+            html += `</div><button class="add-checkbox" onclick="addCheckboxItem(this)">+</button><button class="remove-checkbox" onclick="removeCheckboxItem(this)">-</button>`;
             break;
         case 'dropdown':
             html += `<label class="editable">${element.label}</label><select>`;
@@ -104,10 +102,16 @@ function createFormElement(element) {
             });
             html += `</select>`;
             break;
+        case 'text':
+            html += `<label class="editable">${element.label}</label><input type="text" placeholder="${element.placeholder || ''}">`;
+            break;
+        case 'scaleImage':
+            html += `<label class="editable">${element.label}</label><img src="Schaal.png" alt="Schaal" class="scale-image">`;
+            break;
         default:
             break;
     }
-    html += `<span class="edit-icon">✏️</span></div>`;
+    html += `<button class="remove-element">x</button></div>`;
     return html;
 }
 
@@ -119,44 +123,120 @@ function initSortable() {
 }
 
 function initEditable() {
-    document.querySelectorAll('.edit-icon').forEach(el => {
-        el.addEventListener('click', function(e) {
-            e.stopPropagation();
-            document.querySelectorAll('.edit-options').forEach(opt => opt.remove());
-            
-            const formElement = this.closest('.form-element');
-            const options = document.createElement('div');
-            options.className = 'edit-options';
-            options.innerHTML = 
-                `<button onclick="editElementText(this)">Tekst aanpassen</button>
-                <button onclick="removeElement(this)">Verwijderen</button>`;
-            formElement.appendChild(options);
-            options.style.display = 'block';
-        });
-    });
-
     document.querySelectorAll('.editable').forEach(el => {
-        el.addEventListener('dblclick', function() {
+        el.addEventListener('click', function() {
             const newText = prompt("Pas de tekst aan:", this.textContent);
             if (newText !== null) {
                 this.textContent = newText;
             }
         });
     });
-}
 
-function editElementText(button) {
-    const formElement = button.closest('.form-element');
-    const editableElements = formElement.querySelectorAll('.editable');
-    editableElements.forEach(el => {
-        const newText = prompt("Pas de tekst aan:", el.textContent);
-        if (newText !== null) {
-            el.textContent = newText;
-        }
+    document.querySelectorAll('.remove-element').forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.form-element').remove();
+        });
     });
-    button.parentElement.remove();
 }
 
-function removeElement(button) {
-    button.closest('.form-element').remove();
+function addTextField() {
+    const formContent = document.getElementById('formContent');
+    const textFieldElement = createFormElement({
+        type: 'text',
+        label: 'Tekstveld',
+        placeholder: 'Voer tekst in'
+    });
+    formContent.insertAdjacentHTML('afterbegin', textFieldElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addTextarea() {
+    const formContent = document.getElementById('formContent');
+    const textareaElement = createFormElement({
+        type: 'textarea',
+        label: 'Tekstgebied',
+        placeholder: 'Voer tekst in'
+    });
+    formContent.insertAdjacentHTML('afterbegin', textareaElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addCheckboxGroup() {
+    const formContent = document.getElementById('formContent');
+    const checkboxGroupElement = createFormElement({
+        type: 'checkbox',
+        label: 'Afvinkvakjes',
+        options: ['Optie 1', 'Optie 2', 'Optie 3']
+    });
+    formContent.insertAdjacentHTML('afterbegin', checkboxGroupElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addHeader() {
+    const formContent = document.getElementById('formContent');
+    const headerElement = createFormElement({
+        type: 'header',
+        text: 'Koptekst'
+    });
+    formContent.insertAdjacentHTML('afterbegin', headerElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addRatingScale() {
+    const formContent = document.getElementById('formContent');
+    const ratingScaleElement = createFormElement({
+        type: 'rating',
+        label: 'Schaal',
+        max: 10
+    });
+    formContent.insertAdjacentHTML('afterbegin', ratingScaleElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addCheckboxGroup3() {
+    const formContent = document.getElementById('formContent');
+    const checkboxGroupElement = createFormElement({
+        type: 'checkbox',
+        label: 'Keuze',
+        options: ['Optie A', 'Optie B', 'Optie C']
+    });
+    formContent.insertAdjacentHTML('afterbegin', checkboxGroupElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function addCheckboxItem(button) {
+    const checkboxGroup = button.previousElementSibling;
+    const newCheckbox = document.createElement('div');
+    newCheckbox.className = 'checkbox-item';
+    newCheckbox.innerHTML = '<input type="checkbox"><span class="editable">Nieuwe optie</span>';
+    checkboxGroup.appendChild(newCheckbox);
+    initEditable(); // Reinitialize to make new elements editable
+}
+
+function removeCheckboxItem(button) {
+    const checkboxGroup = button.previousElementSibling.previousElementSibling;
+    if (checkboxGroup.children.length > 0) {
+        checkboxGroup.removeChild(checkboxGroup.lastElementChild);
+    }
+}
+
+function addScaleImage() {
+    const formContent = document.getElementById('formContent');
+    const scaleImageElement = createFormElement({
+        type: 'scaleImage',
+        label: 'Schaal Afbeelding'
+    });
+    formContent.insertAdjacentHTML('afterbegin', scaleImageElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+function printForm() {
+    window.print();
 }

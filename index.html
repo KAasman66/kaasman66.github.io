@@ -12,15 +12,13 @@
         <h1>GGZ Formulier Generator</h1>
         
         <div class="controls">
+<button onclick="addHeader()">Titel</button>
             <button onclick="addTextField()">Tekstveld</button>
-            <button onclick="addCheckboxGroup3()">3 keuze</button>
-            <button onclick="addCheckboxGroup4()">4 keuze</button>
-            <button onclick="addCheckboxGroup5()">5 keuze</button>
-            <button onclick="addCheckboxGroup7()">7 keuze</button>
-            <button onclick="addCheckboxGroup10()">10 keuze</button>
-            <button onclick="addHeader()">Koptekst</button>
-            <button onclick="addRatingScale()">Schaal</button>
+            <button onclick="addCheckboxGroup()">Keuze</button>
             
+          
+            <button onclick="addScaleImage()">Schaal</button>
+         
             <button class="print-button" onclick="printForm()"><i class="fa fa-print"></i> Formulier printen</button>
         </div>
 
@@ -34,20 +32,12 @@
         <div id="formContainer">
             <div id="formContent"></div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+        <script src="form-elements.js"></script>
+        <script src="editable.js"></script>
+        <script src="script.js"></script>
+        <script src="main.js"></script>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-    <script src="form-elements.js"></script>
-    <script src="editable.js"></script>
-    <script src="script.js"></script>
-    <script src="main.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            initSortable();
-            initEditable();
-            initResizable();
-        });
-    </script>
 </body>
 </html>

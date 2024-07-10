@@ -18,6 +18,7 @@ body {
     color: var(--text-color);
     background-image: linear-gradient(to right, #3498db, #2c3e50);
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -82,6 +83,7 @@ button {
     box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 button:before {
@@ -113,9 +115,25 @@ button:active {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+button:hover:after {
+    opacity: 1;
+}
+
 .form-element {
     margin-bottom: 30px;
-    position: relative;
+    position: relative; /* Zorg ervoor dat de parent relative position heeft */
     padding: 20px;
     background-color: #f9f9f9;
     border: 2px solid #e0e0e0;
@@ -150,25 +168,44 @@ button:active {
     z-index: -1;
 }
 
+.remove-element {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1em;
+}
+
+.remove-element:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
 .checkbox-group, .radio-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 5px; /* Verkleinen van de ruimte tussen de checkbox-items */
 }
 
 .checkbox-item, .radio-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Verkleinen van de ruimte onder elk checkbox-item */
 }
 
 .checkbox-item input, .radio-item input {
-    margin-right: 10px;
+    margin-right: 5px;
     width: auto;
 }
 
 .checkbox-item span, .radio-item span {
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 #formContainer {
@@ -188,8 +225,7 @@ button:active {
 }
 
 .editable {
-    position: relative;
-    z-index: 1;
+    cursor: pointer;
 }
 
 .edit-icon {
@@ -271,4 +307,61 @@ textarea {
 
 .template-select select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(52, 152, 219
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #formContent, #formContent * {
+        visibility: visible;
+    }
+    #formContainer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        transform: scale(1.0);
+        transform-origin: top left;
+    }
+    .form-element {
+        background: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0;
+        margin: 0;
+        font-size: 1.0em;
+        resize: none;
+    }
+    .remove-element, .add-checkbox, .remove-checkbox, .edit-icon, .edit-options {
+        display: none !important;
+    }
+    .form-element::before {
+        display: none !important;
+    }
+    .subtext {
+        color: #ccc !important;
+    }
+    .scale-container {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.0em;
+    }
+    .scale-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+}
+
+.scale-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

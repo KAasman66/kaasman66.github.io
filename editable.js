@@ -1,4 +1,14 @@
 function initEditable() {
+    // Nieuwe code voor invoervelden
+    document.querySelectorAll('input[type="text"]').forEach(input => {
+        input.addEventListener('dblclick', function() {
+            const newText = prompt("Pas de tekst aan:", this.value);
+            if (newText !== null) {
+                this.value = newText;
+            }
+        });
+    });
+
     document.querySelectorAll('.edit-icon').forEach(el => {
         el.addEventListener('click', function(e) {
             e.stopPropagation();
