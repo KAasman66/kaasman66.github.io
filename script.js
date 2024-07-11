@@ -115,6 +115,19 @@ function createFormElement(element) {
     return html;
 }
 
+function addTextarea() {
+    const formContent = document.getElementById('formContent');
+    const textareaElement = createFormElement({
+        type: 'textarea',
+        label: 'Tekstgebied',
+        placeholder: 'Voer tekst in'
+    });
+    formContent.insertAdjacentHTML('afterbegin', textareaElement); // Voeg aan het begin toe
+    initSortable();
+    initEditable();
+}
+
+
 function initSortable() {
     new Sortable(document.getElementById('formContent'), {
         animation: 150,
