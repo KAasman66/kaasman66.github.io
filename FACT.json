@@ -1,0 +1,73 @@
+{
+    "FACT_voortgangsrapportage": [
+        {"type": "title", "text": "Voortgangsrapportage (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ],
+    "FACT_medicatietracker": [
+        {"type": "title", "text": "Medicatietracker (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Medicatie", "placeholder": "Welke medicatie neem je?"},
+        {"type": "textarea", "label": "Dosering", "placeholder": "Wat is de dosering van deze medicatie?"},
+        {"type": "textarea", "label": "Bijwerkingen", "placeholder": "Ervaar je bijwerkingen?"},
+        {"type": "textarea", "label": "Effectiviteit", "placeholder": "Hoe effectief is deze medicatie?"}
+    ],
+    "FACT_behandeldoelen_formulier": [
+        {"type": "title", "text": "Behandeldoelen Formulier (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je behandeldoelen"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties ga je ondernemen om deze doelen te bereiken?"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"}
+    ],
+    "FACT_dagelijkse_levensvaardigheden_evaluatie": [
+        {"type": "title", "text": "Dagelijkse Levensvaardigheden Evaluatie (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Activiteiten", "placeholder": "Welke dagelijkse activiteiten heb je ondernomen?"},
+        {"type": "textarea", "label": "Succes", "placeholder": "Wat ging goed?"},
+        {"type": "textarea", "label": "Verbeterpunten", "placeholder": "Wat kan beter?"}
+    ],
+    "FACT_zelfzorg_en_wellness_plan": [
+        {"type": "title", "text": "Zelfzorg- en Wellness Plan (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je zelfzorg- en wellnessplan"},
+        {"type": "textarea", "label": "Activiteiten", "placeholder": "Welke activiteiten omvat dit plan?"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Wat zijn je doelen met dit plan?"}
+    ],
+    "FACT_intake_formulier": [
+        {"type": "title", "text": "FACT Intake Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Persoonlijke informatie", "placeholder": "Vul je persoonlijke informatie in"},
+        {"type": "textarea", "label": "Huidige situatie", "placeholder": "Beschrijf je huidige situatie"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Wat zijn je doelen?"}
+    ],
+    "FACT_zorgplan": [
+        {"type": "title", "text": "FACT Zorgplan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je zorgdoelen"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+    ],
+    "FACT_crisisinterventie_plan": [
+        {"type": "title", "text": "Crisisinterventie Plan (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisinterventieplan"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe in een crisis?"}
+    ],
+    "FACT_risico_evaluatie_formulier": [
+        {"type": "title", "text": "Risico-evaluatie Formulier (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Risico", "placeholder": "Beschrijf het risico"},
+        {"type": "textarea", "label": "Impact", "placeholder": "Wat is de impact van dit risico?"},
+        {"type": "textarea", "label": "Beheersmaatregelen", "placeholder": "Welke maatregelen heb je genomen om dit risico te beheersen?"}
+    ],
+    "FACT_ondersteuningsnetwerk_overzicht": [
+        {"type": "title", "text": "Ondersteuningsnetwerk Overzicht (FACT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Contacten", "placeholder": "Beschrijf je ondersteuningsnetwerk"},
+        {"type": "textarea", "label": "Rol", "placeholder": "Wat is de rol van deze contacten in je netwerk?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe gebruik je dit netwerk?"}
+    ]
+}

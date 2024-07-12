@@ -1,0 +1,75 @@
+{
+    "SFT_schema_identificatie_formulier": [
+        {"type": "title", "text": "Schema Identificatie Formulier (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Schema", "placeholder": "Beschrijf het schema"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie komt dit schema naar voren?"},
+        {"type": "textarea", "label": "Emotionele reactie", "placeholder": "Wat is je emotionele reactie?"}
+    ],
+    "SFT_schema_modus_dagboek": [
+        {"type": "title", "text": "Schema Modus Dagboek (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Modus", "placeholder": "Beschrijf de modus"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie bevond je je in deze modus?"},
+        {"type": "textarea", "label": "Gedachten en gevoelens", "placeholder": "Wat waren je gedachten en gevoelens?"}
+    ],
+    "SFT_schema_herstructurering": [
+        {"type": "title", "text": "Schema Herstructurering (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Schema", "placeholder": "Beschrijf het schema"},
+        {"type": "textarea", "label": "Nieuwe interpretatie", "placeholder": "Wat is je nieuwe interpretatie?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van deze herstructurering?"}
+    ],
+    "SFT_schema_coping_stijlen": [
+        {"type": "title", "text": "Schema Coping Stijlen (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Coping stijl", "placeholder": "Beschrijf je coping stijl"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie gebruik je deze coping stijl?"},
+        {"type": "textarea", "label": "Effectiviteit", "placeholder": "Hoe effectief is deze coping stijl?"}
+    ],
+    "SFT_schema_oefeningen": [
+        {"type": "title", "text": "Schema Oefeningen (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de oefening"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het doel van deze oefening?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van deze oefening?"}
+    ],
+    "SFT_schema_werkbladen": [
+        {"type": "title", "text": "Schema Werkbladen (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de oefening op het werkblad"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het doel van deze oefening?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de oefening?"}
+    ],
+    "SFT_gedachten_en_schema_dagboek": [
+        {"type": "title", "text": "Gedachten en Schema Dagboek (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Beschrijf je gedachten"},
+        {"type": "textarea", "label": "Schema", "placeholder": "Hoe passen deze gedachten in je schema?"},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageer je op deze gedachten?"}
+    ],
+    "SFT_schema_progressie_tracker": [
+        {"type": "title", "text": "Schema Progressie Tracker (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je doelen"},
+        {"type": "textarea", "label": "Stappen", "placeholder": "Welke stappen heb je ondernomen?"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
+        {"type": "textarea", "label": "Belemmeringen", "placeholder": "Wat zijn de belemmeringen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ],
+    "SFT_schema_behandelplan": [
+        {"type": "title", "text": "Schema Behandelplan (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Behandelplan", "placeholder": "Beschrijf je behandelplan"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Wat zijn je doelen?"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+    ],
+    "SFT_schema_therapie_reflectie": [
+        {"type": "title", "text": "Schema Therapie Reflectie (SFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op je therapie"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan?"},
+        {"type": "textarea", "label": "Veranderingen", "placeholder": "Welke veranderingen wil je doorvoeren?"}
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "eetstoornis_voedingslogboek": [
+        {"type": "title", "text": "Eetstoornis Voedingslogboek (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Maaltijden", "placeholder": "Beschrijf wat je hebt gegeten"},
+        {"type": "textarea", "label": "Hoeveelheid", "placeholder": "Hoeveel heb je gegeten?"},
+        {"type": "textarea", "label": "Gedachten en gevoelens", "placeholder": "Welke gedachten en gevoelens had je tijdens het eten?"}
+    ],
+    "eetstoornis_lichaamsbeeld_reflectie_formulier": [
+        {"type": "title", "text": "Lichaamsbeeld Reflectie Formulier (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Gedachten over je lichaam", "placeholder": "Beschrijf je gedachten over je lichaam"},
+        {"type": "textarea", "label": "Gevoelens over je lichaam", "placeholder": "Beschrijf je gevoelens over je lichaam"},
+        {"type": "textarea", "label": "Invloeden", "placeholder": "Welke invloeden hebben je gedachten en gevoelens over je lichaam beïnvloed?"}
+    ],
+    "eetstoornis_honger_en_volheidsgevoelens_tracker": [
+        {"type": "title", "text": "Honger en Volheidsgevoelens Tracker (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Honger", "placeholder": "Hoe hongerig voelde je je?"},
+        {"type": "textarea", "label": "Volheid", "placeholder": "Hoe vol voelde je je na het eten?"},
+        {"type": "textarea", "label": "Gedachten en gevoelens", "placeholder": "Welke gedachten en gevoelens had je tijdens het eten?"}
+    ],
+    "eetstoornis_triggers_en_reacties_bij_eten": [
+        {"type": "title", "text": "Triggers en Reacties bij Eten (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Trigger", "placeholder": "Wat triggerde je om te eten?"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe reageerde je op deze trigger?"},
+        {"type": "textarea", "label": "Coping strategieën", "placeholder": "Welke coping strategieën heb je gebruikt?"}
+    ],
+    "eetstoornis_eetbuien_en_compensatiegedrag_logboek": [
+        {"type": "title", "text": "Eetbuien en Compensatiegedrag Logboek (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Eetbui", "placeholder": "Beschrijf de eetbui"},
+        {"type": "textarea", "label": "Compensatiegedrag", "placeholder": "Beschrijf het compensatiegedrag"},
+        {"type": "textarea", "label": "Gedachten en gevoelens", "placeholder": "Welke gedachten en gevoelens had je tijdens de eetbui?"}
+    ],
+    "eetstoornis_voedingspatroon_evaluatie": [
+        {"type": "title", "text": "Voedingspatroon Evaluatie (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Voedingspatroon", "placeholder": "Beschrijf je voedingspatroon"},
+        {"type": "textarea", "label": "Veranderingen", "placeholder": "Welke veranderingen zou je willen aanbrengen?"},
+        {"type": "textarea", "label": "Redenen", "placeholder": "Wat zijn de redenen voor deze veranderingen?"}
+    ],
+    "eetstoornis_behandeldoelen": [
+        {"type": "title", "text": "Eetstoornis Behandeldoelen (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je behandeldoelen"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën ga je gebruiken om deze doelen te bereiken?"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"}
+    ],
+    "eetstoornis_dagelijkse_voeding_en_emoties_dagboek": [
+        {"type": "title", "text": "Dagelijkse Voeding en Emoties Dagboek (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Voeding", "placeholder": "Beschrijf wat je hebt gegeten"},
+        {"type": "textarea", "label": "Emoties", "placeholder": "Welke emoties ervaarde je tijdens het eten?"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten had je tijdens het eten?"}
+    ],
+    "eetstoornis_motivatie_en_herstel_reflectie": [
+        {"type": "title", "text": "Motivatie en Herstel Reflectie (Eetstoornissen)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Motivatie", "placeholder": "Beschrijf je motivatie voor herstel"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ]
+}

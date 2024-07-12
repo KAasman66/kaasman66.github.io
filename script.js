@@ -26,7 +26,14 @@ function filterTemplatesByTherapy(therapy) {
         'ACT': ['ACT.json'],
         'EFT': ['EFT.json'],
 	'DGT': ['DGT.json'],
-	'CRISIS': ['CRISIS.json']
+	'SFT': ['SFT.json'],
+	'CRISIS': ['CRISIS.json'],
+	'FACT': ['FACT.json'],
+	'EET': ['EET.json'],
+	'PENP': ['PENP.json'],
+	'DSM': ['DSM.json'],
+	'PGT': ['PGT.json']
+
     };
 
     const filesToLoad = templateFilesByTherapy[therapy] || [];

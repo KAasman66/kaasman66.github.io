@@ -1,0 +1,58 @@
+{
+    "PGT_oplossingsstrategieën_dagboek": [
+        {"type": "title", "text": "Oplossingsstrategieën Dagboek (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Strategie", "placeholder": "Beschrijf de oplossingsstrategie"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze strategie toegepast?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze strategie?"}
+    ],
+    "PGT_behandelplan": [
+        {"type": "title", "text": "PGT Behandelplan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je behandeldoelen"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+    ],
+    "PGT_resultaten_evaluatie": [
+        {"type": "title", "text": "Resultaten Evaluatie (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Evaluatie", "placeholder": "Evalueer de resultaten van de behandeling"},
+        {"type": "textarea", "label": "Positieve resultaten", "placeholder": "Wat zijn de positieve resultaten?"},
+        {"type": "textarea", "label": "Negatieve resultaten", "placeholder": "Wat zijn de negatieve resultaten?"}
+    ],
+    "PGT_oplossingsgerichte_interventies": [
+        {"type": "title", "text": "Oplossingsgerichte Interventies (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Interventie", "placeholder": "Beschrijf de oplossingsgerichte interventie"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie heb je deze interventie toegepast?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van deze interventie?"}
+    ],
+    "PGT_voortgangsrapportage": [
+        {"type": "title", "text": "Voortgangsrapportage (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ],
+    "PGT_successen_en_lessen": [
+        {"type": "title", "text": "Successen en Lessen (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Beschrijf je successen"},
+        {"type": "textarea", "label": "Lessen", "placeholder": "Welke lessen heb je geleerd?"},
+        {"type": "textarea", "label": "Toekomstige toepassing", "placeholder": "Hoe ga je deze lessen in de toekomst toepassen?"}
+    ],
+    "PGT_probleemgerichte_reflectie": [
+        {"type": "title", "text": "Probleemgerichte Reflectie (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op het probleem en de oplossing"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan?"},
+        {"type": "textarea", "label": "Veranderingen", "placeholder": "Welke veranderingen wil je doorvoeren?"}
+    ],
+    "PGT_dagelijkse_logboek": [
+        {"type": "title", "text": "PGT Dagelijkse Logboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Activiteiten", "placeholder": "Beschrijf je dagelijkse activiteiten"},
+        {"type": "textarea", "label": "Problemen", "placeholder": "Welke problemen ben je tegengekomen?"},
+        {"type": "textarea", "label": "Oplossingen", "placeholder": "Hoe heb je deze problemen opgelost?"}
+    ]
+}

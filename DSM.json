@@ -1,0 +1,77 @@
+{
+    "DSM_depressie_symptoom_logboek": [
+        {"type": "title", "text": "Depressie Symptoom Logboek (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Symptomen", "placeholder": "Beschrijf de symptomen die je ervaart"},
+        {"type": "textarea", "label": "Intensiteit", "placeholder": "Hoe intens zijn deze symptomen?"},
+        {"type": "textarea", "label": "Duur", "placeholder": "Hoe lang duren deze symptomen?"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn de mogelijke triggers?"}
+    ],
+    "DSM_angststoornis_behandelplan": [
+        {"type": "title", "text": "Angststoornis Behandelplan (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je behandeldoelen"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+    ],
+    "DSM_ptss_trigger_waarschuwing_en_reacties": [
+        {"type": "title", "text": "PTSS Trigger Waarschuwing en Reacties (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Beschrijf de triggers die je hebt ervaren"},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageerde je op deze triggers?"},
+        {"type": "textarea", "label": "Coping strategieën", "placeholder": "Welke coping strategieën heb je gebruikt?"}
+    ],
+    "DSM_bipolaire_stemmingsdagboek": [
+        {"type": "title", "text": "Bipolaire Stemmingsdagboek (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Stemming", "placeholder": "Beschrijf je stemming"},
+        {"type": "textarea", "label": "Intensiteit", "placeholder": "Hoe intens is deze stemming?"},
+        {"type": "textarea", "label": "Duur", "placeholder": "Hoe lang duurt deze stemming?"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn de mogelijke triggers?"}
+    ],
+    "DSM_ocd_gedachten_en_gedragsregistratie": [
+        {"type": "title", "text": "OCD Gedachten en Gedragsregistratie (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Gedachte", "placeholder": "Beschrijf de obsessieve gedachte"},
+        {"type": "textarea", "label": "Gedrag", "placeholder": "Beschrijf het compulsieve gedrag"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe reageer je op deze gedachte of dit gedrag?"}
+    ]
+}
+{
+    "DSM_adhd_dagelijkse_structuur": [
+        {"type": "title", "text": "ADHD Dagelijkse Structuur (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Activiteiten", "placeholder": "Beschrijf je dagelijkse activiteiten"},
+        {"type": "textarea", "label": "Structuur", "placeholder": "Hoe structuur je je dag?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"}
+    ],
+    "DSM_borderline_persoonlijkheidsstoornis_emotionele_reflectie": [
+        {"type": "title", "text": "Borderline Persoonlijkheidsstoornis Emotionele Reflectie (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Emoties", "placeholder": "Welke emoties heb je ervaren?"},
+        {"type": "textarea", "label": "Oorzaken", "placeholder": "Wat waren de oorzaken van deze emoties?"},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageerde je op deze emoties?"}
+    ],
+    "DSM_schizofrenie_symptoom_monitor": [
+        {"type": "title", "text": "Schizofrenie Symptoom Monitor (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Symptomen", "placeholder": "Beschrijf de symptomen die je ervaart"},
+        {"type": "textarea", "label": "Intensiteit", "placeholder": "Hoe intens zijn deze symptomen?"},
+        {"type": "textarea", "label": "Duur", "placeholder": "Hoe lang duren deze symptomen?"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn de mogelijke triggers?"}
+    ],
+    "DSM_sociale_fobie_expositie_oefeningen": [
+        {"type": "title", "text": "Sociale Fobie Expositie Oefeningen (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie waarin je bent blootgesteld"},
+        {"type": "textarea", "label": "Angstniveau", "placeholder": "Wat was je angstniveau (0-10)?"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe heb je gereageerd?"}
+    ],
+    "DSM_gegeneraliseerde_angststoornis_dagboek": [
+        {"type": "title", "text": "Gegeneraliseerde Angststoornis Dagboek (DSM)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Beschrijf je gedachten"},
+        {"type": "textarea", "label": "Stemming", "placeholder": "Beschrijf je stemming"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie had je deze gedachten en stemming?"}
+    ]
+}
