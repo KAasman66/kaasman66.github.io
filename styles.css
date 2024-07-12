@@ -14,9 +14,14 @@ body {
     line-height: 1.8;
     margin: 0;
     padding: 20px;
-    background-color: var(--background-color);
+    background-image: url('back.jpg'); /* Pad naar je achtergrondafbeelding */
+    background-size: cover; /* Zorgt ervoor dat de afbeelding de hele achtergrond bedekt */
+    background-attachment: fixed; /* Zorgt ervoor dat de achtergrondafbeelding vast blijft bij scrollen */
+    background-position: center; /* Centreert de achtergrondafbeelding */
+    background-repeat: no-repeat; /* Voorkomt dat de afbeelding wordt herhaald */
+    background-color: var(--background-color); /* Fallback kleur als afbeelding niet wordt geladen */
     color: var(--text-color);
-    background-image: linear-gradient(to right, #3498db, #2c3e50);
+   
     background-attachment: fixed;
     scroll-behavior: smooth;
     font-size: 12pt; /* Match print font size */
