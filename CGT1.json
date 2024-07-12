@@ -1,8 +1,8 @@
 {
-    "gedachtedagboek": [
+    "CGT_gedachtedagboek": [
         {
             "type": "title",
-            "text": "Gedachtedagboek"
+            "text": "CGT Gedachtedagboek"
         },
         {
             "type": "text",
@@ -49,10 +49,10 @@
             "placeholder": "Wat was het resultaat van deze nieuwe denkwijze?"
         }
     ],
-    "dagelijks_dagboek": [
+    "CGT_dagelijks_dagboek": [
         {
             "type": "title",
-            "text": "Dagelijks Activiteitendagboek"
+            "text": "CGT Dagelijks Activiteitendagboek"
         },
         {
             "type": "text",
@@ -109,10 +109,10 @@
             "placeholder": "Wat wil je morgen bereiken?"
         }
     ],
-    "weekoverzicht": [
+    "CGT_weekoverzicht": [
         {
             "type": "title",
-            "text": "Weekoverzicht"
+            "text": "CGT Weekoverzicht"
         },
         {
             "type": "text",
@@ -164,10 +164,10 @@
             "placeholder": "Algemene reflectie op de afgelopen week"
         }
     ],
-    "stresslogboek": [
+    "CGT_stresslogboek": [
         {
             "type": "title",
-            "text": "Stresslogboek"
+            "text": "CGT Stresslogboek"
         },
         {
             "type": "text",

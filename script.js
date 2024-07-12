@@ -5,14 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadTemplates() {
     const templateFiles = [
-        'EFT.json','templates.json',
-        'templates2.json',
-        'templates3.json',
-        'templates4.json',
-        'templates6.json',
-        'templates7.json',
-        'templates8.json',
-        'templates9.json'
+        'ACT.json','EFT.json','CGT1.json','CGT2.json','CGT3.json'
     ];
 
     let templates = {};

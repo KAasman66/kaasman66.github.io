@@ -1,0 +1,111 @@
+{
+    "ACT_waarden_identificatie_formulier": [
+        {"type": "title", "text": "ACT Waarden Identificatie Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Waarden", "placeholder": "Beschrijf je belangrijkste waarden"},
+        {"type": "textarea", "label": "Betekenis", "placeholder": "Wat betekenen deze waarden voor jou?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties kun je ondernemen om volgens deze waarden te leven?"}
+    ],
+    "ACT_mindfulness_oefeningen": [
+        {"type": "title", "text": "ACT Mindfulness Oefeningen"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de mindfulness oefening"},
+        {"type": "textarea", "label": "Ervaring", "placeholder": "Wat was je ervaring tijdens deze oefening?"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan?"}
+    ],
+    "ACT_defusie_technieken": [
+        {"type": "title", "text": "ACT Defusie Technieken"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Techniek", "placeholder": "Beschrijf de defusie techniek"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze techniek toegepast?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze techniek?"}
+    ],
+    "ACT_acceptatie_oefeningen": [
+        {"type": "title", "text": "ACT Acceptatie Oefeningen"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de acceptatie oefening"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen?"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Welke voortgang heb je gemaakt in acceptatie?"}
+    ],
+    "ACT_waarden_en_doelen_plan": [
+        {"type": "title", "text": "ACT Waarden en Doelen Plan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Waarde", "placeholder": "Beschrijf een belangrijke waarde"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is een doel gerelateerd aan deze waarde?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties ga je ondernemen om dit doel te bereiken?"}
+    ],
+    "ACT_dagelijkse_dagboek": [
+        {"type": "title", "text": "ACT Dagelijkse Dagboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Mindfulness", "placeholder": "Hoe heb je vandaag mindfulness beoefend?"},
+        {"type": "textarea", "label": "Waarden", "placeholder": "Hoe heb je vandaag volgens je waarden geleefd?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Welke successen heb je ervaren?"}
+    ],
+    "ACT_zelfcompassie_oefeningen": [
+        {"type": "title", "text": "ACT Zelfcompassie Oefeningen"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de zelfcompassie oefening"},
+        {"type": "textarea", "label": "Ervaring", "placeholder": "Hoe voelde je je tijdens en na de oefening?"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan over zelfcompassie?"}
+    ],
+    "ACT_gedragsplan": [
+        {"type": "title", "text": "ACT Gedragsplan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is je gedragsdoel?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke specifieke acties ga je ondernemen?"},
+        {"type": "textarea", "label": "Obstakels", "placeholder": "Welke obstakels verwacht je?"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke ACT-strategieën ga je gebruiken om deze obstakels te overwinnen?"}
+    ],
+    "ACT_toekomstgerichte_actie": [
+        {"type": "title", "text": "ACT Toekomstgerichte Actie"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Toekomstvisie", "placeholder": "Beschrijf je visie voor de toekomst"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties kun je nu ondernemen om dichter bij deze visie te komen?"},
+        {"type": "textarea", "label": "Waarden", "placeholder": "Hoe sluiten deze acties aan bij je waarden?"}
+    ],
+    "ACT_flexibiliteit_en_veerkracht_logboek": [
+        {"type": "title", "text": "ACT Flexibiliteit en Veerkracht Logboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf een uitdagende situatie"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe heb je gereageerd?"},
+        {"type": "textarea", "label": "Flexibiliteit", "placeholder": "Hoe heb je psychologische flexibiliteit toegepast?"},
+        {"type": "textarea", "label": "Lessen", "placeholder": "Wat heb je geleerd over je veerkracht?"}
+    ],
+    "ACT_vervolg_actieplan": [
+        {"type": "title", "text": "ACT Vervolg Actieplan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang tot nu toe"},
+        {"type": "textarea", "label": "Volgende stappen", "placeholder": "Wat zijn je volgende stappen?"},
+        {"type": "textarea", "label": "Ondersteuning", "placeholder": "Welke ondersteuning heb je nodig?"}
+    ],
+    "ACT_acceptance_commitment_log": [
+        {"type": "title", "text": "ACT Acceptance Commitment Log"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Acceptatie", "placeholder": "Wat heb je vandaag geaccepteerd?"},
+        {"type": "textarea", "label": "Commitment", "placeholder": "Aan welke waarden heb je je gecommitteerd?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke waarde-gerichte acties heb je ondernomen?"}
+    ],
+    "ACT_waarden_en_compassie_dagboek": [
+        {"type": "title", "text": "ACT Waarden en Compassie Dagboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Waarden", "placeholder": "Hoe heb je vandaag volgens je waarden geleefd?"},
+        {"type": "textarea", "label": "Zelfcompassie", "placeholder": "Hoe heb je zelfcompassie beoefend?"},
+        {"type": "textarea", "label": "Compassie voor anderen", "placeholder": "Hoe heb je compassie voor anderen getoond?"}
+    ],
+    "ACT_reflectie_formulier": [
+        {"type": "title", "text": "ACT Reflectie Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke nieuwe inzichten heb je opgedaan?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen heb je ervaren?"},
+        {"type": "textarea", "label": "Groei", "placeholder": "Op welke gebieden heb je groei ervaren?"},
+        {"type": "textarea", "label": "Toekomstige focus", "placeholder": "Waar wil je je in de toekomst op focussen?"}
+    ],
+    "ACT_metaforische_denken_oefeningen": [
+        {"type": "title", "text": "ACT Metaforische Denken Oefeningen"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Metafoor", "placeholder": "Beschrijf een metafoor die je hebt gebruikt"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze metafoor toegepast in je leven?"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heeft deze metafoor je gebracht?"}
+    ]
+}

@@ -1,5 +1,5 @@
 {
-    "doelstelling_formulier": [
+    "CGT_doelstelling_formulier": [
         {
             "type": "title",
             "text": "Doelstelling Formulier"
@@ -44,7 +44,7 @@
             "placeholder": "Hoe weet je wanneer je dit doel hebt bereikt?"
         }
     ],
-    "probleemoplossingslogboek": [
+    "CGT_probleemoplossingslogboek": [
         {
             "type": "title",
             "text": "Probleemoplossingslogboek"
@@ -89,7 +89,7 @@
             "placeholder": "Reflecteer op het proces en het resultaat"
         }
     ],
-    "gedragsexperiment_logboek": [
+    "CGT_gedragsexperiment_logboek": [
         {
             "type": "title",
             "text": "Gedragsexperiment Logboek"
@@ -134,7 +134,7 @@
             "placeholder": "Hoe kun je deze bevindingen toepassen op je toekomstig gedrag?"
         }
     ],
-    "gedachtenregistratie": [
+    "CGT_gedachtenregistratie": [
         {
             "type": "title",
             "text": "Gedachtenregistratie"

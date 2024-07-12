@@ -1,5 +1,5 @@
 {
-    "zelfreflectie_formulier": [
+    "CGT_zelfreflectie_formulier": [
         {
             "type": "title",
             "text": "Zelfreflectie Formulier"
@@ -44,7 +44,7 @@
             "placeholder": "Wat heb je geleerd van deze ervaring?"
         }
     ],
-    "dankbaarheidslogboek": [
+    "CGT_dankbaarheidslogboek": [
         {
             "type": "title",
             "text": "Dankbaarheidslogboek"
@@ -74,7 +74,7 @@
             "placeholder": "Reflecteer op je gevoelens van dankbaarheid"
         }
     ],
-    "zelfzorg_en_welzijn_formulier": [
+    "CGT_zelfzorg_en_welzijn_formulier": [
         {
             "type": "title",
             "text": "Zelfzorg en Welzijn Formulier"
@@ -119,7 +119,7 @@
             "placeholder": "Hoe heb je vandaag voor je emotionele welzijn gezorgd?"
         }
     ],
-    "relapse_prevention_plan": [
+    "CGT_relapse_prevention_plan": [
         {
             "type": "title",
             "text": "Relapse Prevention Plan"
