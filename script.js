@@ -1,45 +1,71 @@
 document.addEventListener('DOMContentLoaded', () => {
     initSortable();
-    loadTemplates();
+    setupTherapyDropdown();
 });
 
-function loadTemplates() {
-    const templateFiles = [
-        'ACT.json','EFT.json','CGT1.json','CGT2.json','CGT3.json'
-    ];
+let templates = {};
 
-    let templates = {};
+function setupTherapyDropdown() {
+    const therapyDropdown = document.getElementById('therapyDropdown');
+    therapyDropdown.addEventListener('change', function() {
+        const selectedTherapy = this.value;
+        resetTemplateDropdown();
+        templates = {}; // Reset the templates object
+        filterTemplatesByTherapy(selectedTherapy);
+    });
+}
 
-    Promise.all(templateFiles.map(file => 
+function resetTemplateDropdown() {
+    const templateDropdown = document.getElementById('templateDropdown');
+    templateDropdown.innerHTML = '<option value="">Kies een template</option>';
+}
+
+function filterTemplatesByTherapy(therapy) {
+    const templateFilesByTherapy = {
+        'CGT': ['CGT1.json', 'CGT2.json', 'CGT3.json', 'CGT4.json', 'CGT5.json'],
+        'ACT': ['ACT.json'],
+        'EFT': ['EFT.json'],
+	'DGT': ['DGT.json'],
+	'CRISIS': ['CRISIS.json']
+    };
+
+    const filesToLoad = templateFilesByTherapy[therapy] || [];
+    loadSpecificTemplates(filesToLoad);
+}
+
+function loadSpecificTemplates(files) {
+    const promises = files.map(file => 
         fetch(file)
             .then(response => response.json())
+            .then(data => {
+                Object.keys(data).forEach(key => {
+                    templates[key] = data[key];
+                });
+            })
             .catch(error => console.warn(`Error loading ${file}:`, error))
-    ))
-    .then(dataArray => {
-        dataArray.forEach(data => {
-            Object.assign(templates, data);
-        });
-        populateDropdown(templates);
-        setupTemplateChangeHandler(templates);
+    );
+
+    Promise.all(promises)
+    .then(() => {
+        populateTemplateDropdown(Object.keys(templates));
     })
     .catch(error => console.error('Error loading templates:', error));
 }
 
-function populateDropdown(templates) {
-    const dropdown = document.getElementById('templateDropdown');
-    for (const key in templates) {
-        if (templates.hasOwnProperty(key)) {
-            const option = document.createElement('option');
-            option.value = key;
-            option.text = key;
-            dropdown.add(option);
-        }
-    }
+function populateTemplateDropdown(templateKeys) {
+    const templateDropdown = document.getElementById('templateDropdown');
+    templateKeys.forEach(key => {
+        const option = document.createElement('option');
+        option.value = key;
+        option.text = key;
+        templateDropdown.add(option);
+    });
+    setupTemplateChangeHandler();
 }
 
-function setupTemplateChangeHandler(templates) {
-    const dropdown = document.getElementById('templateDropdown');
-    dropdown.addEventListener('change', function() {
+function setupTemplateChangeHandler() {
+    const templateDropdown = document.getElementById('templateDropdown');
+    templateDropdown.addEventListener('change', function() {
         const selectedTemplate = templates[this.value];
         displayTemplate(selectedTemplate);
     });
@@ -136,6 +162,23 @@ function initEditable() {
     });
 }
 
+function addCheckboxItem(button) {
+    const checkboxGroup = button.previousElementSibling;
+    const newCheckbox = document.createElement('div');
+    newCheckbox.className = 'checkbox-item';
+    newCheckbox.innerHTML = '<input type="checkbox"><span class="editable">...</span>';
+    checkboxGroup.appendChild(newCheckbox);
+    
+    // Maak de nieuwe checkbox direct bewerkbaar
+    const editableSpan = newCheckbox.querySelector('.editable');
+    const newText = prompt("Voer de tekst in voor de nieuwe checkbox:");
+    if (newText !== null) {
+        editableSpan.textContent = newText;
+    }
+
+    initEditable(); // Reinitialize to make new elements editable
+}
+
 function addTextField() {
     const formContent = document.getElementById('formContent');
     const textFieldElement = createFormElement({
@@ -176,13 +219,15 @@ function addHeader() {
     const formContent = document.getElementById('formContent');
     const headerElement = createFormElement({
         type: 'header',
-        text: 'Koptekst'
+        text: 'Titel',
+        class: 'header-element' // Voeg de klasse 'header-element' toe
     });
-    formContent.insertAdjacentHTML('afterbegin', headerElement); // Voeg nieuw element bovenaan toe
+    formContent.insertAdjacentHTML('afterbegin', headerElement);
+
     initSortable();
     initEditable();
-}
 
+}
 function addRatingScale() {
     const formContent = document.getElementById('formContent');
     const ratingScaleElement = createFormElement({
@@ -204,15 +249,6 @@ function addScaleImage() {
     formContent.insertAdjacentHTML('afterbegin', scaleImageElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
-}
-
-function addCheckboxItem(button) {
-    const checkboxGroup = button.previousElementSibling;
-    const newCheckbox = document.createElement('div');
-    newCheckbox.className = 'checkbox-item';
-    newCheckbox.innerHTML = '<input type="checkbox"><span class="editable">...</span>';
-    checkboxGroup.appendChild(newCheckbox);
-    initEditable(); // Reinitialize to make new elements editable
 }
 
 function removeCheckboxItem(button) {

@@ -19,7 +19,7 @@ body {
     background-image: linear-gradient(to right, #3498db, #2c3e50);
     background-attachment: fixed;
     scroll-behavior: smooth;
-font-size: 12pt; /* Match print font size */
+    font-size: 12pt; /* Match print font size */
 }
 
 .container {
@@ -39,7 +39,7 @@ h1, h2 {
 
 h1 {
     text-align: center;
-    font-size: 3em;
+    font-size: 4em; /* Verhoogd van 3em naar 4em */
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -49,6 +49,17 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
 }
+
+.header-element {
+    text-align: left; /* Zorg ervoor dat de tekst links is uitgelijnd */
+    margin-bottom: 20px; /* Voeg wat ruimte toe onder de header */
+    font-size: 2em; /* Voorbeeld: pas de tekstgrootte aan indien nodig */
+    font-weight: bold; /* Voorbeeld: maak de tekst vetgedrukt indien nodig */
+    color: var(--secondary-color); /* Voorbeeld: pas de kleur van de tekst aan */
+}
+
+
+
 
 select, input, textarea {
     width: 100%;
@@ -62,10 +73,81 @@ select, input, textarea {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/* Container voor de printknop */
+.print-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Voeg wat ruimte toe boven de printknop */
+}
+
+/* Stijl voor de printknop */
+.print-button {
+    background-color: #555555; /* Donkergrijs */
+    color: white;
+    border: none;
+    padding: 14px 24px; /* Verdubbelde padding */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1em; /* Verdubbelde lettergrootte */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+    background-repeat: no-repeat;
+    background-position: 30px center;
+    }
+
+.print-button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.75s;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.print-button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.print-button:hover {
+    background-color: #333333; /* Donkerder grijs bij hover */
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.print-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+select {
+    appearance: none; /* Verwijdert de standaardstijl van de browser */
+    
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px 12px;
+}
+
 select:focus, input:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Voor oudere browsers die appearance: none; niet ondersteunen */
+select::-ms-expand {
+    display: none;
 }
 
 button {
@@ -86,6 +168,7 @@ button {
     overflow: hidden;
     z-index: 1;
 }
+
 .scale-image-container {
     position: relative;
     width: 100%;
@@ -99,6 +182,7 @@ button {
     max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder wordt dan zijn container */
     display: block; /* Verwijder eventuele onbedoelde ruimte onder de afbeelding */
 }
+
 button:before {
     content: '';
     position: absolute;
@@ -127,6 +211,7 @@ button:active {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 textarea {
     width: 100%;
     padding: 14px;
@@ -187,6 +272,7 @@ button:hover:after {
     border-color: var(--primary-color);
     transform: translateY(-4px);
 }
+
 .form-element::before {
     content: '';
     position: absolute;
@@ -324,6 +410,7 @@ textarea {
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center; /* Voeg deze regel toe om de knoppen te centreren */
 }
 
 .template-select {
@@ -343,6 +430,7 @@ textarea {
     border-color: var(--primary-color);
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
 }
+
 @media print {
     body * {
         visibility: hidden;
@@ -380,17 +468,19 @@ textarea {
         display: none !important;
     }
     
-.scale-image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
+    .scale-image-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
 
-.scale-image-container img.scale-image {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}.subtext {
+    .scale-image-container img.scale-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .subtext {
         color: #666 !important;
     }
     .scale-container {

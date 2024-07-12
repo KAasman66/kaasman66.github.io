@@ -12,18 +12,31 @@
         <h1>GGZ Formulier Generator</h1>
         
         <div class="controls">
-            <button onclick="addHeader()">Titel</button>
-            <button onclick="addTextarea()">Tekstgebied</button>
-            <button onclick="addCheckboxGroup()">Keuze</button>
-            <button onclick="addScaleImage()">Schaal</button>
-            <button class="print-button" onclick="printForm()"><i class="fa fa-print"></i> Formulier printen</button>
-        </div>
+            <label for="therapyDropdown">Selecteer een onderwerp:</label>
+            <select id="therapyDropdown" name="therapyDropdown">
+                <option value="">Kies een onderwerp</option>
+                <option value="CGT">CGT</option>
+                <option value="ACT">ACT</option>
+                <option value="EFT">EFT</option>
+                <option value="DGT">DGT</option>
+ 		<option value="CRISIS">CRISIS</option>
+            </select>
 
-        <div class="controls">
             <label for="templateDropdown">Selecteer een template:</label>
             <select id="templateDropdown" name="templateDropdown">
                 <option value="">Kies een template</option>
             </select>
+        </div>
+
+        <div class="controls">
+            <button onclick="addHeader()">Titel</button>
+            <button onclick="addTextarea()">Tekstgebied</button>
+            <button onclick="addCheckboxGroup()">Keuze</button>
+            <button onclick="addScaleImage()">Schaal</button>
+        </div>
+
+        <div class="print-button-container">
+            <button class="print-button" onclick="printForm()"><i class="fa fa-print"></i> Formulier printen</button>
         </div>
         
         <div id="formContainer">
@@ -35,6 +48,9 @@
         <script src="editable.js"></script>
         <script src="script.js"></script>
         <script src="main.js"></script>
+        <script>
+            
+        </script>
     </div>
 </body>
 </html>

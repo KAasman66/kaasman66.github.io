@@ -1,8 +1,8 @@
 {
-    "coping_styles_worksheet": [
+    "CGT_zelfreflectie_formulier": [
         {
             "type": "title",
-            "text": "Coping Stijlen Werkblad"
+            "text": "Zelfreflectie Formulier"
         },
         {
             "type": "date",
@@ -10,99 +10,44 @@
         },
         {
             "type": "textarea",
-            "label": "Huidige problemen",
-            "placeholder": "Beschrijf je huidige problemen"
-        },
-        {
-            "type": "textarea",
-            "label": "Copingstrategieën",
-            "placeholder": "Welke copingstrategieën gebruik je momenteel?"
-        }
-    ],
-    "abc_functional_analysis": [
-        {
-            "type": "title",
-            "text": "ABC Functionele Analyse"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Antecedenten",
-            "placeholder": "Wat gebeurde er voor het gedrag?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedrag",
-            "placeholder": "Beschrijf het gedrag"
-        },
-        {
-            "type": "textarea",
-            "label": "Consequenties",
-            "placeholder": "Wat waren de gevolgen van het gedrag?"
-        }
-    ],
-    "case_formulation_worksheet": [
-        {
-            "type": "title",
-            "text": "Casus Formulering Werkblad"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Predisponerende factoren",
-            "placeholder": "Welke factoren dragen bij aan het probleem?"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitlokkende factoren",
-            "placeholder": "Wat heeft het probleem verergerd?"
-        },
-        {
-            "type": "textarea",
-            "label": "In stand houdende factoren",
-            "placeholder": "Wat houdt het probleem in stand?"
-        },
-        {
-            "type": "textarea",
-            "label": "Beschermende factoren",
-            "placeholder": "Welke factoren beschermen tegen het probleem?"
-        }
-    ],
-    "cognitive_triangle": [
-        {
-            "type": "title",
-            "text": "Cognitieve Driehoek"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
+            "label": "Beschrijving van de situatie",
+            "placeholder": "Beschrijf de situatie waarop je reflecteert"
         },
         {
             "type": "textarea",
             "label": "Gedachten",
-            "placeholder": "Beschrijf je gedachten"
+            "placeholder": "Welke gedachten had je?"
         },
         {
             "type": "textarea",
-            "label": "Emoties",
-            "placeholder": "Beschrijf je emoties"
+            "label": "Gevoelens",
+            "placeholder": "Welke gevoelens ervaarde je?"
         },
         {
             "type": "textarea",
             "label": "Gedragingen",
-            "placeholder": "Beschrijf je gedragingen"
+            "placeholder": "Welke gedragingen vertoonde je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat ging goed?",
+            "placeholder": "Wat ging goed in deze situatie?"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat kon beter?",
+            "placeholder": "Wat kon beter in deze situatie?"
+        },
+        {
+            "type": "textarea",
+            "label": "Leerpunten",
+            "placeholder": "Wat heb je geleerd van deze ervaring?"
         }
     ],
-    "behavioral_activation_worksheet": [
+    "CGT_dankbaarheidslogboek": [
         {
             "type": "title",
-            "text": "Gedragsactivatie Werkblad"
+            "text": "Dankbaarheidslogboek"
         },
         {
             "type": "date",
@@ -110,19 +55,29 @@
         },
         {
             "type": "textarea",
-            "label": "Activiteiten",
-            "placeholder": "Welke activiteiten ga je ondernemen?"
+            "label": "Waar ben je vandaag dankbaar voor?",
+            "placeholder": "Schrijf hier waar je vandaag dankbaar voor bent"
         },
         {
             "type": "textarea",
-            "label": "Verwachtingen",
-            "placeholder": "Wat verwacht je dat het resultaat zal zijn?"
+            "label": "Waarom ben je dankbaar?",
+            "placeholder": "Waarom ben je hier dankbaar voor?"
+        },
+        {
+            "type": "textarea",
+            "label": "Hoe heeft dit je dag verbeterd?",
+            "placeholder": "Hoe heeft dit je dag verbeterd?"
+        },
+        {
+            "type": "textarea",
+            "label": "Reflectie",
+            "placeholder": "Reflecteer op je gevoelens van dankbaarheid"
         }
     ],
-    "exposure_hierarchy_worksheet": [
+    "CGT_zelfzorg_en_welzijn_formulier": [
         {
             "type": "title",
-            "text": "Blootstellingshiërarchie Werkblad"
+            "text": "Zelfzorg en Welzijn Formulier"
         },
         {
             "type": "date",
@@ -130,14 +85,44 @@
         },
         {
             "type": "textarea",
-            "label": "Situaties",
-            "placeholder": "Rangschik de angstwekkende situaties van minst naar meest angstwekkend"
+            "label": "Zelfzorgactiviteiten",
+            "placeholder": "Welke zelfzorgactiviteiten heb je vandaag gedaan?"
+        },
+        {
+            "type": "textarea",
+            "label": "Hoe voelde je je na deze activiteiten?",
+            "placeholder": "Hoe voelde je je na deze activiteiten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Wat heb je gedaan om je welzijn te verbeteren?",
+            "placeholder": "Wat heb je gedaan om je welzijn te verbeteren?"
+        },
+        {
+            "type": "textarea",
+            "label": "Heb je voldoende rust gehad?",
+            "placeholder": "Heb je voldoende rust gehad? beschrijf."
+        },
+        {
+            "type": "textarea",
+            "label": "Eetpatroon",
+            "placeholder": "Beschrijf je eetpatroon van vandaag"
+        },
+        {
+            "type": "textarea",
+            "label": "Beweging",
+            "placeholder": "Heb je vandaag bewogen? wat heb je gedaan?"
+        },
+        {
+            "type": "textarea",
+            "label": "Emotionele zelfzorg",
+            "placeholder": "Hoe heb je vandaag voor je emotionele welzijn gezorgd?"
         }
     ],
-    "cognitive_restructuring_worksheet": [
+    "CGT_relapse_prevention_plan": [
         {
             "type": "title",
-            "text": "Cognitieve Herstructurering Werkblad"
+            "text": "Relapse Prevention Plan"
         },
         {
             "type": "date",
@@ -145,63 +130,33 @@
         },
         {
             "type": "textarea",
-            "label": "Negatieve gedachten",
-            "placeholder": "Beschrijf je negatieve gedachten"
+            "label": "Triggers",
+            "placeholder": "Wat zijn je belangrijkste triggers voor terugval?"
         },
         {
             "type": "textarea",
-            "label": "Bewijs voor",
-            "placeholder": "Wat is het bewijs voor deze gedachten?"
+            "label": "Waarschuwingssignalen",
+            "placeholder": "Wat zijn de vroege waarschuwingssignalen van terugval?"
         },
         {
             "type": "textarea",
-            "label": "Bewijs tegen",
-            "placeholder": "Wat is het bewijs tegen deze gedachten?"
+            "label": "Copingstrategieën",
+            "placeholder": "Welke copingstrategieën kun je gebruiken om een terugval te voorkomen?"
         },
         {
             "type": "textarea",
-            "label": "Alternatieve gedachten",
-            "placeholder": "Beschrijf realistischere gedachten"
-        }
-    ],
-    "relaxation_techniques_worksheet": [
-        {
-            "type": "title",
-            "text": "Ontspanningstechnieken Werkblad"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
+            "label": "Ondersteuningsnetwerk",
+            "placeholder": "Wie in je netwerk kan je ondersteunen bij het voorkomen van een terugval?"
         },
         {
             "type": "textarea",
-            "label": "Techniek",
-            "placeholder": "Welke ontspanningstechniek heb je gebruikt?"
+            "label": "Actieplan",
+            "placeholder": "Wat is je actieplan als je merkt dat je een terugval dreigt te krijgen?"
         },
         {
             "type": "textarea",
-            "label": "Effectiviteit",
-            "placeholder": "Hoe effectief was de techniek? (beoordeel van 1 tot 10)"
-        }
-    ],
-    "sleep_hygiene_worksheet": [
-        {
-            "type": "title",
-            "text": "Slaaphygiëne Werkblad"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Slaappatroon",
-            "placeholder": "Beschrijf je slaappatroon"
-        },
-        {
-            "type": "textarea",
-            "label": "Verbeterpunten",
-            "placeholder": "Wat kun je doen om je slaaphygiëne te verbeteren?"
+            "label": "Lessen uit vorige terugvallen",
+            "placeholder": "Wat heb je geleerd van vorige terugvallen die je kunt toepassen?"
         }
     ]
 }

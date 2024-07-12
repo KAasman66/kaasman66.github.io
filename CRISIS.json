@@ -1,0 +1,74 @@
+{
+    "CRISIS_crisisinterventie_plan": [
+        {"type": "title", "text": "Crisisinterventie Plan (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisinterventieplan"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe in een crisis?"}
+    ],
+    "CRISIS_acute_stress_reactie_logboek": [
+        {"type": "title", "text": "Acute Stress Reactie Logboek (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Beschrijf je acute stress reactie"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat waren de triggers?"},
+        {"type": "textarea", "label": "Coping", "placeholder": "Hoe ging je om met de stress?"}
+    ],
+    "CRISIS_crisis_evaluatie_formulier": [
+        {"type": "title", "text": "Crisis Evaluatie Formulier (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Evaluatie", "placeholder": "Evalueer de crisis situatie"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties zijn ondernomen?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de ondernomen acties?"},
+        {"type": "checkbox", "label": "Acties effectief?", "options": ["Ja", "Nee"]}
+    ],
+    "CRISIS_noodcontacten_lijst": [
+        {"type": "title", "text": "Noodcontacten Lijst (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Contacten", "placeholder": "Lijst van noodcontacten"},
+        {"type": "textarea", "label": "Details", "placeholder": "Details van de contacten"}
+    ],
+    "CRISIS_crisisopvolging_plan": [
+        {"type": "title", "text": "Crisisopvolging Plan (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisopvolging plan"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe na een crisis?"}
+    ],
+    "CRISIS_veiligheidsplan": [
+        {"type": "title", "text": "Veiligheidsplan (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je veiligheidsplan"},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke veiligheidsstrategieën bevat dit plan?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe om veiligheid te waarborgen?"}
+    ],
+    "CRISIS_emotionele_first_aid_oefeningen": [
+        {"type": "title", "text": "Emotionele Eerste Hulp Oefeningen (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de emotionele eerste hulp oefening"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze oefening toegepast?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze oefening?"}
+    ],
+    "CRISIS_trigger_waarschuwingssignalen": [
+        {"type": "title", "text": "Trigger Waarschuwingssignalen (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Beschrijf de waarschuwingssignalen van triggers"},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageer je op deze waarschuwingssignalen?"},
+        {"type": "checkbox", "label": "Signalen correct herkend?", "options": ["Ja", "Nee"]}
+    ],
+    "CRISIS_de_escalatietechnieken": [
+        {"type": "title", "text": "De-escalatietechnieken (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Techniek", "placeholder": "Beschrijf de de-escalatietechniek"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze techniek toegepast?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze techniek?"},
+        {"type": "checkbox", "label": "Techniek succesvol?", "options": ["Ja", "Nee"]}
+    ],
+    "CRISIS_incidentrapportage": [
+        {"type": "title", "text": "Incidentrapportage (Crisismanagement)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Incident", "placeholder": "Beschrijf het incident"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties zijn ondernomen?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de ondernomen acties?"},
+        {"type": "checkbox", "label": "Acties effectief?", "options": ["Ja", "Nee"]}
+    ]
+}

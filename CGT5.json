@@ -1,5 +1,5 @@
 {
-    "grounding_techniques_menu": [
+    "CGT_grondingstechnieken_menu": [
         {
             "type": "title",
             "text": "Grondingstechnieken Menu"
@@ -19,7 +19,7 @@
             "placeholder": "Hoe effectief was de techniek? (beoordeel van 1 tot 10)"
         }
     ],
-    "values_clarification_worksheet": [
+    "CGT_waarden_verheldering_werkblad": [
         {
             "type": "title",
             "text": "Waarden Verheldering Werkblad"
@@ -44,7 +44,7 @@
             "placeholder": "Welke acties onderneem je om volgens deze waarden te leven?"
         }
     ],
-    "successive_approximation": [
+    "CGT_successieve_approximation": [
         {
             "type": "title",
             "text": "Successieve Approximation"
@@ -69,7 +69,7 @@
             "placeholder": "Beschrijf je voortgang bij elke stap"
         }
     ],
-    "interoceptive_exposure": [
+    "CGT_interoceptieve_blootstelling": [
         {
             "type": "title",
             "text": "Interoceptieve Blootstelling"
@@ -94,7 +94,7 @@
             "placeholder": "Wat zijn de uitkomsten van de blootstelling?"
         }
     ],
-    "cognitive_distortions_worksheet": [
+    "CGT_cognitieve_vervormingen_werkblad": [
         {
             "type": "title",
             "text": "Cognitieve Vervormingen Werkblad"
@@ -124,7 +124,7 @@
             "placeholder": "Wat zijn realistischere gedachten?"
         }
     ],
-    "mastery_and_pleasure_activities": [
+    "CGT_beheers_en_plezieractiviteiten": [
         {
             "type": "title",
             "text": "Beheers- en Plezieractiviteiten"
@@ -145,8 +145,8 @@
         },
         {
             "type": "textarea",
-            "label": "Pleziervniveau",
-            "placeholder": "Beoordeel het pleziervniveau van 1 tot 10"
+            "label": "Plezierniveau",
+            "placeholder": "Beoordeel het plezierniveau van 1 tot 10"
         },
         {
             "type": "textarea",
@@ -154,7 +154,7 @@
             "placeholder": "Beschrijf de resultaten en gevoelens na de activiteit"
         }
     ],
-    "imagery_based_exposure": [
+    "CGT_op_beeld_gebaseerde_blootstelling": [
         {
             "type": "title",
             "text": "Op Beeld Gebaseerde Blootstelling"
@@ -184,7 +184,7 @@
             "placeholder": "Wat zijn de uitkomsten van de visualisatie?"
         }
     ],
-    "behavioral_experiments": [
+    "CGT_gedragsexperimenten": [
         {
             "type": "title",
             "text": "Gedragsexperimenten"
