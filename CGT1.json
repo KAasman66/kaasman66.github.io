@@ -1,0 +1,226 @@
+{
+    "gedachtedagboek": [
+        {
+            "type": "title",
+            "text": "Gedachtedagboek"
+        },
+        {
+            "type": "text",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de situatie die de automatische gedachten uitlokte"
+        },
+        {
+            "type": "textarea",
+            "label": "Automatische gedachten",
+            "placeholder": "Noteer de automatische gedachten die opkwamen"
+        },
+        {
+            "type": "textarea",
+            "label": "Emoties",
+            "placeholder": "Beschrijf de emoties die je ervaarde"
+        },
+        {
+            "type": "custom",
+            "label": "Intensiteit van de emoties",
+            "customType": "scale-image"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedrag",
+            "placeholder": "Beschrijf je gedrag in reactie op de situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitdaging van de gedachten",
+            "placeholder": "Hoe kun je deze gedachten rationeel uitdagen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Alternatieve gedachten",
+            "placeholder": "Wat zijn meer realistische of helpende gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitkomst",
+            "placeholder": "Wat was het resultaat van deze nieuwe denkwijze?"
+        }
+    ],
+    "dagelijks_dagboek": [
+        {
+            "type": "title",
+            "text": "Dagelijks Activiteitendagboek"
+        },
+        {
+            "type": "text",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Dagbeschrijving",
+            "placeholder": "Geef een korte beschrijving van je dag"
+        },
+        {
+            "type": "custom",
+            "label": "Algemene stemming",
+            "customType": "scale-image"
+        },
+        {
+            "type": "textarea",
+            "label": "Positieve ervaringen",
+            "placeholder": "Beschrijf positieve ervaringen van vandaag"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitdagingen",
+            "placeholder": "Beschrijf uitdagingen die je vandaag tegenkwam"
+        },
+        {
+            "type": "textarea",
+            "label": "Cognities",
+            "placeholder": "Noteer belangrijke gedachten of overtuigingen van vandaag"
+        },
+        {
+            "type": "textarea",
+            "label": "Emoties",
+            "placeholder": "Beschrijf je belangrijkste emoties van vandaag"
+        },
+        {
+            "type": "textarea",
+            "label": "Zelfzorg",
+            "placeholder": "Welke zelfzorgactiviteiten heb je vandaag ondernomen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Dankbaarheid",
+            "placeholder": "Waar ben je vandaag dankbaar voor?"
+        },
+        {
+            "type": "textarea",
+            "label": "Leerpunten",
+            "placeholder": "Wat heb je vandaag geleerd?"
+        },
+        {
+            "type": "textarea",
+            "label": "Doelen voor morgen",
+            "placeholder": "Wat wil je morgen bereiken?"
+        }
+    ],
+    "weekoverzicht": [
+        {
+            "type": "title",
+            "text": "Weekoverzicht"
+        },
+        {
+            "type": "text",
+            "label": "Week van"
+        },
+        {
+            "type": "textarea",
+            "label": "Hoogtepunten",
+            "placeholder": "Wat waren de hoogtepunten van deze week?"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitdagingen",
+            "placeholder": "Welke uitdagingen kwam je deze week tegen?"
+        },
+        {
+            "type": "custom",
+            "label": "Algemene stemming deze week",
+            "customType": "scale-image"
+        },
+        {
+            "type": "textarea",
+            "label": "Belangrijkste prestaties",
+            "placeholder": "Wat heb je deze week bereikt?"
+        },
+        {
+            "type": "textarea",
+            "label": "Leerpunten",
+            "placeholder": "Wat heb je deze week geleerd?"
+        },
+        {
+            "type": "textarea",
+            "label": "Zelfzorg",
+            "placeholder": "Hoe heb je deze week voor jezelf gezorgd?"
+        },
+        {
+            "type": "textarea",
+            "label": "Sociale interacties",
+            "placeholder": "Hoe verliepen je sociale interacties deze week?"
+        },
+        {
+            "type": "textarea",
+            "label": "Doelen voor volgende week",
+            "placeholder": "Wat wil je volgende week bereiken?"
+        },
+        {
+            "type": "textarea",
+            "label": "Reflectie",
+            "placeholder": "Algemene reflectie op de afgelopen week"
+        }
+    ],
+    "stresslogboek": [
+        {
+            "type": "title",
+            "text": "Stresslogboek"
+        },
+        {
+            "type": "text",
+            "label": "Datum"
+        },
+        {
+            "type": "text",
+            "label": "Tijd"
+        },
+        {
+            "type": "textarea",
+            "label": "Stressvolle situatie",
+            "placeholder": "Beschrijf de stressvolle situatie"
+        },
+        {
+            "type": "custom",
+            "label": "Stressniveau",
+            "customType": "scale-image"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedachten",
+            "placeholder": "Welke gedachten had je tijdens deze situatie?"
+        },
+        {
+            "type": "textarea",
+            "label": "Emoties",
+            "placeholder": "Welke emoties ervaarde je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Lichamelijke reacties",
+            "placeholder": "Welke lichamelijke reacties merkte je op?"
+        },
+        {
+            "type": "textarea",
+            "label": "Copingstrategieën",
+            "placeholder": "Hoe ben je met de situatie omgegaan?"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitkomst",
+            "placeholder": "Wat was het resultaat van je aanpak?"
+        },
+        {
+            "type": "textarea",
+            "label": "Alternatieve aanpak",
+            "placeholder": "Hoe zou je de situatie anders kunnen aanpakken in de toekomst?"
+        },
+        {
+            "type": "textarea",
+            "label": "Leerpunten",
+            "placeholder": "Wat heb je geleerd van deze ervaring?"
+        }
+    ]
+}

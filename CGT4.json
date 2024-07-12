@@ -1,0 +1,207 @@
+{
+    "coping_styles_worksheet": [
+        {
+            "type": "title",
+            "text": "Coping Stijlen Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Huidige problemen",
+            "placeholder": "Beschrijf je huidige problemen"
+        },
+        {
+            "type": "textarea",
+            "label": "Copingstrategieën",
+            "placeholder": "Welke copingstrategieën gebruik je momenteel?"
+        }
+    ],
+    "abc_functional_analysis": [
+        {
+            "type": "title",
+            "text": "ABC Functionele Analyse"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Antecedenten",
+            "placeholder": "Wat gebeurde er voor het gedrag?"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedrag",
+            "placeholder": "Beschrijf het gedrag"
+        },
+        {
+            "type": "textarea",
+            "label": "Consequenties",
+            "placeholder": "Wat waren de gevolgen van het gedrag?"
+        }
+    ],
+    "case_formulation_worksheet": [
+        {
+            "type": "title",
+            "text": "Casus Formulering Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Predisponerende factoren",
+            "placeholder": "Welke factoren dragen bij aan het probleem?"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitlokkende factoren",
+            "placeholder": "Wat heeft het probleem verergerd?"
+        },
+        {
+            "type": "textarea",
+            "label": "In stand houdende factoren",
+            "placeholder": "Wat houdt het probleem in stand?"
+        },
+        {
+            "type": "textarea",
+            "label": "Beschermende factoren",
+            "placeholder": "Welke factoren beschermen tegen het probleem?"
+        }
+    ],
+    "cognitive_triangle": [
+        {
+            "type": "title",
+            "text": "Cognitieve Driehoek"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedachten",
+            "placeholder": "Beschrijf je gedachten"
+        },
+        {
+            "type": "textarea",
+            "label": "Emoties",
+            "placeholder": "Beschrijf je emoties"
+        },
+        {
+            "type": "textarea",
+            "label": "Gedragingen",
+            "placeholder": "Beschrijf je gedragingen"
+        }
+    ],
+    "behavioral_activation_worksheet": [
+        {
+            "type": "title",
+            "text": "Gedragsactivatie Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Activiteiten",
+            "placeholder": "Welke activiteiten ga je ondernemen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Verwachtingen",
+            "placeholder": "Wat verwacht je dat het resultaat zal zijn?"
+        }
+    ],
+    "exposure_hierarchy_worksheet": [
+        {
+            "type": "title",
+            "text": "Blootstellingshiërarchie Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situaties",
+            "placeholder": "Rangschik de angstwekkende situaties van minst naar meest angstwekkend"
+        }
+    ],
+    "cognitive_restructuring_worksheet": [
+        {
+            "type": "title",
+            "text": "Cognitieve Herstructurering Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Negatieve gedachten",
+            "placeholder": "Beschrijf je negatieve gedachten"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs voor",
+            "placeholder": "Wat is het bewijs voor deze gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs tegen",
+            "placeholder": "Wat is het bewijs tegen deze gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Alternatieve gedachten",
+            "placeholder": "Beschrijf realistischere gedachten"
+        }
+    ],
+    "relaxation_techniques_worksheet": [
+        {
+            "type": "title",
+            "text": "Ontspanningstechnieken Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Techniek",
+            "placeholder": "Welke ontspanningstechniek heb je gebruikt?"
+        },
+        {
+            "type": "textarea",
+            "label": "Effectiviteit",
+            "placeholder": "Hoe effectief was de techniek? (beoordeel van 1 tot 10)"
+        }
+    ],
+    "sleep_hygiene_worksheet": [
+        {
+            "type": "title",
+            "text": "Slaaphygiëne Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Slaappatroon",
+            "placeholder": "Beschrijf je slaappatroon"
+        },
+        {
+            "type": "textarea",
+            "label": "Verbeterpunten",
+            "placeholder": "Wat kun je doen om je slaaphygiëne te verbeteren?"
+        }
+    ]
+}

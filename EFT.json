@@ -1,0 +1,110 @@
+{
+    "emotionele_bewustwording_formulier": [
+        {"type": "title", "text": "Emotionele Bewustwording Formulier (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie"},
+        {"type": "textarea", "label": "Emoties", "placeholder": "Welke emoties ervaarde je?"},
+        {"type": "textarea", "label": "Fysieke reacties", "placeholder": "Beschrijf je fysieke reacties"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten had je?"},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageerde je?"}
+    ],
+    "hechting_en_verbinding_oefeningen": [
+        {"type": "title", "text": "Hechting en Verbinding Oefeningen (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de oefening"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het doel van deze oefening?"},
+        {"type": "textarea", "label": "Uitkomsten", "placeholder": "Wat waren de uitkomsten?"}
+    ],
+    "relatiepatronen_dagboek": [
+        {"type": "title", "text": "Relatiepatronen Dagboek (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Patroon", "placeholder": "Beschrijf het relatiepatroon"},
+        {"type": "textarea", "label": "Oorzaken", "placeholder": "Wat zijn de oorzaken van dit patroon?"},
+        {"type": "textarea", "label": "Gevolgen", "placeholder": "Wat zijn de gevolgen van dit patroon?"}
+    ],
+    "eft_communicatievaardigheden": [
+        {"type": "title", "text": "EFT Communicatievaardigheden"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Vaardigheid", "placeholder": "Beschrijf de communicatievaardigheid"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wanneer heb je deze vaardigheid gebruikt?"},
+        {"type": "textarea", "label": "Uitkomst", "placeholder": "Wat was de uitkomst?"}
+    ],
+    "emotionele_triggers_logboek": [
+        {"type": "title", "text": "Emotionele Triggers Logboek (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Trigger", "placeholder": "Beschrijf de emotionele trigger"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe reageerde je op deze trigger?"},
+        {"type": "textarea", "label": "Alternatieve reactie", "placeholder": "Hoe had je anders kunnen reageren?"}
+    ],
+    "eft_progressie_tracker": [
+        {"type": "title", "text": "EFT Progressie Tracker"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je doelen"},
+        {"type": "textarea", "label": "Stappen", "placeholder": "Welke stappen heb je ondernomen?"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
+        {"type": "textarea", "label": "Belemmeringen", "placeholder": "Wat zijn de belemmeringen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ],
+    "conflictoplossing_dagboek": [
+        {"type": "title", "text": "Conflictoplossing Dagboek (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Conflict", "placeholder": "Beschrijf het conflict"},
+        {"type": "textarea", "label": "Oplossing", "placeholder": "Hoe heb je het conflict opgelost?"},
+        {"type": "textarea", "label": "Uitkomst", "placeholder": "Wat was de uitkomst?"}
+    ],
+    "versterking_van_positieve_interacties": [
+        {"type": "title", "text": "Versterking van Positieve Interacties (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Positieve interactie", "placeholder": "Beschrijf de positieve interactie"},
+        {"type": "textarea", "label": "Effect", "placeholder": "Wat was het effect van deze interactie?"}
+    ],
+    "empathie_en_begrip_oefeningen": [
+        {"type": "title", "text": "Empathie en Begrip Oefeningen (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de oefening"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het doel van deze oefening?"},
+        {"type": "textarea", "label": "Uitkomsten", "placeholder": "Wat waren de uitkomsten?"}
+    ],
+    "verbindende_gesprekken_formulier": [
+        {"type": "title", "text": "Verbindende Gesprekken Formulier (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Gesprek", "placeholder": "Beschrijf het gesprek"},
+        {"type": "textarea", "label": "Uitkomst", "placeholder": "Wat was de uitkomst van dit gesprek?"}
+    ],
+    "hechtingsstijlen_evaluatie": [
+        {"type": "title", "text": "Hechtingsstijlen Evaluatie (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Hechtingsstijl", "placeholder": "Beschrijf je hechtingsstijl"},
+        {"type": "textarea", "label": "Invloed op relaties", "placeholder": "Hoe beïnvloedt deze hechtingsstijl je relaties?"}
+    ],
+    "eft_therapie_progressie": [
+        {"type": "title", "text": "EFT Therapie Progressie"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je therapiedoelen"},
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
+        {"type": "textarea", "label": "Belemmeringen", "placeholder": "Wat zijn de belemmeringen?"},
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+    ],
+    "verbindingsoefeningen": [
+        {"type": "title", "text": "Verbindingsoefeningen (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de oefening"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het doel van deze oefening?"},
+        {"type": "textarea", "label": "Uitkomsten", "placeholder": "Wat waren de uitkomsten?"}
+    ],
+    "eft_emotionele_expressie": [
+        {"type": "title", "text": "EFT Emotionele Expressie"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Emotie", "placeholder": "Beschrijf de emotie die je hebt geuit"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de situatie waarin je deze emotie hebt geuit"},
+        {"type": "textarea", "label": "Reactie van anderen", "placeholder": "Hoe reageerden anderen?"}
+    ],
+    "relatie_verbetering_plan": [
+        {"type": "title", "text": "Relatie Verbetering Plan (EFT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je relatieverbeteringsdoelen"},
+        {"type": "textarea", "label": "Stappen", "placeholder": "Welke stappen ga je ondernemen om deze doelen te bereiken?"},
+        {"type": "textarea", "label": "Belemmeringen", "placeholder": "Wat zijn de mogelijke belemmeringen?"},
+        {"type": "textarea", "label": "Ondersteuning", "placeholder": "Welke ondersteuning heb je nodig?"}
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "doelstelling_formulier": [
+        {
+            "type": "title",
+            "text": "Doelstelling Formulier"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Doel",
+            "placeholder": "Beschrijf je doel"
+        },
+        {
+            "type": "textarea",
+            "label": "Reden",
+            "placeholder": "Waarom is dit doel belangrijk voor je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Actieplan",
+            "placeholder": "Welke stappen ga je ondernemen om dit doel te bereiken?"
+        },
+        {
+            "type": "textarea",
+            "label": "Middelen en ondersteuning",
+            "placeholder": "Welke middelen of ondersteuning heb je nodig?"
+        },
+        {
+            "type": "textarea",
+            "label": "Potentiële obstakels",
+            "placeholder": "Welke obstakels verwacht je en hoe ga je deze overwinnen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Tijdlijn",
+            "placeholder": "Wat is je tijdlijn voor dit doel?"
+        },
+        {
+            "type": "textarea",
+            "label": "Succescriteria",
+            "placeholder": "Hoe weet je wanneer je dit doel hebt bereikt?"
+        }
+    ],
+    "probleemoplossingslogboek": [
+        {
+            "type": "title",
+            "text": "Probleemoplossingslogboek"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Probleemomschrijving",
+            "placeholder": "Beschrijf het probleem"
+        },
+        {
+            "type": "textarea",
+            "label": "Oorzaken van het probleem",
+            "placeholder": "Wat zijn de oorzaken van het probleem?"
+        },
+        {
+            "type": "textarea",
+            "label": "Mogelijke oplossingen",
+            "placeholder": "Welke mogelijke oplossingen zie je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Gekozen oplossing",
+            "placeholder": "Welke oplossing ga je proberen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Actieplan",
+            "placeholder": "Wat is je actieplan?"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaat",
+            "placeholder": "Wat was het resultaat van je actie?"
+        },
+        {
+            "type": "textarea",
+            "label": "Reflectie",
+            "placeholder": "Reflecteer op het proces en het resultaat"
+        }
+    ],
+    "gedragsexperiment_logboek": [
+        {
+            "type": "title",
+            "text": "Gedragsexperiment Logboek"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Hypothese",
+            "placeholder": "Wat is je hypothese?"
+        },
+        {
+            "type": "textarea",
+            "label": "Experiment beschrijving",
+            "placeholder": "Beschrijf het gedragsexperiment"
+        },
+        {
+            "type": "textarea",
+            "label": "Verwachtingen",
+            "placeholder": "Wat verwacht je dat er zal gebeuren?"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaten",
+            "placeholder": "Wat waren de werkelijke resultaten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Analyse",
+            "placeholder": "Analyseer de resultaten en vergelijk deze met je verwachtingen"
+        },
+        {
+            "type": "textarea",
+            "label": "Conclusies",
+            "placeholder": "Welke conclusies kun je trekken?"
+        },
+        {
+            "type": "textarea",
+            "label": "Toepassing op toekomstig gedrag",
+            "placeholder": "Hoe kun je deze bevindingen toepassen op je toekomstig gedrag?"
+        }
+    ],
+    "gedachtenregistratie": [
+        {
+            "type": "title",
+            "text": "Gedachtenregistratie"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Negatieve gedachten",
+            "placeholder": "Welke negatieve gedachten had je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs voor",
+            "placeholder": "Wat is het bewijs voor deze gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Bewijs tegen",
+            "placeholder": "Wat is het bewijs tegen deze gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Realistische gedachten",
+            "placeholder": "Wat zijn realistischere gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Emoties",
+            "placeholder": "Welke emoties voelde je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Intensiteit van emoties",
+            "max": 10
+        },
+        {
+            "type": "textarea",
+            "label": "Gedrag",
+            "placeholder": "Wat was je gedrag als gevolg van deze gedachten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaat",
+            "placeholder": "Wat was het resultaat van deze gedachten en gedrag?"
+        }
+    ]
+}

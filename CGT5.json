@@ -1,0 +1,232 @@
+{
+    "grounding_techniques_menu": [
+        {
+            "type": "title",
+            "text": "Grondingstechnieken Menu"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Techniek",
+            "placeholder": "Welke grondingstechniek heb je gebruikt?"
+        },
+        {
+            "type": "textarea",
+            "label": "Effectiviteit",
+            "placeholder": "Hoe effectief was de techniek? (beoordeel van 1 tot 10)"
+        }
+    ],
+    "values_clarification_worksheet": [
+        {
+            "type": "title",
+            "text": "Waarden Verheldering Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Waarden",
+            "placeholder": "Beschrijf je kernwaarden"
+        },
+        {
+            "type": "textarea",
+            "label": "Belang",
+            "placeholder": "Waarom zijn deze waarden belangrijk voor je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Acties",
+            "placeholder": "Welke acties onderneem je om volgens deze waarden te leven?"
+        }
+    ],
+    "successive_approximation": [
+        {
+            "type": "title",
+            "text": "Successieve Approximation"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Taak",
+            "placeholder": "Beschrijf de taak die je wilt voltooien"
+        },
+        {
+            "type": "textarea",
+            "label": "Stappen",
+            "placeholder": "Breek de taak op in kleinere, beheersbare stappen"
+        },
+        {
+            "type": "textarea",
+            "label": "Voortgang",
+            "placeholder": "Beschrijf je voortgang bij elke stap"
+        }
+    ],
+    "interoceptive_exposure": [
+        {
+            "type": "title",
+            "text": "Interoceptieve Blootstelling"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Lichamelijke sensaties",
+            "placeholder": "Welke lichamelijke sensaties veroorzaak je?"
+        },
+        {
+            "type": "textarea",
+            "label": "Reacties",
+            "placeholder": "Wat zijn je reacties op deze sensaties?"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitkomsten",
+            "placeholder": "Wat zijn de uitkomsten van de blootstelling?"
+        }
+    ],
+    "cognitive_distortions_worksheet": [
+        {
+            "type": "title",
+            "text": "Cognitieve Vervormingen Werkblad"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Negatieve gedachten",
+            "placeholder": "Beschrijf je negatieve gedachten"
+        },
+        {
+            "type": "textarea",
+            "label": "Type vervorming",
+            "placeholder": "Identificeer het type cognitieve vervorming"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitdaging",
+            "placeholder": "Hoe kun je deze gedachten uitdagen?"
+        },
+        {
+            "type": "textarea",
+            "label": "Alternatieve gedachten",
+            "placeholder": "Wat zijn realistischere gedachten?"
+        }
+    ],
+    "mastery_and_pleasure_activities": [
+        {
+            "type": "title",
+            "text": "Beheers- en Plezieractiviteiten"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Activiteit",
+            "placeholder": "Beschrijf de activiteit"
+        },
+        {
+            "type": "textarea",
+            "label": "Beheersniveau",
+            "placeholder": "Beoordeel het beheersniveau van 1 tot 10"
+        },
+        {
+            "type": "textarea",
+            "label": "Pleziervniveau",
+            "placeholder": "Beoordeel het pleziervniveau van 1 tot 10"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaten",
+            "placeholder": "Beschrijf de resultaten en gevoelens na de activiteit"
+        }
+    ],
+    "imagery_based_exposure": [
+        {
+            "type": "title",
+            "text": "Op Beeld Gebaseerde Blootstelling"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Situatie",
+            "placeholder": "Beschrijf de angstige situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Visualisatie",
+            "placeholder": "Beschrijf de visualisatie van de situatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Reacties",
+            "placeholder": "Beschrijf je reacties op de visualisatie"
+        },
+        {
+            "type": "textarea",
+            "label": "Uitkomsten",
+            "placeholder": "Wat zijn de uitkomsten van de visualisatie?"
+        }
+    ],
+    "behavioral_experiments": [
+        {
+            "type": "title",
+            "text": "Gedragsexperimenten"
+        },
+        {
+            "type": "date",
+            "label": "Datum"
+        },
+        {
+            "type": "textarea",
+            "label": "Hypothese",
+            "placeholder": "Wat is je hypothese?"
+        },
+        {
+            "type": "textarea",
+            "label": "Experiment beschrijving",
+            "placeholder": "Beschrijf het gedragsexperiment"
+        },
+        {
+            "type": "textarea",
+            "label": "Verwachtingen",
+            "placeholder": "Wat verwacht je dat er zal gebeuren?"
+        },
+        {
+            "type": "textarea",
+            "label": "Resultaten",
+            "placeholder": "Wat waren de werkelijke resultaten?"
+        },
+        {
+            "type": "textarea",
+            "label": "Analyse",
+            "placeholder": "Analyseer de resultaten en vergelijk deze met je verwachtingen"
+        },
+        {
+            "type": "textarea",
+            "label": "Conclusies",
+            "placeholder": "Welke conclusies kun je trekken?"
+        },
+        {
+            "type": "textarea",
+            "label": "Toepassing op toekomstig gedrag",
+            "placeholder": "Hoe kun je deze bevindingen toepassen op je toekomstig gedrag?"
+        }
+    ]
+}

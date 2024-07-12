@@ -5,7 +5,7 @@ function addTextField() {
         label: 'Tekstveld',
         placeholder: 'Voer tekst in'
     });
-    formContent.insertAdjacentHTML('beforeend', textFieldElement);
+    formContent.insertAdjacentHTML('afterbegin', textFieldElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
 }
@@ -17,7 +17,7 @@ function addCheckboxGroup() {
         label: 'Afvinkvakjes',
         options: ['Optie 1', 'Optie 2', 'Optie 3']
     });
-    formContent.insertAdjacentHTML('beforeend', checkboxGroupElement);
+    formContent.insertAdjacentHTML('afterbegin', checkboxGroupElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
 }
@@ -28,7 +28,7 @@ function addHeader() {
         type: 'header',
         text: 'Koptekst'
     });
-    formContent.insertAdjacentHTML('beforeend', headerElement);
+    formContent.insertAdjacentHTML('afterbegin', headerElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
 }
@@ -39,19 +39,31 @@ function addRatingScale() {
         type: 'rating-scale',
         label: 'Schaal'
     });
-    formContent.insertAdjacentHTML('beforeend', ratingScaleElement);
+    formContent.insertAdjacentHTML('afterbegin', ratingScaleElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
 }
 
-function addCheckboxGroup3() {
+function addTextarea() {
     const formContent = document.getElementById('formContent');
-    const checkboxGroupElement = createFormElement({
-        type: 'checkbox-group',
-        label: 'Keuze',
-        options: ['Optie 1', 'Optie 2', 'Optie 3']
+    const textareaElement = createFormElement({
+        type: 'textarea',
+        label: 'Tekstgebied',
+        placeholder: 'Voer tekst in'
     });
-    formContent.insertAdjacentHTML('beforeend', checkboxGroupElement);
+    formContent.insertAdjacentHTML('afterbegin', textareaElement); // Voeg nieuw element bovenaan toe
     initSortable();
     initEditable();
 }
+
+function addScaleImage() {
+    const formContent = document.getElementById('formContent');
+    const scaleImageElement = createFormElement({
+        type: 'scaleImage',
+        label: 'Schaal Afbeelding'
+    });
+    formContent.insertAdjacentHTML('afterbegin', scaleImageElement); // Voeg nieuw element bovenaan toe
+    initSortable();
+    initEditable();
+}
+

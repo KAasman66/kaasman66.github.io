@@ -18,8 +18,6 @@ body {
     color: var(--text-color);
     background-image: linear-gradient(to right, #3498db, #2c3e50);
     background-attachment: fixed;
-    scroll-behavior: smooth;
-font-size: 12pt; /* Match print font size */
 }
 
 .container {
@@ -84,21 +82,8 @@ button {
     box-shadow: var(--box-shadow);
     position: relative;
     overflow: hidden;
-    z-index: 1;
-}
-.scale-image-container {
-    position: relative;
-    width: 100%;
-    max-width: 100%; /* Zorg ervoor dat de container niet breder wordt dan zijn ouder */
-    overflow: hidden; /* Verberg alles wat buiten de container valt */
 }
 
-.scale-image-container img.scale-image {
-    width: 100%; /* Maak de afbeelding 100% breed binnen zijn container */
-    height: auto; /* Behoud de aspect ratio */
-    max-width: 100%; /* Zorg ervoor dat de afbeelding niet breder wordt dan zijn container */
-    display: block; /* Verwijder eventuele onbedoelde ruimte onder de afbeelding */
-}
 button:before {
     content: '';
     position: absolute;
@@ -127,45 +112,10 @@ button:active {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: var(--border-radius);
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    transition: var(--transition);
-    background: rgba(255, 255, 255, 0.8);
-    resize: vertical; /* Zorgt ervoor dat de textarea verticaal kan worden vergroot */
-    min-height: 150px; /* Minimale hoogte om vergroten mogelijk te maken */
-}
-
-textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-}
-
-button:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-button:hover:after {
-    opacity: 1;
-}
 
 .form-element {
     margin-bottom: 30px;
-    position: relative; /* Zorg ervoor dat de parent relative position heeft */
+    position: relative;
     padding: 20px;
     background-color: #f9f9f9;
     border: 2px solid #e0e0e0;
@@ -179,7 +129,7 @@ button:hover:after {
     z-index: 1;
     min-height: 50px;
     resize: vertical;
-    overflow: hidden; /* Zorg ervoor dat de inhoud niet buiten het element komt */
+    overflow: auto;
 }
 
 .form-element:hover {
@@ -187,6 +137,7 @@ button:hover:after {
     border-color: var(--primary-color);
     transform: translateY(-4px);
 }
+
 .form-element::before {
     content: '';
     position: absolute;
@@ -199,59 +150,37 @@ button:hover:after {
     z-index: -1;
 }
 
-.remove-element {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.8em;
-    opacity: 0.5; /* Set the opacity to 50% */
-}
-
-.remove-element:hover {
-    background-color: #c0392b;
-    transform: scale(1.1);
-    opacity: 1; /* Set the opacity to 100% on hover */
-}
-
 .checkbox-group, .radio-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px; /* Verkleinen van de ruimte tussen de checkbox-items */
+    gap: 20px;
 }
 
 .checkbox-item, .radio-item {
     display: flex;
     align-items: center;
-    margin-bottom: 5px; /* Verkleinen van de ruimte onder elk checkbox-item */
+    margin-bottom: 10px;
 }
 
 .checkbox-item input, .radio-item input {
-    margin-right: 5px;
+    margin-right: 10px;
     width: auto;
 }
 
 .checkbox-item span, .radio-item span {
-    margin-left: 0;
+    margin-left: 10px;
 }
 
 #formContainer {
-    width: 210mm;
+    width: calc(210mm + 120px);
     min-height: 297mm;
     margin: 40px auto;
     background-color: white;
     box-shadow: var(--box-shadow);
-    padding: 10mm; /* Match print padding */
+    overflow: hidden;
+    padding: 30mm;
     box-sizing: border-box;
     border: 1px solid #ddd;
-    overflow: visible;
-    font-size: 12pt; /* Match print font size */
 }
 
 .draggable {
@@ -259,7 +188,8 @@ button:hover:after {
 }
 
 .editable {
-    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 .edit-icon {
@@ -341,69 +271,4 @@ textarea {
 
 .template-select select:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-}
-@media print {
-    body * {
-        visibility: hidden;
-    }
-    #formContent, #formContent * {
-        visibility: visible;
-    }
-    #formContainer {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        box-shadow: none;
-        border: none;
-        transform: scale(1.0);
-        transform-origin: top left;
-        page-break-inside: avoid; /* Voorkom pagina-break binnen de container */
-    }
-    .form-element {
-        background-color: #f9f9f9 !important;
-        box-shadow: var(--box-shadow) !important;
-        border: 2px solid #e0e0e0 !important;
-        padding: 20px !important;
-        margin: 0 0 30px 0 !important;
-        font-size: 1.0em;
-        resize: none;
-        page-break-inside: avoid; /* Voorkom pagina-break binnen een form-element */
-    }
-    .remove-element, .add-checkbox, .remove-checkbox, .edit-icon, .edit-options {
-        display: none !important;
-    }
-    .form-element::before {
-        display: none !important;
-    }
-    
-.scale-image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.scale-image-container img.scale-image {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}.subtext {
-        color: #666 !important;
-    }
-    .scale-container {
-        text-align: center;
-        margin: 20px 0;
-        font-size: 1.0em;
-    }
-    .scale-labels {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px;
-    }
-    .container {
-        page-break-inside: avoid; /* Voorkom pagina-break binnen de container */
-    }
-}
+    box-shadow: 0 0 10px rgba(52, 152, 219
