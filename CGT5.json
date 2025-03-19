@@ -95,138 +95,38 @@
         }
     ],
     "CGT_cognitieve_vervormingen_werkblad": [
-        {
-            "type": "title",
-            "text": "Cognitieve Vervormingen Werkblad"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Negatieve gedachten",
-            "placeholder": "Beschrijf je negatieve gedachten"
-        },
-        {
-            "type": "textarea",
-            "label": "Type vervorming",
-            "placeholder": "Identificeer het type cognitieve vervorming"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitdaging",
-            "placeholder": "Hoe kun je deze gedachten uitdagen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Alternatieve gedachten",
-            "placeholder": "Wat zijn realistischere gedachten?"
-        }
+        {"type": "header", "text": "Cognitieve Vervormingen Werkblad"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Negatieve gedachten", "placeholder": "Wat dacht je?"},
+        {"type": "dropdown", "label": "Vervorming", "options": ["Zwart-wit", "Overgeneralisatie", "Catastroferen", "Andere"]},
+        {"type": "textarea", "label": "Uitdaging", "placeholder": "Hoe tegenspreken?"},
+        {"type": "textarea", "label": "Alternatieven", "placeholder": "Realistischere gedachten?"}
     ],
     "CGT_beheers_en_plezieractiviteiten": [
-        {
-            "type": "title",
-            "text": "Beheers- en Plezieractiviteiten"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Activiteit",
-            "placeholder": "Beschrijf de activiteit"
-        },
-        {
-            "type": "textarea",
-            "label": "Beheersniveau",
-            "placeholder": "Beoordeel het beheersniveau van 1 tot 10"
-        },
-        {
-            "type": "textarea",
-            "label": "Plezierniveau",
-            "placeholder": "Beoordeel het plezierniveau van 1 tot 10"
-        },
-        {
-            "type": "textarea",
-            "label": "Resultaten",
-            "placeholder": "Beschrijf de resultaten en gevoelens na de activiteit"
-        }
+        {"type": "header", "text": "Beheers- en Plezieractiviteiten"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Activiteit", "placeholder": "Wat gedaan?"},
+        {"type": "scaleImage", "label": "Beheersniveau", "image": "Schaal.png"},
+        {"type": "scaleImage", "label": "Plezierniveau", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Hoe voelde het?"}
     ],
     "CGT_op_beeld_gebaseerde_blootstelling": [
-        {
-            "type": "title",
-            "text": "Op Beeld Gebaseerde Blootstelling"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Situatie",
-            "placeholder": "Beschrijf de angstige situatie"
-        },
-        {
-            "type": "textarea",
-            "label": "Visualisatie",
-            "placeholder": "Beschrijf de visualisatie van de situatie"
-        },
-        {
-            "type": "textarea",
-            "label": "Reacties",
-            "placeholder": "Beschrijf je reacties op de visualisatie"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitkomsten",
-            "placeholder": "Wat zijn de uitkomsten van de visualisatie?"
-        }
+        {"type": "header", "text": "Op Beeld Gebaseerde Blootstelling"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Angstige situatie?"},
+        {"type": "textarea", "label": "Visualisatie", "placeholder": "Hoe zag je het?"},
+        {"type": "scaleImage", "label": "Angstniveau", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Uitkomsten", "placeholder": "Wat geleerd?"}
     ],
     "CGT_gedragsexperimenten": [
-        {
-            "type": "title",
-            "text": "Gedragsexperimenten"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Hypothese",
-            "placeholder": "Wat is je hypothese?"
-        },
-        {
-            "type": "textarea",
-            "label": "Experiment beschrijving",
-            "placeholder": "Beschrijf het gedragsexperiment"
-        },
-        {
-            "type": "textarea",
-            "label": "Verwachtingen",
-            "placeholder": "Wat verwacht je dat er zal gebeuren?"
-        },
-        {
-            "type": "textarea",
-            "label": "Resultaten",
-            "placeholder": "Wat waren de werkelijke resultaten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Analyse",
-            "placeholder": "Analyseer de resultaten en vergelijk deze met je verwachtingen"
-        },
-        {
-            "type": "textarea",
-            "label": "Conclusies",
-            "placeholder": "Welke conclusies kun je trekken?"
-        },
-        {
-            "type": "textarea",
-            "label": "Toepassing op toekomstig gedrag",
-            "placeholder": "Hoe kun je deze bevindingen toepassen op je toekomstig gedrag?"
-        }
+        {"type": "header", "text": "Gedragsexperimenten"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Hypothese", "placeholder": "Wat test je?"},
+        {"type": "textarea", "label": "Experiment", "placeholder": "Beschrijf het"},
+        {"type": "textarea", "label": "Verwachtingen", "placeholder": "Wat verwacht je?"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Wat gebeurde?"},
+        {"type": "scaleImage", "label": "Angst vóór", "image": "Schaal.png"},
+        {"type": "scaleImage", "label": "Angst na", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Conclusies", "placeholder": "Wat geleerd?"}
     ]
 }

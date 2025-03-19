@@ -1,162 +1,43 @@
 {
     "CGT_zelfreflectie_formulier": [
-        {
-            "type": "title",
-            "text": "Zelfreflectie Formulier"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Beschrijving van de situatie",
-            "placeholder": "Beschrijf de situatie waarop je reflecteert"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedachten",
-            "placeholder": "Welke gedachten had je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gevoelens",
-            "placeholder": "Welke gevoelens ervaarde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedragingen",
-            "placeholder": "Welke gedragingen vertoonde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat ging goed?",
-            "placeholder": "Wat ging goed in deze situatie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat kon beter?",
-            "placeholder": "Wat kon beter in deze situatie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Leerpunten",
-            "placeholder": "Wat heb je geleerd van deze ervaring?"
-        }
+        {"type": "header", "text": "Zelfreflectie Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wat gebeurde er?"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Wat dacht je?"},
+        {"type": "checkbox", "label": "Gevoelens", "options": ["Blij", "Verdrietig", "Boos", "Angstig", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit gevoelens", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Gedragingen", "placeholder": "Wat deed je?"},
+        {"type": "textarea", "label": "Wat ging goed?", "placeholder": "Positieve punten?"},
+        {"type": "textarea", "label": "Wat kon beter?", "placeholder": "Verbeterpunten?"},
+        {"type": "textarea", "label": "Leerpunten", "placeholder": "Wat neem je mee?"}
     ],
     "CGT_dankbaarheidslogboek": [
-        {
-            "type": "title",
-            "text": "Dankbaarheidslogboek"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Waar ben je vandaag dankbaar voor?",
-            "placeholder": "Schrijf hier waar je vandaag dankbaar voor bent"
-        },
-        {
-            "type": "textarea",
-            "label": "Waarom ben je dankbaar?",
-            "placeholder": "Waarom ben je hier dankbaar voor?"
-        },
-        {
-            "type": "textarea",
-            "label": "Hoe heeft dit je dag verbeterd?",
-            "placeholder": "Hoe heeft dit je dag verbeterd?"
-        },
-        {
-            "type": "textarea",
-            "label": "Reflectie",
-            "placeholder": "Reflecteer op je gevoelens van dankbaarheid"
-        }
+        {"type": "header", "text": "Dankbaarheidslogboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Dankbaar voor", "placeholder": "Wat waardeerde je?"},
+        {"type": "textarea", "label": "Waarom dankbaar?", "placeholder": "Reden?"},
+        {"type": "scaleImage", "label": "Positieve impact", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Reflectie", "placeholder": "Hoe voelde dit?"}
     ],
     "CGT_zelfzorg_en_welzijn_formulier": [
-        {
-            "type": "title",
-            "text": "Zelfzorg en Welzijn Formulier"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Zelfzorgactiviteiten",
-            "placeholder": "Welke zelfzorgactiviteiten heb je vandaag gedaan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Hoe voelde je je na deze activiteiten?",
-            "placeholder": "Hoe voelde je je na deze activiteiten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat heb je gedaan om je welzijn te verbeteren?",
-            "placeholder": "Wat heb je gedaan om je welzijn te verbeteren?"
-        },
-        {
-            "type": "textarea",
-            "label": "Heb je voldoende rust gehad?",
-            "placeholder": "Heb je voldoende rust gehad? beschrijf."
-        },
-        {
-            "type": "textarea",
-            "label": "Eetpatroon",
-            "placeholder": "Beschrijf je eetpatroon van vandaag"
-        },
-        {
-            "type": "textarea",
-            "label": "Beweging",
-            "placeholder": "Heb je vandaag bewogen? wat heb je gedaan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Emotionele zelfzorg",
-            "placeholder": "Hoe heb je vandaag voor je emotionele welzijn gezorgd?"
-        }
+        {"type": "header", "text": "Zelfzorg en Welzijn Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "checkbox", "label": "Zelfzorgactiviteiten", "options": ["Sport", "Meditatie", "Lezen", "Slapen", "Andere"]},
+        {"type": "scaleImage", "label": "Effect op welzijn", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Welzijnsverbetering", "placeholder": "Wat gedaan?"},
+        {"type": "textarea", "label": "Rust", "placeholder": "Voldoende rust?"},
+        {"type": "textarea", "label": "Eetpatroon", "placeholder": "Wat gegeten?"},
+        {"type": "textarea", "label": "Beweging", "placeholder": "Hoe bewogen?"},
+        {"type": "textarea", "label": "Emotionele zelfzorg", "placeholder": "Hoe emoties verzorgd?"}
     ],
     "CGT_relapse_prevention_plan": [
-        {
-            "type": "title",
-            "text": "Relapse Prevention Plan"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Triggers",
-            "placeholder": "Wat zijn je belangrijkste triggers voor terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Waarschuwingssignalen",
-            "placeholder": "Wat zijn de vroege waarschuwingssignalen van terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Copingstrategieën",
-            "placeholder": "Welke copingstrategieën kun je gebruiken om een terugval te voorkomen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Ondersteuningsnetwerk",
-            "placeholder": "Wie in je netwerk kan je ondersteunen bij het voorkomen van een terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Actieplan",
-            "placeholder": "Wat is je actieplan als je merkt dat je een terugval dreigt te krijgen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Lessen uit vorige terugvallen",
-            "placeholder": "Wat heb je geleerd van vorige terugvallen die je kunt toepassen?"
-        }
+        {"type": "header", "text": "Relapse Prevention Plan"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat triggert terugval?"},
+        {"type": "checkbox", "label": "Waarschuwingssignalen", "options": ["Slaapproblemen", "Isolatie", "Angst", "Andere"]},
+        {"type": "textarea", "label": "Copingstrategieën", "placeholder": "Hoe voorkomen?"},
+        {"type": "textarea", "label": "Ondersteuning", "placeholder": "Wie helpt je?"},
+        {"type": "textarea", "label": "Actieplan", "placeholder": "Stappen bij risico?"},
+        {"type": "textarea", "label": "Lessen", "placeholder": "Wat geleerd?"}
     ]
 }

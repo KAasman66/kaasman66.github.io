@@ -1,115 +1,108 @@
 {
     "DGT_emotieregulatie_skills": [
-        {"type": "title", "text": "Emotieregulatie Vaardigheden (DGT)"},
+        {"type": "header", "text": "Emotieregulatie Vaardigheden (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Vaardigheid", "placeholder": "Beschrijf de emotieregulatie vaardigheid"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze vaardigheid toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze vaardigheid?"}
+        {"type": "dropdown", "label": "Vaardigheid", "options": ["Tegenovergestelde actie", "Emotie benoemen", "Check de feiten", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe gebruikt?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "DGT_distress_tolerantie_oefeningen": [
-        {"type": "title", "text": "Distress Tolerantie Oefeningen (DGT)"},
+        {"type": "header", "text": "Distress Tolerantie Oefeningen (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de distress tolerantie oefening"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze oefening toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze oefening?"}
+        {"type": "dropdown", "label": "Oefening", "options": ["STOP", "TIP", "Afleiding", "Zelfkalmering"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe uitgevoerd?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "DGT_mindfulness_dagboek": [
-        {"type": "title", "text": "Mindfulness Dagboek (DGT)"},
+        {"type": "header", "text": "Mindfulness Dagboek (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de mindfulness oefening"},
-        {"type": "textarea", "label": "Ervaring", "placeholder": "Wat was je ervaring tijdens deze oefening?"},
-        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan?"}
+        {"type": "dropdown", "label": "Oefening", "options": ["Wat-vaardigheden", "Hoe-vaardigheden", "Ademfocus", "Andere"]},
+        {"type": "textarea", "label": "Ervaring", "placeholder": "Wat opgemerkt?"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Wat geleerd?"}
     ],
     "DGT_interpersoonlijke_effectiviteit_oefeningen": [
-        {"type": "title", "text": "Interpersoonlijke Effectiviteit Oefeningen (DGT)"},
+        {"type": "header", "text": "Interpersoonlijke Effectiviteit Oefeningen (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de interpersoonlijke effectiviteit oefening"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze oefening toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze oefening?"}
+        {"type": "dropdown", "label": "Oefening", "options": ["DEAR MAN", "GIVE", "FAST", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe gebruikt?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "DGT_crisisplan": [
-        {"type": "title", "text": "DGT Crisisplan"},
+        {"type": "header", "text": "DGT Crisisplan"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisplan"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe in een crisis?"}
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat veroorzaakt een crisis?"},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Afleiding", "Zelfkalmering", "Hulp zoeken", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe gebruik je dit?"}
     ],
     "DGT_gedragspatronen_analyse": [
-        {"type": "title", "text": "Gedragspatronen Analyse (DGT)"},
+        {"type": "header", "text": "Gedragspatronen Analyse (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Gedragspatroon", "placeholder": "Beschrijf het gedragspatroon"},
-        {"type": "textarea", "label": "Analyse", "placeholder": "Analyseer het gedragspatroon"},
-        {"type": "textarea", "label": "Veranderingen", "placeholder": "Welke veranderingen wil je doorvoeren?"},
+        {"type": "textarea", "label": "Gedragspatroon", "placeholder": "Welk patroon?"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Wat triggert dit?"},
+        {"type": "textarea", "label": "Veranderingen", "placeholder": "Hoe aanpassen?"},
         {"type": "checkbox", "label": "Veranderingen toegepast?", "options": ["Ja", "Nee"]}
     ],
     "DGT_slaaplogboek": [
-        {"type": "title", "text": "Slaaplogboek voor DGT"},
+        {"type": "header", "text": "Slaaplogboek (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Slaapduur", "placeholder": "Hoe lang heb je geslapen?"},
-        {"type": "textarea", "label": "Kwaliteit", "placeholder": "Hoe was de kwaliteit van je slaap?"},
-        {"type": "textarea", "label": "Opmerkingen", "placeholder": "Eventuele opmerkingen over je slaap"},
+        {"type": "number", "label": "Slaapduur (uren)", "min": 0, "max": 24},
+        {"type": "scaleImage", "label": "Slaapkwaliteit", "image": "Schaal.png"},
         {"type": "checkbox", "label": "Doorslapen?", "options": ["Ja", "Nee"]}
     ],
     "DGT_zelfbeeld_en_identiteit_evaluatie": [
-        {"type": "title", "text": "Zelfbeeld en Identiteit Evaluatie (DGT)"},
+        {"type": "header", "text": "Zelfbeeld en Identiteit Evaluatie (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Zelfbeeld", "placeholder": "Beschrijf je zelfbeeld"},
-        {"type": "textarea", "label": "Identiteit", "placeholder": "Hoe zou je je identiteit omschrijven?"},
-        {"type": "textarea", "label": "Evaluatie", "placeholder": "Evalueer je zelfbeeld en identiteit"}
+        {"type": "textarea", "label": "Zelfbeeld", "placeholder": "Hoe zie je jezelf?"},
+        {"type": "textarea", "label": "Identiteit", "placeholder": "Wie ben je?"},
+        {"type": "scaleImage", "label": "Zelfacceptatie", "image": "Schaal.png"}
     ],
     "DGT_dagelijkse_emotionele_reflectie": [
-        {"type": "title", "text": "Dagelijkse Emotionele Reflectie (DGT)"},
+        {"type": "header", "text": "Dagelijkse Emotionele Reflectie (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Emoties", "placeholder": "Welke emoties heb je vandaag ervaren?"},
-        {"type": "textarea", "label": "Oorzaken", "placeholder": "Wat waren de oorzaken van deze emoties?"},
-        {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op je emoties en hun oorzaken"}
+        {"type": "checkbox", "label": "Emoties", "options": ["Blij", "Boos", "Verdrietig", "Angstig", "Andere"]},
+        {"type": "textarea", "label": "Oorzaken", "placeholder": "Wat veroorzaakte dit?"},
+        {"type": "scaleImage", "label": "Intensiteit", "image": "Schaal.png"}
     ],
     "DGT_weekoverzicht": [
-        {"type": "title", "text": "DGT Weekoverzicht"},
-        {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Hoogtepunten", "placeholder": "Wat waren de hoogtepunten van deze week?"},
-        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Wat waren de uitdagingen van deze week?"},
-        {"type": "textarea", "label": "Lessen", "placeholder": "Welke lessen heb je deze week geleerd?"},
-        {"type": "checkbox", "label": "Doelen bereikt?", "options": ["Ja", "Nee"]}
+        {"type": "header", "text": "DGT Weekoverzicht"},
+        {"type": "date", "label": "Week van"},
+        {"type": "textarea", "label": "Hoogtepunten", "placeholder": "Wat ging goed?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Wat was moeilijk?"},
+        {"type": "scaleImage", "label": "Algemene stemming", "image": "Schaal.png"}
     ],
     "DGT_emotionele_skills_tracker": [
-        {"type": "title", "text": "DGT Emotionele Vaardigheden Tracker"},
+        {"type": "header", "text": "DGT Emotionele Vaardigheden Tracker"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Vaardigheid", "placeholder": "Welke emotionele vaardigheid heb je toegepast?"},
-        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie heb je deze vaardigheid toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze vaardigheid?"},
-        {"type": "checkbox", "label": "Vaardigheid succesvol toegepast?", "options": ["Ja", "Nee"]}
+        {"type": "dropdown", "label": "Vaardigheid", "options": ["Emotie benoemen", "Tegenovergestelde actie", "Check de feiten"]},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wanneer gebruikt?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "DGT_radicale_acceptatie_oefeningen": [
-        {"type": "title", "text": "Radicale Acceptatie Oefeningen (DGT)"},
+        {"type": "header", "text": "Radicale Acceptatie Oefeningen (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de radicale acceptatie oefening"},
-        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen?"},
-        {"type": "textarea", "label": "Voortgang", "placeholder": "Welke voortgang heb je gemaakt in radicale acceptatie?"},
-        {"type": "checkbox", "label": "Acceptatie bereikt?", "options": ["Ja", "Nee"]}
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wat accepteer je?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Wat was moeilijk?"},
+        {"type": "scaleImage", "label": "Acceptatieniveau", "image": "Schaal.png"}
     ],
     "DGT_urge_surfing_technieken": [
-        {"type": "title", "text": "Urge Surfing Technieken (DGT)"},
+        {"type": "header", "text": "Urge Surfing Technieken (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Techniek", "placeholder": "Beschrijf de urge surfing techniek"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze techniek toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze techniek?"},
-        {"type": "checkbox", "label": "Techniek succesvol?", "options": ["Ja", "Nee"]}
+        {"type": "textarea", "label": "Drang", "placeholder": "Welke drang voelde je?"},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe gesurft?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "DGT_gedachteanalyse": [
-        {"type": "title", "text": "DGT Gedachteanalyse"},
+        {"type": "header", "text": "DGT Gedachteanalyse"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Gedachte", "placeholder": "Beschrijf de gedachte die je hebt geanalyseerd"},
-        {"type": "textarea", "label": "Analyse", "placeholder": "Analyseer deze gedachte"},
-        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen kwam je tegen bij de analyse?"},
-        {"type": "checkbox", "label": "Gedachte geanalyseerd?", "options": ["Ja", "Nee"]}
+        {"type": "textarea", "label": "Gedachte", "placeholder": "Welke gedachte?"},
+        {"type": "textarea", "label": "Feiten", "placeholder": "Wat zijn de feiten?"},
+        {"type": "scaleImage", "label": "Geloofwaardigheid", "image": "Schaal.png"}
     ],
     "DGT_emotionele_regulatie_technieken": [
-        {"type": "title", "text": "Emotionele Regulatie Technieken (DGT)"},
+        {"type": "header", "text": "Emotionele Regulatie Technieken (DGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Techniek", "placeholder": "Beschrijf de emotionele regulatie techniek"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze techniek toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze techniek?"},
-        {"type": "checkbox", "label": "Techniek succesvol toegepast?", "options": ["Ja", "Nee"]}
+        {"type": "dropdown", "label": "Techniek", "options": ["Tegenovergestelde actie", "Probleemoplossing", "Accumuleren positieve emoties"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe toegepast?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ]
 }

@@ -1,192 +1,49 @@
 {
     "CGT_doelstelling_formulier": [
-        {
-            "type": "title",
-            "text": "Doelstelling Formulier"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Doel",
-            "placeholder": "Beschrijf je doel"
-        },
-        {
-            "type": "textarea",
-            "label": "Reden",
-            "placeholder": "Waarom is dit doel belangrijk voor je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Actieplan",
-            "placeholder": "Welke stappen ga je ondernemen om dit doel te bereiken?"
-        },
-        {
-            "type": "textarea",
-            "label": "Middelen en ondersteuning",
-            "placeholder": "Welke middelen of ondersteuning heb je nodig?"
-        },
-        {
-            "type": "textarea",
-            "label": "Potentiële obstakels",
-            "placeholder": "Welke obstakels verwacht je en hoe ga je deze overwinnen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Tijdlijn",
-            "placeholder": "Wat is je tijdlijn voor dit doel?"
-        },
-        {
-            "type": "textarea",
-            "label": "Succescriteria",
-            "placeholder": "Hoe weet je wanneer je dit doel hebt bereikt?"
-        }
+        {"type": "header", "text": "Doelstelling Formulier"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Specifiek doel?"},
+        {"type": "textarea", "label": "Reden", "placeholder": "Waarom belangrijk?"},
+        {"type": "textarea", "label": "Actieplan", "placeholder": "Welke stappen?"},
+        {"type": "checkbox", "label": "Benodigde ondersteuning", "options": ["Therapeut", "Familie", "Vrienden", "Materialen", "Andere"]},
+        {"type": "textarea", "label": "Obstakels", "placeholder": "Verwachte problemen?"},
+        {"type": "textarea", "label": "Tijdlijn", "placeholder": "Wanneer klaar?"},
+        {"type": "textarea", "label": "Succescriteria", "placeholder": "Hoe meet je succes?"}
     ],
     "CGT_probleemoplossingslogboek": [
-        {
-            "type": "title",
-            "text": "Probleemoplossingslogboek"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Probleemomschrijving",
-            "placeholder": "Beschrijf het probleem"
-        },
-        {
-            "type": "textarea",
-            "label": "Oorzaken van het probleem",
-            "placeholder": "Wat zijn de oorzaken van het probleem?"
-        },
-        {
-            "type": "textarea",
-            "label": "Mogelijke oplossingen",
-            "placeholder": "Welke mogelijke oplossingen zie je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gekozen oplossing",
-            "placeholder": "Welke oplossing ga je proberen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Actieplan",
-            "placeholder": "Wat is je actieplan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Resultaat",
-            "placeholder": "Wat was het resultaat van je actie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Reflectie",
-            "placeholder": "Reflecteer op het proces en het resultaat"
-        }
+        {"type": "header", "text": "Probleemoplossingslogboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Probleem", "placeholder": "Wat is het probleem?"},
+        {"type": "textarea", "label": "Oorzaken", "placeholder": "Waarom bestaat dit?"},
+        {"type": "textarea", "label": "Mogelijke oplossingen", "placeholder": "Opties?"},
+        {"type": "dropdown", "label": "Gekozen oplossing", "options": ["Optie 1", "Optie 2", "Optie 3"]},
+        {"type": "textarea", "label": "Actieplan", "placeholder": "Hoe uitvoeren?"},
+        {"type": "scaleImage", "label": "Effectiviteit oplossing", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Reflectie", "placeholder": "Wat geleerd?"}
     ],
     "CGT_gedragsexperiment_logboek": [
-        {
-            "type": "title",
-            "text": "Gedragsexperiment Logboek"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Hypothese",
-            "placeholder": "Wat is je hypothese?"
-        },
-        {
-            "type": "textarea",
-            "label": "Experiment beschrijving",
-            "placeholder": "Beschrijf het gedragsexperiment"
-        },
-        {
-            "type": "textarea",
-            "label": "Verwachtingen",
-            "placeholder": "Wat verwacht je dat er zal gebeuren?"
-        },
-        {
-            "type": "textarea",
-            "label": "Resultaten",
-            "placeholder": "Wat waren de werkelijke resultaten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Analyse",
-            "placeholder": "Analyseer de resultaten en vergelijk deze met je verwachtingen"
-        },
-        {
-            "type": "textarea",
-            "label": "Conclusies",
-            "placeholder": "Welke conclusies kun je trekken?"
-        },
-        {
-            "type": "textarea",
-            "label": "Toepassing op toekomstig gedrag",
-            "placeholder": "Hoe kun je deze bevindingen toepassen op je toekomstig gedrag?"
-        }
+        {"type": "header", "text": "Gedragsexperiment Logboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Hypothese", "placeholder": "Wat test je?"},
+        {"type": "textarea", "label": "Experiment", "placeholder": "Beschrijf experiment"},
+        {"type": "textarea", "label": "Verwachtingen", "placeholder": "Wat verwacht je?"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Wat gebeurde er?"},
+        {"type": "scaleImage", "label": "Angst/stress voor experiment", "image": "Schaal.png"},
+        {"type": "scaleImage", "label": "Angst/stress na experiment", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Conclusies", "placeholder": "Wat geleerd?"},
+        {"type": "textarea", "label": "Toekomstig gedrag", "placeholder": "Hoe toepassen?"}
     ],
     "CGT_gedachtenregistratie": [
-        {
-            "type": "title",
-            "text": "Gedachtenregistratie"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Situatie",
-            "placeholder": "Beschrijf de situatie"
-        },
-        {
-            "type": "textarea",
-            "label": "Negatieve gedachten",
-            "placeholder": "Welke negatieve gedachten had je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Bewijs voor",
-            "placeholder": "Wat is het bewijs voor deze gedachten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Bewijs tegen",
-            "placeholder": "Wat is het bewijs tegen deze gedachten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Realistische gedachten",
-            "placeholder": "Wat zijn realistischere gedachten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Emoties",
-            "placeholder": "Welke emoties voelde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Intensiteit van emoties",
-            "max": 10
-        },
-        {
-            "type": "textarea",
-            "label": "Gedrag",
-            "placeholder": "Wat was je gedrag als gevolg van deze gedachten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Resultaat",
-            "placeholder": "Wat was het resultaat van deze gedachten en gedrag?"
-        }
+        {"type": "header", "text": "Gedachtenregistratie"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wat gebeurde er?"},
+        {"type": "textarea", "label": "Negatieve gedachten", "placeholder": "Wat dacht je?"},
+        {"type": "textarea", "label": "Bewijs voor", "placeholder": "Ondersteunend bewijs?"},
+        {"type": "textarea", "label": "Bewijs tegen", "placeholder": "Tegenbewijs?"},
+        {"type": "textarea", "label": "Realistische gedachten", "placeholder": "Nieuwe gedachte?"},
+        {"type": "checkbox", "label": "Emoties", "options": ["Angst", "Verdriet", "Boosheid", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit emoties", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Gedrag", "placeholder": "Hoe gereageerd?"},
+        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was de uitkomst?"}
     ]
 }

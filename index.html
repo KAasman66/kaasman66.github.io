@@ -1,44 +1,304 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <base href="/">
     <title>GGZ Formulier Generator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <style>
+        .control-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .control-group label {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        
+        .control-group select {
+            flex: 1;
+            min-width: 200px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        
+        .element-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .element-buttons button {
+            padding: 8px 12px;
+            background-color: #4285f4;
+            color: white;
+            border: 1px solid #3367d6;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .element-buttons button:hover {
+            background-color: #3367d6;
+        }
+        
+        .element-buttons button i {
+            margin-right: 5px;
+        }
+        
+        .print-button-container {
+            text-align: right;
+            margin: 15px 0;
+        }
+        
+        .print-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .print-button:hover {
+            background-color: #45a049;
+        }
+        
+        #formContainer {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            min-height: 300px;
+        }
+        
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            flex: 1;
+        }
+        
+        .loading-indicator {
+            display: none;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+        
+        .empty-form-message {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Styles for radio and checkbox groups */
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 8px 0;
+        }
+        
+        .radio-item, .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px;
+            border: 1px solid transparent;
+        }
+        
+        .radio-item:hover, .checkbox-item:hover {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        
+        .radio-label {
+            cursor: pointer;
+        }
+        
+        /* Rating scale styling */
+        .rating-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 8px 0;
+        }
+        
+        .rating-option {
+            text-align: center;
+        }
+        
+        .rating-option input[type="radio"] {
+            margin: 0;
+        }
+        
+        /* Form element styling */
+        .form-element {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        /* Input container and placeholder hint styling */
+        .input-container {
+            position: relative;
+            margin-top: 5px;
+        }
+        
+        .placeholder-hint {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 3px;
+            font-style: italic;
+            display: none; /* Hidden by default in normal view */
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            
+            #formContainer {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .form-element {
+                page-break-inside: avoid;
+                border: 1px solid #ccc;
+                box-shadow: none;
+            }
+            
+            .control-group, .element-buttons, .print-button-container, 
+            .remove-element, .add-checkbox, .remove-checkbox, 
+            .fallback-loading, #notification-container {
+                display: none !important;
+            }
+            
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            /* Show placeholder hints when printing */
+            .placeholder-hint {
+                display: block;
+                color: #999;
+                font-size: 11pt;
+            }
+            
+            textarea, input[type="text"], input[type="number"] {
+                border: 1px solid #ccc;
+                padding: 5px;
+                width: 100%;
+                /* Increase height for more writing space */
+                min-height: 24pt;
+            }
+            
+            textarea {
+                min-height: 80pt;
+            }
+            
+            .radio-group, .checkbox-group {
+                border: 1px solid #eee;
+                padding: 5px;
+                margin: 10px 0;
+            }
+            
+            img.scale-image {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Ensure form elements have enough space between them */
+            .form-element {
+                margin-bottom: 20pt;
+                padding: 10pt;
+            }
+            
+            /* Labels should be prominent */
+            label {
+                font-weight: bold;
+                margin-bottom: 5pt;
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>GGZ Formulier Generator</h1>
+        <h1 class="animate__animated animate__fadeIn">GGZ Formulier Generator</h1>
         
-        <div class="controls">
-            <label for="therapyDropdown">Selecteer een onderwerp:</label>
-            <select id="therapyDropdown" name="therapyDropdown">
-                <option value="">Kies een onderwerp</option>
-                <option value="CGT">CGT</option>
-                <option value="ACT">ACT</option>
-                <option value="EFT">EFT</option>
-                <option value="DGT">DGT</option>
- 		<option value="CRISIS">CRISIS</option>
-		<option value="SFT">SFT</option>
-		<option value="FACT">FACT</option>
-		<option value="EET">EETSTOORNISSEN</option>
-		<option value="PENP">PSYCHOSE</option>
-		<option value="PGT">OPLOSSINGSGERICHT</option>
-		<option value="DSM">STOORNIS_SPECIFIEK</option>
-            </select>
-
-            <label for="templateDropdown">Selecteer een template:</label>
-            <select id="templateDropdown" name="templateDropdown">
-                <option value="">Kies een template</option>
-            </select>
+        <div class="control-group">
+            <label for="therapyDropdown">Onderwerp:</label>
+            <div class="dropdown-container">
+                <select id="therapyDropdown" name="therapyDropdown">
+                    <option value="">Kies een onderwerp</option>
+                    <option value="CGT">Cognitieve Gedragstherapie (CGT)</option>
+                    <option value="ACT">Acceptance and Commitment Therapy (ACT)</option>
+                    <option value="EFT">Emotionally Focused Therapy (EFT)</option>
+                    <option value="DGT">Dialectische Gedragstherapie (DGT)</option>
+                    <option value="CRISIS">Crisisinterventie</option>
+                    <option value="SFT">Systeemtherapie (SFT)</option>
+                    <option value="FACT">Flexible Assertive Community Treatment (FACT)</option>
+                    <option value="EET">Eetstoornissen</option>
+                    <option value="PENP">Psychose</option>
+                    <option value="PGT">Oplossingsgericht</option>
+                    <option value="DSM">Stoornis Specifiek</option>
+                </select>
+                <span class="loading-indicator"><i class="fas fa-spinner fa-spin"></i></span>
+            </div>
         </div>
 
-        <div class="controls">
-            <button onclick="addHeader()">Titel</button>
-            <button onclick="addTextarea()">Tekstgebied</button>
-            <button onclick="addCheckboxGroup()">Keuze</button>
-            <button onclick="addScaleImage()">Schaal</button>
+        <div class="control-group">
+            <label for="templateDropdown">Template:</label>
+            <div class="dropdown-container">
+                <select id="templateDropdown" name="templateDropdown">
+                    <option value="">Kies een template</option>
+                </select>
+                <span class="loading-indicator"><i class="fas fa-spinner fa-spin"></i></span>
+            </div>
+        </div>
+
+        <div class="element-buttons">
+            <button onclick="addHeader()"><i class="fas fa-heading"></i> Titel</button>
+            <button onclick="addTextarea()"><i class="fas fa-align-left"></i> Tekstgebied</button>
+            <button onclick="addCheckboxGroup()"><i class="fas fa-check-square"></i> Keuzes</button>
+            <button onclick="addScaleImage()"><i class="fas fa-ruler"></i> Schaal</button>
         </div>
 
         <div class="print-button-container">
@@ -47,6 +307,14 @@
         
         <div id="formContainer">
             <div id="formContent"></div>
+            <div class="empty-form-message">Selecteer een onderwerp en template of maak uw eigen formulier met de knoppen hierboven</div>
+        </div>
+
+        <!-- Floating Undo/Redo Buttons -->
+        <div class="float-buttons">
+            <button id="undoButton" class="float-button undo" title="Ongedaan maken"><i class="fas fa-undo"></i></button>
+            <button id="redoButton" class="float-button redo" title="Opnieuw"><i class="fas fa-redo"></i></button>
+            <button id="resetButton" class="float-button reset" title="Reset"><i class="fas fa-trash-alt"></i></button>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
@@ -54,9 +322,59 @@
         <script src="editable.js"></script>
         <script src="script.js"></script>
         <script src="main.js"></script>
-        <script>
-            
-        </script>
     </div>
+
+    <!-- Add Element Menu -->
+    <div id="add-element-menu" class="add-element-menu">
+        <button onclick="addHeader()"><i class="fas fa-heading"></i> Header</button>
+        <button onclick="addTextField()"><i class="fas fa-font"></i> Tekst Veld</button>
+        <button onclick="addTextarea()"><i class="fas fa-align-left"></i> Tekst Area</button>
+        <button onclick="addCheckboxGroup()"><i class="fas fa-check-square"></i> Checkbox Groep</button>
+        <button onclick="addRatingScale()"><i class="fas fa-star-half-alt"></i> Rating Schaal</button>
+        <button onclick="addScaleImage()"><i class="fas fa-ruler-horizontal"></i> Schaal Afbeelding</button>
+    </div>
+
+    <script>
+    // Initialiseer tooltips
+    document.addEventListener('DOMContentLoaded', function() {
+        // Setup tooltips met Tippy.js
+        tippy('[title]', {
+            placement: 'top',
+            arrow: true,
+            theme: 'light-border',
+            animation: 'shift-away'
+        });
+        
+        // Add element menu tonen/verbergen
+        const addElementButton = document.getElementById('add-element-button');
+        const addElementMenu = document.getElementById('add-element-menu');
+        
+        if (addElementButton && addElementMenu) {
+            addElementButton.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const buttonRect = addElementButton.getBoundingClientRect();
+                
+                addElementMenu.style.display = addElementMenu.style.display === 'flex' ? 'none' : 'flex';
+                
+                // Positioneer menu onder de knop
+                addElementMenu.style.top = (buttonRect.bottom + 5) + 'px';
+                addElementMenu.style.left = buttonRect.left + 'px';
+                
+                // Voeg animatie toe
+                if (addElementMenu.style.display === 'flex') {
+                    addElementMenu.classList.add('animate__animated', 'animate__fadeIn');
+                    addElementMenu.style.animationDuration = '0.2s';
+                }
+            });
+            
+            // Klik buiten menu verbergt het
+            document.addEventListener('click', function(e) {
+                if (e.target !== addElementButton && !addElementMenu.contains(e.target)) {
+                    addElementMenu.style.display = 'none';
+                }
+            });
+        }
+    });
+    </script>
 </body>
 </html>

@@ -1,226 +1,46 @@
 {
     "CGT_gedachtedagboek": [
-        {
-            "type": "title",
-            "text": "CGT Gedachtedagboek"
-        },
-        {
-            "type": "text",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Situatie",
-            "placeholder": "Beschrijf de situatie die de automatische gedachten uitlokte"
-        },
-        {
-            "type": "textarea",
-            "label": "Automatische gedachten",
-            "placeholder": "Noteer de automatische gedachten die opkwamen"
-        },
-        {
-            "type": "textarea",
-            "label": "Emoties",
-            "placeholder": "Beschrijf de emoties die je ervaarde"
-        },
-        {
-            "type": "custom",
-            "label": "Intensiteit van de emoties",
-            "customType": "scale-image"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedrag",
-            "placeholder": "Beschrijf je gedrag in reactie op de situatie"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitdaging van de gedachten",
-            "placeholder": "Hoe kun je deze gedachten rationeel uitdagen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Alternatieve gedachten",
-            "placeholder": "Wat zijn meer realistische of helpende gedachten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitkomst",
-            "placeholder": "Wat was het resultaat van deze nieuwe denkwijze?"
-        }
+        {"type": "header", "text": "CGT Gedachtedagboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "time", "label": "Tijdstip"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Wie, wat, waar?"},
+        {"type": "textarea", "label": "Automatische gedachten", "placeholder": "Wat dacht je direct?"},
+        {"type": "checkbox", "label": "Emoties", "options": ["Angst", "Verdriet", "Boosheid", "Schaamte", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit emoties", "image": "Schaal.png"},
+        {"type": "dropdown", "label": "Denkfout", "options": ["Zwart-wit denken", "Overgeneraliseren", "Gedachtenlezen", "Personaliseren", "Catastroferen"]},
+        {"type": "textarea", "label": "Alternatieve gedachten", "placeholder": "Realistischer/helpend?"},
+        {"type": "scaleImage", "label": "Geloofwaardigheid alternatief", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Uitkomst", "placeholder": "Effect nieuwe gedachten?"}
     ],
     "CGT_dagelijks_dagboek": [
-        {
-            "type": "title",
-            "text": "CGT Dagelijks Activiteitendagboek"
-        },
-        {
-            "type": "text",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Dagbeschrijving",
-            "placeholder": "Geef een korte beschrijving van je dag"
-        },
-        {
-            "type": "custom",
-            "label": "Algemene stemming",
-            "customType": "scale-image"
-        },
-        {
-            "type": "textarea",
-            "label": "Positieve ervaringen",
-            "placeholder": "Beschrijf positieve ervaringen van vandaag"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitdagingen",
-            "placeholder": "Beschrijf uitdagingen die je vandaag tegenkwam"
-        },
-        {
-            "type": "textarea",
-            "label": "Cognities",
-            "placeholder": "Noteer belangrijke gedachten of overtuigingen van vandaag"
-        },
-        {
-            "type": "textarea",
-            "label": "Emoties",
-            "placeholder": "Beschrijf je belangrijkste emoties van vandaag"
-        },
-        {
-            "type": "textarea",
-            "label": "Zelfzorg",
-            "placeholder": "Welke zelfzorgactiviteiten heb je vandaag ondernomen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Dankbaarheid",
-            "placeholder": "Waar ben je vandaag dankbaar voor?"
-        },
-        {
-            "type": "textarea",
-            "label": "Leerpunten",
-            "placeholder": "Wat heb je vandaag geleerd?"
-        },
-        {
-            "type": "textarea",
-            "label": "Doelen voor morgen",
-            "placeholder": "Wat wil je morgen bereiken?"
-        }
+        {"type": "header", "text": "CGT Dagelijks Activiteitendagboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Dagbeschrijving", "placeholder": "Korte samenvatting dag"},
+        {"type": "scaleImage", "label": "Algemene stemming", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Positieve ervaringen", "placeholder": "Wat ging goed?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Wat was moeilijk?"},
+        {"type": "checkbox", "label": "Copingstrategieën", "options": ["Probleemoplossing", "Afleiding", "Mindfulness", "Sociale steun", "Andere"]},
+        {"type": "textarea", "label": "Doelen morgen", "placeholder": "Wat wil je bereiken?"}
     ],
     "CGT_weekoverzicht": [
-        {
-            "type": "title",
-            "text": "CGT Weekoverzicht"
-        },
-        {
-            "type": "text",
-            "label": "Week van"
-        },
-        {
-            "type": "textarea",
-            "label": "Hoogtepunten",
-            "placeholder": "Wat waren de hoogtepunten van deze week?"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitdagingen",
-            "placeholder": "Welke uitdagingen kwam je deze week tegen?"
-        },
-        {
-            "type": "custom",
-            "label": "Algemene stemming deze week",
-            "customType": "scale-image"
-        },
-        {
-            "type": "textarea",
-            "label": "Belangrijkste prestaties",
-            "placeholder": "Wat heb je deze week bereikt?"
-        },
-        {
-            "type": "textarea",
-            "label": "Leerpunten",
-            "placeholder": "Wat heb je deze week geleerd?"
-        },
-        {
-            "type": "textarea",
-            "label": "Zelfzorg",
-            "placeholder": "Hoe heb je deze week voor jezelf gezorgd?"
-        },
-        {
-            "type": "textarea",
-            "label": "Sociale interacties",
-            "placeholder": "Hoe verliepen je sociale interacties deze week?"
-        },
-        {
-            "type": "textarea",
-            "label": "Doelen voor volgende week",
-            "placeholder": "Wat wil je volgende week bereiken?"
-        },
-        {
-            "type": "textarea",
-            "label": "Reflectie",
-            "placeholder": "Algemene reflectie op de afgelopen week"
-        }
+        {"type": "header", "text": "CGT Weekoverzicht"},
+        {"type": "date", "label": "Week van"},
+        {"type": "textarea", "label": "Hoogtepunten", "placeholder": "Beste momenten?"},
+        {"type": "scaleImage", "label": "Algemene stemming", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Prestaties", "placeholder": "Wat bereikt?"},
+        {"type": "checkbox", "label": "Zelfzorg", "options": ["Gezonde voeding", "Slaap", "Beweging", "Ontspanning", "Andere"]},
+        {"type": "textarea", "label": "Doelen volgende week", "placeholder": "Volgende stappen?"}
     ],
     "CGT_stresslogboek": [
-        {
-            "type": "title",
-            "text": "CGT Stresslogboek"
-        },
-        {
-            "type": "text",
-            "label": "Datum"
-        },
-        {
-            "type": "text",
-            "label": "Tijd"
-        },
-        {
-            "type": "textarea",
-            "label": "Stressvolle situatie",
-            "placeholder": "Beschrijf de stressvolle situatie"
-        },
-        {
-            "type": "custom",
-            "label": "Stressniveau",
-            "customType": "scale-image"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedachten",
-            "placeholder": "Welke gedachten had je tijdens deze situatie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Emoties",
-            "placeholder": "Welke emoties ervaarde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Lichamelijke reacties",
-            "placeholder": "Welke lichamelijke reacties merkte je op?"
-        },
-        {
-            "type": "textarea",
-            "label": "Copingstrategieën",
-            "placeholder": "Hoe ben je met de situatie omgegaan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Uitkomst",
-            "placeholder": "Wat was het resultaat van je aanpak?"
-        },
-        {
-            "type": "textarea",
-            "label": "Alternatieve aanpak",
-            "placeholder": "Hoe zou je de situatie anders kunnen aanpakken in de toekomst?"
-        },
-        {
-            "type": "textarea",
-            "label": "Leerpunten",
-            "placeholder": "Wat heb je geleerd van deze ervaring?"
-        }
+        {"type": "header", "text": "CGT Stresslogboek"},
+        {"type": "date", "label": "Datum"},
+        {"type": "time", "label": "Tijd"},
+        {"type": "textarea", "label": "Stressvolle situatie", "placeholder": "Wat gebeurde er?"},
+        {"type": "scaleImage", "label": "Stressniveau", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Wat dacht je?"},
+        {"type": "checkbox", "label": "Lichamelijke reacties", "options": ["Hartkloppingen", "Zweten", "Spanning", "Misselijkheid", "Andere"]},
+        {"type": "textarea", "label": "Copingstrategieën", "placeholder": "Hoe aangepakt?"},
+        {"type": "scaleImage", "label": "Effectiviteit coping", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Alternatieve aanpak", "placeholder": "Toekomstige optie?"}
     ]
 }

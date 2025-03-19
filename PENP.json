@@ -1,74 +1,73 @@
 {
     "PENP_psychose_symptoom_tracker": [
-        {"type": "title", "text": "Psychose Symptoom Tracker (PENP)"},
+        {"type": "header", "text": "Psychose Symptoom Tracker (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Symptomen", "placeholder": "Beschrijf de symptomen die je ervaart"},
-        {"type": "textarea", "label": "Intensiteit", "placeholder": "Hoe intens zijn deze symptomen?"},
-        {"type": "textarea", "label": "Duur", "placeholder": "Hoe lang duren deze symptomen?"},
-        {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn de mogelijke triggers?"}
+        {"type": "checkbox", "label": "Symptomen", "options": ["Hallucinaties", "Waanideeën", "Verwarring", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Welke omstandigheden of factoren leken deze symptomen te veroorzaken of te verergeren? (stress, slaaptekort, medicatie verandering, etc.)"}
     ],
     "PENP_paranoide_gedachten_logboek": [
-        {"type": "title", "text": "Paranoïde Gedachten Logboek (PENP)"},
+        {"type": "header", "text": "Paranoïde Gedachten Logboek (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Gedachte", "placeholder": "Beschrijf de paranoïde gedachte"},
-        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie had je deze gedachte?"},
-        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe reageerde je op deze gedachte?"}
+        {"type": "textarea", "label": "Gedachte", "placeholder": "Beschrijf de paranoïde gedachte of overtuiging in detail. Waar ging het over? Wat maakte het beangstigend?"},
+        {"type": "textarea", "label": "Bewijs", "placeholder": "Noteer bewijs dat deze gedachte zou kunnen ondersteunen én bewijs dat deze gedachte zou kunnen tegenspreken."},
+        {"type": "scaleImage", "label": "Geloofwaardigheid", "image": "Schaal.png"}
     ],
     "PENP_realiteitstoetsing_oefeningen": [
-        {"type": "title", "text": "Realiteitstoetsing Oefeningen (PENP)"},
+        {"type": "header", "text": "Realiteitstoetsing Oefeningen (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de realiteitstoetsing oefening"},
-        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie paste je deze oefening toe?"},
-        {"type": "textarea", "label": "Uitkomst", "placeholder": "Wat was de uitkomst van deze oefening?"}
+        {"type": "dropdown", "label": "Oefening", "options": ["5 zintuigen", "Feiten checken", "Andere"]},
+        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie heb je deze oefening toegepast? Welke gedachte, overtuiging of ervaring wilde je toetsen aan de realiteit?"},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "PENP_medicatiebeheer_formulier": [
-        {"type": "title", "text": "Medicatiebeheer Formulier (PENP)"},
+        {"type": "header", "text": "Medicatiebeheer Formulier (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Medicatie", "placeholder": "Welke medicatie neem je?"},
-        {"type": "textarea", "label": "Dosering", "placeholder": "Wat is de dosering van deze medicatie?"},
-        {"type": "textarea", "label": "Bijwerkingen", "placeholder": "Ervaar je bijwerkingen?"},
-        {"type": "textarea", "label": "Effectiviteit", "placeholder": "Hoe effectief is deze medicatie?"}
+        {"type": "textarea", "label": "Medicatie", "placeholder": "Noteer de naam en vorm van de medicatie (tablet, capsule, injectie, etc.)."},
+        {"type": "number", "label": "Dosering (mg)", "min": 0},
+        {"type": "checkbox", "label": "Bijwerkingen", "options": ["Slaperigheid", "Onrust", "Andere"]},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "PENP_ondersteuningsplan_voor_psychose": [
-        {"type": "title", "text": "Ondersteuningsplan voor Psychose (PENP)"},
+        {"type": "header", "text": "Ondersteuningsplan voor Psychose (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je ondersteuningsplan"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+        {"type": "textarea", "label": "Doelen", "placeholder": "Welke concrete, specifieke doelen wil je bereiken met betrekking tot het omgaan met psychotische symptomen? Denk aan zowel korte als lange termijn."},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Medicatie", "Structuur", "Steun", "Andere"]},
+        {"type": "scaleImage", "label": "Voortgang", "image": "Schaal.png"}
     ],
     "PENP_dagelijkse_structuur_planner": [
-        {"type": "title", "text": "Dagelijkse Structuur Planner (PENP)"},
+        {"type": "header", "text": "Dagelijkse Structuur Planner (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Activiteiten", "placeholder": "Welke activiteiten plan je voor de dag?"},
-        {"type": "textarea", "label": "Tijdschema", "placeholder": "Wat is je tijdschema?"},
-        {"type": "textarea", "label": "Prioriteiten", "placeholder": "Wat zijn je prioriteiten voor de dag?"}
+        {"type": "checkbox", "label": "Activiteiten", "options": ["Werk", "Zelfzorg", "Rust", "Andere"]},
+        {"type": "textarea", "label": "Tijdschema", "placeholder": "Maak een gedetailleerd schema van je dag, met vaste tijden voor opstaan, maaltijden, medicatie, activiteiten en rustmomenten."},
+        {"type": "scaleImage", "label": "Succes", "image": "Schaal.png"}
     ],
     "PENP_perceptuele_ervaringen_dagboek": [
-        {"type": "title", "text": "Perceptuele Ervaringen Dagboek (PENP)"},
+        {"type": "header", "text": "Perceptuele Ervaringen Dagboek (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Ervaring", "placeholder": "Beschrijf je perceptuele ervaring"},
-        {"type": "textarea", "label": "Intensiteit", "placeholder": "Hoe intens was deze ervaring?"},
-        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe reageerde je op deze ervaring?"}
+        {"type": "checkbox", "label": "Ervaringen", "options": ["Auditief", "Visueel", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Reactie", "placeholder": "Hoe heb je gereageerd op deze perceptuele ervaringen? Welke coping strategieën heb je gebruikt? Heb je realiteitstoetsing toegepast?"}
     ],
     "PENP_voortgang_en_herstel_evaluatie": [
-        {"type": "title", "text": "Voortgang en Herstel Evaluatie (PENP)"},
+        {"type": "header", "text": "Voortgang en Herstel Evaluatie (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
-        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"},
-        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Welke concrete vooruitgang heb je geboekt sinds je laatste evaluatie? Denk aan symptoombeheersing, dagstructuur, medicatietrouw, etc."},
+        {"type": "textarea", "label": "Successen", "placeholder": "Beschrijf momenten waarop je succesvol omging met uitdagingen of symptomen. Wat ging er goed en waarom?"},
+        {"type": "scaleImage", "label": "Herstel", "image": "Schaal.png"}
     ],
     "PENP_omgaan_met_stigma": [
-        {"type": "title", "text": "Omgaan met Stigma (PENP)"},
+        {"type": "header", "text": "Omgaan met Stigma (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Ervaring", "placeholder": "Beschrijf je ervaring met stigma"},
-        {"type": "textarea", "label": "Gevoelens", "placeholder": "Hoe voel je je over deze ervaring?"},
-        {"type": "textarea", "label": "Coping", "placeholder": "Hoe ga je om met stigma?"}
+        {"type": "textarea", "label": "Ervaring", "placeholder": "Beschrijf een specifieke situatie waarin je te maken kreeg met stigma of vooroordelen vanwege je psychische klachten."},
+        {"type": "scaleImage", "label": "Impact", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Coping", "placeholder": "Hoe ben je omgegaan met deze ervaring? Welke strategieën heb je gebruikt om ermee om te gaan? Wat was helpend?"}
     ],
     "PENP_stressoren_en_triggers_identificatie": [
-        {"type": "title", "text": "Stressoren en Triggers Identificatie (PENP)"},
+        {"type": "header", "text": "Stressoren en Triggers Identificatie (PENP)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Stressoren", "placeholder": "Beschrijf de stressoren die je ervaart"},
-        {"type": "textarea", "label": "Triggers", "placeholder": "Wat zijn de mogelijke triggers?"},
-        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageer je op deze stressoren en triggers?"}
+        {"type": "checkbox", "label": "Stressoren", "options": ["Slaap", "Sociale druk", "Werk", "Andere"]},
+        {"type": "textarea", "label": "Triggers", "placeholder": "Welke specifieke gebeurtenissen, omstandigheden of prikkels kunnen psychotische symptomen uitlokken of verergeren? Wees zo concreet mogelijk."},
+        {"type": "scaleImage", "label": "Intensiteit", "image": "Schaal.png"}
     ]
 }

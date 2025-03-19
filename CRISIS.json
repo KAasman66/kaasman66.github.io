@@ -1,74 +1,73 @@
 {
     "CRISIS_crisisinterventie_plan": [
-        {"type": "title", "text": "Crisisinterventie Plan (Crisismanagement)"},
+        {"type": "header", "text": "Crisisinterventie Plan (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisinterventieplan"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe in een crisis?"}
+        {"type": "textarea", "label": "Triggers", "placeholder": "Beschrijf welke situaties, gedachten of gevoelens een crisis kunnen uitlokken bij jou."},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Hulp zoeken", "Ademhaling", "Afleiding", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe en wanneer pas je deze strategieën concreet toe? Wees specifiek."},
+        {"type": "scaleImage", "label": "Effectiviteit plan", "image": "Schaal.png"}
     ],
     "CRISIS_acute_stress_reactie_logboek": [
-        {"type": "title", "text": "Acute Stress Reactie Logboek (Crisismanagement)"},
+        {"type": "header", "text": "Acute Stress Reactie Logboek (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Reactie", "placeholder": "Beschrijf je acute stress reactie"},
-        {"type": "textarea", "label": "Triggers", "placeholder": "Wat waren de triggers?"},
-        {"type": "textarea", "label": "Coping", "placeholder": "Hoe ging je om met de stress?"}
+        {"type": "textarea", "label": "Triggers", "placeholder": "Welke specifieke gebeurtenis of situatie veroorzaakte de acute stress? Beschrijf wat er gebeurde."},
+        {"type": "checkbox", "label": "Reacties", "options": ["Hartkloppingen", "Angst", "Dissociatie", "Andere"]},
+        {"type": "scaleImage", "label": "Intensiteit", "image": "Schaal.png"},
+        {"type": "textarea", "label": "Coping", "placeholder": "Welke strategie(ën) heb je gebruikt om met de stress om te gaan? Was dit effectief?"}
     ],
     "CRISIS_crisis_evaluatie_formulier": [
-        {"type": "title", "text": "Crisis Evaluatie Formulier (Crisismanagement)"},
+        {"type": "header", "text": "Crisis Evaluatie Formulier (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Evaluatie", "placeholder": "Evalueer de crisis situatie"},
-        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties zijn ondernomen?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de ondernomen acties?"},
-        {"type": "checkbox", "label": "Acties effectief?", "options": ["Ja", "Nee"]}
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de crisis in detail: wat gebeurde er, waar was je, en wie was erbij?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke specifieke stappen heb je genomen tijdens en na de crisis? In welke volgorde?"},
+        {"type": "scaleImage", "label": "Effectiviteit acties", "image": "Schaal.png"}
     ],
     "CRISIS_noodcontacten_lijst": [
-        {"type": "title", "text": "Noodcontacten Lijst (Crisismanagement)"},
+        {"type": "header", "text": "Noodcontacten Lijst (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Contacten", "placeholder": "Lijst van noodcontacten"},
-        {"type": "textarea", "label": "Details", "placeholder": "Details van de contacten"}
+        {"type": "checkbox", "label": "Contacten", "options": ["Familie", "Vrienden", "Hulpverlener", "Andere"]},
+        {"type": "textarea", "label": "Details", "placeholder": "Noteer namen, telefoonnummers en beste tijden om te bereiken. Voeg eventueel toe wat deze persoon kan doen in noodgevallen."}
     ],
     "CRISIS_crisisopvolging_plan": [
-        {"type": "title", "text": "Crisisopvolging Plan (Crisismanagement)"},
+        {"type": "header", "text": "Crisisopvolging Plan (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je crisisopvolging plan"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe na een crisis?"}
+        {"type": "textarea", "label": "Doelen", "placeholder": "Welke concrete doelen wil je bereiken in de eerste dagen na de crisis? Wat zijn je prioriteiten?"},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Zelfzorg", "Therapie", "Steun", "Andere"]},
+        {"type": "scaleImage", "label": "Herstel", "image": "Schaal.png"}
     ],
     "CRISIS_veiligheidsplan": [
-        {"type": "title", "text": "Veiligheidsplan (Crisismanagement)"},
+        {"type": "header", "text": "Veiligheidsplan (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Plan", "placeholder": "Beschrijf je veiligheidsplan"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke veiligheidsstrategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe om veiligheid te waarborgen?"}
+        {"type": "textarea", "label": "Risico's", "placeholder": "Welke concrete situaties, personen of plaatsen vormen een risico voor je veiligheid? Wees specifiek."},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Veilige plek", "Contact opnemen", "Afleiding", "Andere"]},
+        {"type": "scaleImage", "label": "Veiligheidsgevoel", "image": "Schaal.png"}
     ],
     "CRISIS_emotionele_first_aid_oefeningen": [
-        {"type": "title", "text": "Emotionele Eerste Hulp Oefeningen (Crisismanagement)"},
+        {"type": "header", "text": "Emotionele Eerste Hulp Oefeningen (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Oefening", "placeholder": "Beschrijf de emotionele eerste hulp oefening"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze oefening toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze oefening?"}
+        {"type": "dropdown", "label": "Oefening", "options": ["Gronden", "Ademhaling", "Zelfkalmering", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze oefening precies uitgevoerd? Beschrijf de stappen en hoe lang je de oefening deed."},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "CRISIS_trigger_waarschuwingssignalen": [
-        {"type": "title", "text": "Trigger Waarschuwingssignalen (Crisismanagement)"},
+        {"type": "header", "text": "Trigger Waarschuwingssignalen (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Triggers", "placeholder": "Beschrijf de waarschuwingssignalen van triggers"},
-        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageer je op deze waarschuwingssignalen?"},
-        {"type": "checkbox", "label": "Signalen correct herkend?", "options": ["Ja", "Nee"]}
+        {"type": "checkbox", "label": "Signalen", "options": ["Onrust", "Slaapproblemen", "Angst", "Andere"]},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe heb je gereageerd toen je deze waarschuwingssignalen opmerkte? Wat deed je concreet?"},
+        {"type": "scaleImage", "label": "Herkenning", "image": "Schaal.png"}
     ],
     "CRISIS_de_escalatietechnieken": [
-        {"type": "title", "text": "De-escalatietechnieken (Crisismanagement)"},
+        {"type": "header", "text": "De-escalatietechnieken (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Techniek", "placeholder": "Beschrijf de de-escalatietechniek"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze techniek toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze techniek?"},
-        {"type": "checkbox", "label": "Techniek succesvol?", "options": ["Ja", "Nee"]}
+        {"type": "dropdown", "label": "Techniek", "options": ["Rustig praten", "Ruimte geven", "Afleiding", "Andere"]},
+        {"type": "textarea", "label": "Toepassing", "placeholder": "Beschrijf in detail hoe je de techniek hebt toegepast, inclusief timing en reacties van anderen."},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "CRISIS_incidentrapportage": [
-        {"type": "title", "text": "Incidentrapportage (Crisismanagement)"},
+        {"type": "header", "text": "Incidentrapportage (Crisismanagement)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Incident", "placeholder": "Beschrijf het incident"},
-        {"type": "textarea", "label": "Acties", "placeholder": "Welke acties zijn ondernomen?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van de ondernomen acties?"},
-        {"type": "checkbox", "label": "Acties effectief?", "options": ["Ja", "Nee"]}
+        {"type": "textarea", "label": "Incident", "placeholder": "Beschrijf gedetailleerd wat er gebeurde, waar en wanneer het plaatsvond, en wie erbij betrokken was."},
+        {"type": "textarea", "label": "Acties", "placeholder": "Welke specifieke stappen heb je ondernomen? Wie heb je ingeschakeld? Wat was de volgorde van acties?"},
+        {"type": "scaleImage", "label": "Impact", "image": "Schaal.png"}
     ]
 }

@@ -1,162 +1,29 @@
 {
-    "CGT_zelfreflectie_formulier": [
-        {
-            "type": "title",
-            "text": "Zelfreflectie Formulier"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Beschrijving van de situatie",
-            "placeholder": "Beschrijf de situatie waarop je reflecteert"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedachten",
-            "placeholder": "Welke gedachten had je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gevoelens",
-            "placeholder": "Welke gevoelens ervaarde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Gedragingen",
-            "placeholder": "Welke gedragingen vertoonde je?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat ging goed?",
-            "placeholder": "Wat ging goed in deze situatie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat kon beter?",
-            "placeholder": "Wat kon beter in deze situatie?"
-        },
-        {
-            "type": "textarea",
-            "label": "Leerpunten",
-            "placeholder": "Wat heb je geleerd van deze ervaring?"
-        }
+    "CGT_grondingstechnieken_menu": [
+        {"type": "header", "text": "Grondingstechnieken Menu"},
+        {"type": "date", "label": "Datum"},
+        {"type": "dropdown", "label": "Techniek", "options": ["5-4-3-2-1", "Ademhaling", "Fysiek contact", "Andere"]},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
-    "CGT_dankbaarheidslogboek": [
-        {
-            "type": "title",
-            "text": "Dankbaarheidslogboek"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Waar ben je vandaag dankbaar voor?",
-            "placeholder": "Schrijf hier waar je vandaag dankbaar voor bent"
-        },
-        {
-            "type": "textarea",
-            "label": "Waarom ben je dankbaar?",
-            "placeholder": "Waarom ben je hier dankbaar voor?"
-        },
-        {
-            "type": "textarea",
-            "label": "Hoe heeft dit je dag verbeterd?",
-            "placeholder": "Hoe heeft dit je dag verbeterd?"
-        },
-        {
-            "type": "textarea",
-            "label": "Reflectie",
-            "placeholder": "Reflecteer op je gevoelens van dankbaarheid"
-        }
+    "CGT_waarden_verheldering_werkblad": [
+        {"type": "header", "text": "Waarden Verheldering Werkblad"},
+        {"type": "date", "label": "Datum"},
+        {"type": "checkbox", "label": "Kernwaarden", "options": ["Familie", "Werk", "Vriendschap", "Zelfontplooiing", "Andere"]},
+        {"type": "textarea", "label": "Belang", "placeholder": "Waarom belangrijk?"},
+        {"type": "textarea", "label": "Acties", "placeholder": "Hoe leef je ernaar?"}
     ],
-    "CGT_zelfzorg_en_welzijn_formulier": [
-        {
-            "type": "title",
-            "text": "Zelfzorg en Welzijn Formulier"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Zelfzorgactiviteiten",
-            "placeholder": "Welke zelfzorgactiviteiten heb je vandaag gedaan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Hoe voelde je je na deze activiteiten?",
-            "placeholder": "Hoe voelde je je na deze activiteiten?"
-        },
-        {
-            "type": "textarea",
-            "label": "Wat heb je gedaan om je welzijn te verbeteren?",
-            "placeholder": "Wat heb je gedaan om je welzijn te verbeteren?"
-        },
-        {
-            "type": "textarea",
-            "label": "Heb je voldoende rust gehad?",
-            "placeholder": "Heb je voldoende rust gehad? beschrijf."
-        },
-        {
-            "type": "textarea",
-            "label": "Eetpatroon",
-            "placeholder": "Beschrijf je eetpatroon van vandaag"
-        },
-        {
-            "type": "textarea",
-            "label": "Beweging",
-            "placeholder": "Heb je vandaag bewogen? wat heb je gedaan?"
-        },
-        {
-            "type": "textarea",
-            "label": "Emotionele zelfzorg",
-            "placeholder": "Hoe heb je vandaag voor je emotionele welzijn gezorgd?"
-        }
+    "CGT_successieve_approximation": [
+        {"type": "header", "text": "Successieve Approximation"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Taak", "placeholder": "Wat wil je doen?"},
+        {"type": "textarea", "label": "Stappen", "placeholder": "Kleinere stappen?"},
+        {"type": "scaleImage", "label": "Voortgang per stap", "image": "Schaal.png"}
     ],
-    "CGT_relapse_prevention_plan": [
-        {
-            "type": "title",
-            "text": "Relapse Prevention Plan"
-        },
-        {
-            "type": "date",
-            "label": "Datum"
-        },
-        {
-            "type": "textarea",
-            "label": "Triggers",
-            "placeholder": "Wat zijn je belangrijkste triggers voor terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Waarschuwingssignalen",
-            "placeholder": "Wat zijn de vroege waarschuwingssignalen van terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Copingstrategieën",
-            "placeholder": "Welke copingstrategieën kun je gebruiken om een terugval te voorkomen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Ondersteuningsnetwerk",
-            "placeholder": "Wie in je netwerk kan je ondersteunen bij het voorkomen van een terugval?"
-        },
-        {
-            "type": "textarea",
-            "label": "Actieplan",
-            "placeholder": "Wat is je actieplan als je merkt dat je een terugval dreigt te krijgen?"
-        },
-        {
-            "type": "textarea",
-            "label": "Lessen uit vorige terugvallen",
-            "placeholder": "Wat heb je geleerd van vorige terugvallen die je kunt toepassen?"
-        }
+    "CGT_interoceptieve_blootstelling": [
+        {"type": "header", "text": "Interoceptieve Blootstelling"},
+        {"type": "date", "label": "Datum"},
+        {"type": "dropdown", "label": "Sensaties", "options": ["Snelle adem", "Hartslag", "Duizeligheid", "Andere"]},
+        {"type": "textarea", "label": "Reacties", "placeholder": "Hoe reageerde je?"},
+        {"type": "scaleImage", "label": "Angstniveau", "image": "Schaal.png"}
     ]
 }

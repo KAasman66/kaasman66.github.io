@@ -1,58 +1,137 @@
 {
     "PGT_oplossingsstrategieën_dagboek": [
-        {"type": "title", "text": "Oplossingsstrategieën Dagboek (PGT)"},
+        {"type": "header", "text": "Oplossingsstrategieën Dagboek (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Strategie", "placeholder": "Beschrijf de oplossingsstrategie"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe heb je deze strategie toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van het toepassen van deze strategie?"}
+        {"type": "textarea", "label": "Probleem", "placeholder": "Welk probleem?"},
+        {"type": "dropdown", "label": "Strategie", "options": ["Brainstormen", "Actieplan", "Evaluatie", "Andere"]},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "PGT_behandelplan": [
-        {"type": "title", "text": "PGT Behandelplan"},
+        {"type": "header", "text": "PGT Behandelplan"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Doelen", "placeholder": "Beschrijf je behandeldoelen"},
-        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke strategieën bevat dit plan?"},
-        {"type": "textarea", "label": "Toepassing", "placeholder": "Hoe pas je dit plan toe?"}
+        {"type": "textarea", "label": "Doelen", "placeholder": "Wat wil je oplossen?"},
+        {"type": "checkbox", "label": "Strategieën", "options": ["Probleemanalyse", "Actiestappen", "Reflectie", "Andere"]},
+        {"type": "scaleImage", "label": "Voortgang", "image": "Schaal.png"}
     ],
     "PGT_resultaten_evaluatie": [
-        {"type": "title", "text": "Resultaten Evaluatie (PGT)"},
+        {"type": "header", "text": "Resultaten Evaluatie (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Evaluatie", "placeholder": "Evalueer de resultaten van de behandeling"},
-        {"type": "textarea", "label": "Positieve resultaten", "placeholder": "Wat zijn de positieve resultaten?"},
-        {"type": "textarea", "label": "Negatieve resultaten", "placeholder": "Wat zijn de negatieve resultaten?"}
+        {"type": "textarea", "label": "Positieve resultaten", "placeholder": "Wat ging goed?"},
+        {"type": "textarea", "label": "Negatieve resultaten", "placeholder": "Wat ging mis?"},
+        {"type": "scaleImage", "label": "Tevredenheid", "image": "Schaal.png"}
     ],
     "PGT_oplossingsgerichte_interventies": [
-        {"type": "title", "text": "Oplossingsgerichte Interventies (PGT)"},
+        {"type": "header", "text": "Oplossingsgerichte Interventies (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Interventie", "placeholder": "Beschrijf de oplossingsgerichte interventie"},
-        {"type": "textarea", "label": "Situatie", "placeholder": "In welke situatie heb je deze interventie toegepast?"},
-        {"type": "textarea", "label": "Resultaat", "placeholder": "Wat was het resultaat van deze interventie?"}
+        {"type": "textarea", "label": "Probleem", "placeholder": "Welk probleem?"},
+        {"type": "dropdown", "label": "Interventie", "options": ["Actieplan", "Prioriteiten stellen", "Andere"]},
+        {"type": "scaleImage", "label": "Effectiviteit", "image": "Schaal.png"}
     ],
     "PGT_voortgangsrapportage": [
-        {"type": "title", "text": "Voortgangsrapportage (PGT)"},
+        {"type": "header", "text": "Voortgangsrapportage (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Voortgang", "placeholder": "Beschrijf je voortgang"},
-        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Welke uitdagingen ben je tegengekomen?"},
-        {"type": "textarea", "label": "Successen", "placeholder": "Wat zijn je successen?"}
+        {"type": "textarea", "label": "Voortgang", "placeholder": "Wat bereikt?"},
+        {"type": "textarea", "label": "Uitdagingen", "placeholder": "Wat was moeilijk?"},
+        {"type": "scaleImage", "label": "Vooruitgang", "image": "Schaal.png"}
     ],
     "PGT_successen_en_lessen": [
-        {"type": "title", "text": "Successen en Lessen (PGT)"},
+        {"type": "header", "text": "Successen en Lessen (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Successen", "placeholder": "Beschrijf je successen"},
-        {"type": "textarea", "label": "Lessen", "placeholder": "Welke lessen heb je geleerd?"},
-        {"type": "textarea", "label": "Toekomstige toepassing", "placeholder": "Hoe ga je deze lessen in de toekomst toepassen?"}
+        {"type": "textarea", "label": "Successen", "placeholder": "Wat ging goed?"},
+        {"type": "textarea", "label": "Lessen", "placeholder": "Wat geleerd?"},
+        {"type": "scaleImage", "label": "Toepassing", "image": "Schaal.png"}
     ],
     "PGT_probleemgerichte_reflectie": [
-        {"type": "title", "text": "Probleemgerichte Reflectie (PGT)"},
+        {"type": "header", "text": "Probleemgerichte Reflectie (PGT)"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Reflectie", "placeholder": "Reflecteer op het probleem en de oplossing"},
-        {"type": "textarea", "label": "Inzichten", "placeholder": "Welke inzichten heb je opgedaan?"},
-        {"type": "textarea", "label": "Veranderingen", "placeholder": "Welke veranderingen wil je doorvoeren?"}
+        {"type": "textarea", "label": "Probleem", "placeholder": "Welk probleem?"},
+        {"type": "textarea", "label": "Inzichten", "placeholder": "Wat geleerd?"},
+        {"type": "scaleImage", "label": "Vooruitgang", "image": "Schaal.png"}
     ],
     "PGT_dagelijkse_logboek": [
-        {"type": "title", "text": "PGT Dagelijkse Logboek"},
+        {"type": "header", "text": "PGT Dagelijkse Logboek"},
         {"type": "date", "label": "Datum"},
-        {"type": "textarea", "label": "Activiteiten", "placeholder": "Beschrijf je dagelijkse activiteiten"},
-        {"type": "textarea", "label": "Problemen", "placeholder": "Welke problemen ben je tegengekomen?"},
-        {"type": "textarea", "label": "Oplossingen", "placeholder": "Hoe heb je deze problemen opgelost?"}
+        {"type": "checkbox", "label": "Activiteiten", "options": ["Werk", "Zelfzorg", "Sociale contacten", "Andere"]},
+        {"type": "textarea", "label": "Problemen", "placeholder": "Welke problemen?"},
+        {"type": "scaleImage", "label": "Oplossing", "image": "Schaal.png"}
+    ],
+    "PGT_probleemidentificatie_formulier": [
+        {"type": "header", "text": "Probleemidentificatie Formulier (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Probleem", "placeholder": "Beschrijf het specifieke probleem zo concreet mogelijk. Wat is precies het probleem? Wanneer doet het zich voor? Hoe lang bestaat het al?"},
+        {"type": "checkbox", "label": "Leefgebieden", "options": ["Relaties", "Werk", "Gezondheid", "Andere"]},
+        {"type": "scaleImage", "label": "Ernst", "image": "Schaal.png"}
+    ],
+    "PGT_probleem_en_doelen_overzicht": [
+        {"type": "header", "text": "Probleem en Doelen Overzicht (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Probleemomschrijving", "placeholder": "Beschrijf het kernprobleem kort en bondig. Wat is de hoofdkwestie die je wilt aanpakken?"},
+        {"type": "textarea", "label": "Doelen", "placeholder": "Formuleer concrete, specifieke en haalbare doelen die je wilt bereiken. Maak ze SMART: Specifiek, Meetbaar, Acceptabel, Realistisch en Tijdgebonden."},
+        {"type": "scaleImage", "label": "Prioriteit", "image": "Schaal.png"}
+    ],
+    "PGT_probleemanalyse_formulier": [
+        {"type": "header", "text": "Probleemanalyse Formulier (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Situatie", "placeholder": "Beschrijf de specifieke situatie waarin het probleem zich voordoet. Waar ben je? Wie is erbij? Wat gebeurt er precies?"},
+        {"type": "textarea", "label": "Gedachten", "placeholder": "Welke gedachten heb je in deze situatie? Wat zeg je tegen jezelf? Welke overtuigingen spelen een rol?"},
+        {"type": "textarea", "label": "Gevoelens", "placeholder": "Welke emoties ervaar je in deze situatie? Hoe intens zijn deze gevoelens op een schaal van 1-10?"},
+        {"type": "textarea", "label": "Gedrag", "placeholder": "Hoe reageer je in deze situatie? Wat doe je wel of juist niet? Welk gedrag zou je willen veranderen?"},
+        {"type": "scaleImage", "label": "Impact", "image": "Schaal.png"}
+    ],
+    "PGT_oplossingen_brainstorm": [
+        {"type": "header", "text": "Oplossingen Brainstorm (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Probleem", "placeholder": "Beschrijf kort het probleem waarvoor je oplossingen zoekt. Wees zo specifiek mogelijk."},
+        {"type": "textarea", "label": "Mogelijke oplossingen", "placeholder": "Noteer alle mogelijke oplossingen die je kunt bedenken, ook als ze niet perfect zijn. Denk breed en creatief. Wat zou kunnen werken? Wat hebben anderen in vergelijkbare situaties gedaan?"},
+        {"type": "checkbox", "label": "Hulpbronnen", "options": ["Sociale steun", "Professionele hulp", "Kennis/vaardigheden", "Andere"]},
+        {"type": "scaleImage", "label": "Haalbaarheid", "image": "Schaal.png"}
+    ],
+    "PGT_actieplan": [
+        {"type": "header", "text": "Actieplan (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat is het specifieke doel dat je wilt bereiken? Maak het SMART: Specifiek, Meetbaar, Acceptabel, Realistisch en Tijdgebonden."},
+        {"type": "textarea", "label": "Actiestappen", "placeholder": "Welke concrete stappen ga je nemen om je doel te bereiken? Maak de stappen klein en specifiek. Noteer wanneer je elke stap wilt uitvoeren."},
+        {"type": "checkbox", "label": "Benodigdheden", "options": ["Tijd", "Ondersteuning", "Middelen", "Andere"]},
+        {"type": "scaleImage", "label": "Vertrouwen", "image": "Schaal.png"}
+    ],
+    "PGT_voortgangsevaluatie": [
+        {"type": "header", "text": "Voortgangsevaluatie (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Doel", "placeholder": "Wat was het oorspronkelijke doel dat je wilde bereiken? Beschrijf dit zo concreet mogelijk."},
+        {"type": "textarea", "label": "Ondernomen acties", "placeholder": "Welke specifieke acties heb je ondernomen om dit doel te bereiken? Wat heb je precies gedaan en wanneer?"},
+        {"type": "textarea", "label": "Resultaten", "placeholder": "Welke resultaten heb je tot nu toe bereikt? Wat is er veranderd? Waar merk je vooruitgang aan?"},
+        {"type": "scaleImage", "label": "Voortgang", "image": "Schaal.png"}
+    ],
+    "PGT_hindernissen_en_uitdagingen": [
+        {"type": "header", "text": "Hindernissen en Uitdagingen (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Hindernis", "placeholder": "Welke specifieke hindernissen of uitdagingen ben je tegengekomen bij het werken aan je doel? Wat maakt het moeilijk om vooruitgang te boeken?"},
+        {"type": "checkbox", "label": "Type", "options": ["Intern", "Extern", "Beide"]},
+        {"type": "textarea", "label": "Strategieën", "placeholder": "Welke concrete strategieën kun je gebruiken om deze hindernissen te overwinnen? Welke aanpassingen in je aanpak zou je kunnen maken?"},
+        {"type": "scaleImage", "label": "Moeilijkheidsgraad", "image": "Schaal.png"}
+    ],
+    "PGT_succeservaringen_logboek": [
+        {"type": "header", "text": "Succeservaringen Logboek (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Succes", "placeholder": "Beschrijf een specifieke ervaring waarin je succesvol was in het omgaan met je probleem of het werken aan je doel. Wat ging er goed? Wat deed je anders?"},
+        {"type": "textarea", "label": "Factoren", "placeholder": "Welke factoren hebben bijgedragen aan dit succes? Wat maakte het mogelijk? Welke vaardigheden, hulpbronnen of strategieën heb je gebruikt?"},
+        {"type": "textarea", "label": "Lessen", "placeholder": "Welke lessen kun je hieruit trekken? Hoe kun je deze succeservaring gebruiken in andere situaties? Wat neem je hiervan mee?"},
+        {"type": "scaleImage", "label": "Tevredenheid", "image": "Schaal.png"}
+    ],
+    "PGT_terugvalpreventieplan": [
+        {"type": "header", "text": "Terugvalpreventieplan (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Risicosituaties", "placeholder": "Welke specifieke situaties, gedachten, gevoelens of gedragingen kunnen leiden tot een terugval? In welke omstandigheden ben je het meest kwetsbaar?"},
+        {"type": "textarea", "label": "Vroege waarschuwingssignalen", "placeholder": "Welke signalen kunnen erop wijzen dat je risico loopt op een terugval? Dit kunnen gedachten, gevoelens, lichamelijke sensaties of gedragingen zijn."},
+        {"type": "textarea", "label": "Preventiestrategieën", "placeholder": "Welke specifieke strategieën ga je gebruiken om een terugval te voorkomen? Wat werkt goed voor jou? Wie kan je helpen?"},
+        {"type": "scaleImage", "label": "Vertrouwen", "image": "Schaal.png"}
+    ],
+    "PGT_ondersteuningsnetwerk_plan": [
+        {"type": "header", "text": "Ondersteuningsnetwerk Plan (PGT)"},
+        {"type": "date", "label": "Datum"},
+        {"type": "textarea", "label": "Steunfiguren", "placeholder": "Wie zijn de belangrijkste personen in je ondersteuningsnetwerk? Noteer naam, relatie tot jou, en contactgegevens van mensen die je kunnen helpen."},
+        {"type": "textarea", "label": "Hulp", "placeholder": "Op welke specifieke manieren kunnen deze personen je ondersteunen? Welk soort hulp kan elke persoon bieden? Wat werkt het beste?"},
+        {"type": "textarea", "label": "Communicatie", "placeholder": "Hoe en wanneer neem je contact op met deze steunfiguren? Wat is de beste manier om je behoeften aan hen duidelijk te maken?"},
+        {"type": "scaleImage", "label": "Tevredenheid", "image": "Schaal.png"}
     ]
 }
