@@ -179,82 +179,137 @@
         
         /* Print-specific styles */
         @media print {
+            /* Remove the general visibility rules */
+            /* body * { ... } */
+            /* .container, .container h1, ... { visibility: visible; } */
+
             body {
                 font-size: 12pt;
-                background: white;
+                background: white !important; /* Ensure white background */
                 color: black;
+                margin: 0; /* Reset body margin */
             }
-            
+
             .container {
                 width: 100%;
                 max-width: 100%;
                 padding: 0;
                 margin: 0;
+                display: block !important; /* Ensure container is displayed */
             }
-            
+
             #formContainer {
+                /* position: absolute; */ /* REMOVED absolute positioning */
+                /* Let it flow naturally */
+                width: auto; /* Allow natural width */
+                padding: 15mm; /* Keep padding */
                 box-shadow: none;
-                padding: 0;
+                /* border: 2px solid red !important; */ /* REMOVED temporary border */
+                border: none; /* Ensure no border */
+                margin: 10mm; /* Add some margin for print */
+                background: white !important;
+                display: block !important; /* Ensure formContainer is displayed */
             }
-            
+
+            #formContent {
+                 /* border: 2px solid blue !important; */ /* REMOVED temporary border */
+                 display: block !important; /* Ensure formContent is displayed */
+                 /* min-height: 50px; */ /* REMOVED temporary min-height */
+                 background: white !important; /* Ensure background is white */
+                 overflow: visible !important; /* Ensure content isn't clipped */
+            }
+
             .form-element {
                 page-break-inside: avoid;
-                border: 1px solid #ccc;
+                border: none;
                 box-shadow: none;
+                background: none !important;
+                padding: 5mm 0;
+                margin-bottom: 5mm;
+                display: block !important; /* Explicitly show form elements */
+                visibility: visible !important; /* Add visibility just in case */
             }
-            
-            .control-group, .element-buttons, .print-button-container, 
-            .remove-element, .add-checkbox, .remove-checkbox, 
-            .fallback-loading, #notification-container {
+
+            /* Force everything inside form elements to be visible */
+            .form-element * {
+                visibility: visible !important;
+                display: block !important; /* Default display, might be overridden below */
+                background: none !important; /* Ensure no weird background */
+            }
+
+            /* Hide specific UI elements using display: none */
+            .control-group, .element-buttons, .print-button-container,
+            .remove-element, .add-checkbox, .remove-checkbox,
+            .fallback-loading, #notification-container,
+            .float-buttons, .share-button,
+            .empty-form-message, /* Hide empty message when printing */
+            #add-element-menu /* Hide add element menu */ {
                 display: none !important;
             }
-            
+
             h1 {
                 text-align: center;
                 margin-bottom: 20px;
             }
-            
-            /* Show placeholder hints when printing */
+
+            /* Keep styles for placeholder hints, inputs, labels, etc. */
             .placeholder-hint {
-                display: block;
-                color: #999;
-                font-size: 11pt;
+                display: block !important;
+                visibility: visible !important;
+                color: #777 !important;
+                font-size: 10pt !important;
+                font-style: italic !important;
+                margin-bottom: 1mm !important;
             }
-            
+
             textarea, input[type="text"], input[type="number"] {
-                border: 1px solid #ccc;
-                padding: 5px;
-                width: 100%;
-                /* Increase height for more writing space */
+                border: 1px solid #ccc !important;
+                padding: 3mm !important;
+                width: 100% !important; /* Ensure full width */
                 min-height: 24pt;
+                background: white !important;
+                display: block !important; /* Reiterate display */
+                visibility: visible !important; /* Reiterate visibility */
             }
-            
+
             textarea {
                 min-height: 80pt;
             }
-            
+
             .radio-group, .checkbox-group {
                 border: 1px solid #eee;
                 padding: 5px;
                 margin: 10px 0;
+                display: block !important; /* Reiterate display */
+                visibility: visible !important; /* Reiterate visibility */
             }
-            
+
+            /* Ensure radio/checkbox items themselves are visible */
+            .radio-item, .checkbox-item {
+                display: flex !important; /* Use flex for alignment */
+                visibility: visible !important;
+            }
+
             img.scale-image {
                 max-width: 100%;
                 height: auto;
+                display: block !important; /* Ensure image displays */
+                visibility: visible !important;
             }
-            
-            /* Ensure form elements have enough space between them */
-            .form-element {
-                margin-bottom: 20pt;
-                padding: 10pt;
-            }
-            
-            /* Labels should be prominent */
+
             label {
                 font-weight: bold;
                 margin-bottom: 5pt;
-                display: block;
+                display: block !important; /* Reiterate display */
+                visibility: visible !important; /* Reiterate visibility */
+            }
+
+            .scale-mark {
+                display: block !important;
+                visibility: visible !important; /* Keep this for scale marks if needed */
+                color: #e74c3c !important;
+                font-weight: bold !important;
+                font-size: 24px !important;
             }
         }
     </style>

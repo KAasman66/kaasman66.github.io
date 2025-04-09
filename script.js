@@ -220,73 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(responsiveStyle);
-    
-    // Fix print styling
-    const printStyle = document.createElement('style');
-    printStyle.innerHTML = `
-        @media print {
-            body * {
-                visibility: hidden;
-                background: white !important;
-            }
-            
-            #formContent, #formContent * {
-                visibility: visible;
-            }
-            
-            #formContainer {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                padding: 15mm;
-                box-shadow: none;
-                border: none;
-                margin: 0;
-            }
-            
-            .form-element {
-                page-break-inside: avoid;
-                border: none;
-                box-shadow: none;
-                background: none !important;
-                padding: 5mm 0;
-                margin-bottom: 5mm;
-            }
-            
-            .remove-element, .add-checkbox, .remove-checkbox, .edit-icon, .edit-options,
-            .float-buttons, .print-button-container, .share-button {
-                display: none !important;
-            }
-            
-            .form-element::before, .form-element::after {
-                display: none !important;
-            }
-            
-            .scale-mark {
-                display: block !important;
-                visibility: visible !important;
-                color: #e74c3c !important;
-                font-weight: bold !important;
-                font-size: 24px !important;
-            }
-            
-            input, textarea {
-                border: 1px solid #ccc !important;
-                background: white !important;
-                padding: 3mm !important;
-            }
-            
-            .placeholder-hint {
-                display: block !important;
-                color: #777 !important;
-                font-style: italic !important;
-                margin-bottom: 1mm !important;
-                font-size: 10pt !important;
-            }
-        }
-    `;
-    document.head.appendChild(printStyle);
 });
 
 // Verbeterde notificatiefunctie - verplaatst naar rechtsboven het formulier
@@ -864,97 +797,104 @@ function removeCheckboxItem(button) {
 function printForm() {
     const formContent = document.getElementById('formContent');
     
-    // Create a print-specific stylesheet
-    const printStyle = document.createElement('style');
-    printStyle.id = 'print-style';
-    printStyle.innerHTML = `
-        @media print {
-            body * {
-                visibility: hidden;
-                background: white !important;
-            }
-            
-            #formContent, #formContent * {
-                visibility: visible;
-            }
-            
-            #formContainer {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                padding: 15mm;
-                box-shadow: none;
-                border: none;
-                margin: 0;
-            }
-            
-            .form-element {
-                page-break-inside: avoid;
-                border: none;
-                box-shadow: none;
-                background: none !important;
-                padding: 5mm 0;
-                margin-bottom: 5mm;
-            }
-            
-            .remove-element, .add-checkbox, .remove-checkbox, .float-buttons, .share-button {
-                display: none !important;
-            }
-            
-            .scale-mark {
-                display: block !important;
-                visibility: visible !important;
-                color: #e74c3c !important;
-                font-weight: bold !important;
-                font-size: 24px !important;
-            }
-            
-            input, textarea {
-                border: 1px solid #ccc !important;
-                background: white !important;
-                padding: 3mm !important;
-            }
-            
-            .placeholder-hint {
-                display: block !important;
-                color: #777 !important;
-                font-style: italic !important;
-                margin-bottom: 1mm !important;
-                font-size: 10pt !important;
-            }
-        }
-    `;
-    document.head.appendChild(printStyle);
-    
-    // Show all placeholder hints for printing
-    const placeholderHints = formContent.querySelectorAll('.placeholder-hint');
-    placeholderHints.forEach(hint => {
-        hint.style.display = 'block';
-    });
-    
-    // Ensure scale marks are visible
-    const scaleMarks = formContent.querySelectorAll('.scale-mark');
-    scaleMarks.forEach(mark => {
-        mark.style.display = 'block';
-        mark.style.visibility = 'visible';
-        mark.style.color = '#e74c3c';
-        mark.style.fontWeight = 'bold';
-        mark.style.fontSize = '24px';
-    });
-    
-    // Print the form
-    window.print();
-    
-    // After printing, restore elements to original state and remove the style
-    setTimeout(() => {
-        document.head.removeChild(printStyle);
-        
-        // Restore placeholder hints visibility
-        placeholderHints.forEach(hint => {
-            hint.style.display = '';
-        });
-    }, 500);
+    // Create a new window with just the form content
+    const printWindow = window.open('', '_blank', 'width=800,height=600');
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>GGZ Formulier Generator - Printen</title>
+            <style>
+                body {
+                    font-family: 'Roboto', Arial, sans-serif;
+                    font-size: 12pt;
+                    background: white;
+                    color: black;
+                    padding: 20mm;
+                }
+                h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .form-element {
+                    margin-bottom: 15mm;
+                    page-break-inside: avoid;
+                }
+                textarea, input[type="text"], input[type="number"] {
+                    border: 1px solid #ccc;
+                    padding: 3mm;
+                    width: 100%;
+                    min-height: 24pt;
+                    background: white;
+                }
+                textarea {
+                    min-height: 80pt;
+                }
+                .placeholder-hint {
+                    display: block;
+                    color: #777;
+                    font-style: italic;
+                    margin-bottom: 1mm;
+                    font-size: 10pt;
+                }
+                .radio-group, .checkbox-group {
+                    border: 1px solid #eee;
+                    padding: 5px;
+                    margin: 10px 0;
+                }
+                label {
+                    font-weight: bold;
+                    margin-bottom: 5pt;
+                    display: block;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .remove-element, .add-checkbox, .remove-checkbox, .edit-icon, .edit-options {
+                    display: none !important;
+                }
+                .scale-mark {
+                    display: block;
+                    color: #e74c3c;
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+                @media print {
+                    body {
+                        padding: 0;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <h1>GGZ Formulier Generator</h1>
+            <div id="printContent">
+                ${formContent.innerHTML}
+            </div>
+            <script>
+                // Show all placeholder hints
+                document.querySelectorAll('.placeholder-hint').forEach(hint => {
+                    hint.style.display = 'block';
+                });
+                
+                // Remove buttons and edit controls
+                document.querySelectorAll('.remove-element, .add-checkbox, .remove-checkbox, .edit-icon, .edit-options').forEach(el => {
+                    if (el) el.style.display = 'none';
+                });
+                
+                // Auto-print and close
+                window.onload = function() {
+                    setTimeout(function() {
+                        window.print();
+                        // Don't close window automatically - let user close it
+                        // window.close();
+                    }, 500);
+                };
+            </script>
+        </body>
+        </html>
+    `);
+    printWindow.document.close();
 }
 
 // Add these functions after the printForm function
